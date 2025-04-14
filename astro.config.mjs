@@ -15,7 +15,15 @@ export default defineConfig({
     // trailingSlash: 'never',
     
     integrations: [
-        icon(),
+        icon({
+            include: {
+                arcticons: [
+                   'github',
+                   'linkedin',
+                   'yahoo-mail'
+                ],
+            }
+        }),
         sitemap(),
     ],
     
