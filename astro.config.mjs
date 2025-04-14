@@ -1,3 +1,4 @@
+import tailwindcss from "@tailwindcss/vite";
 // @ts-check
 import { defineConfig } from 'astro/config';
 
@@ -7,7 +8,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://zorang.netlify.app',
+	site: 'https://zorang.netlify.app',
 
   // output: 'static',
   // trailingSlash: 'never',
@@ -19,4 +20,7 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+	experimental: {
+		svg: true,
+	},
 });
