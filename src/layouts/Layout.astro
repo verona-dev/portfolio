@@ -4,6 +4,7 @@ import "@/styles/starwind.css";
 
 import { SEO } from 'astro-seo';
 import CommonMeta from '../components/CommonMeta.astro';
+import Socials from '../components/Socials.astro';
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
@@ -63,8 +64,9 @@ const pageTitle = `Zoran G Verona - Frontend Developer | ${title}`
    </head>
 
    <body>
-      <main class='mx-auto max-w-4xl relative'>
+      <main class='mx-auto max-w-xl md:max-w-3xl relative'>
           <slot />
       </main>
+          <Socials />
    </body>
 </html>

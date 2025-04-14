@@ -1,0 +1,20 @@
+---
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/starwind/tabs';
+---
+
+
+<Tabs
+    defaultValue='astro'
+    class='mx-auto max-w-2xl my-40'
+>
+    <TabsList>
+        <TabsTrigger value='astro' class=''>Stack</TabsTrigger>
+        <TabsTrigger value='next'>Projects</TabsTrigger>
+    </TabsList>
+    <TabsContent value='astro'>
+        Stack goes here...
+    </TabsContent>
+    <TabsContent value='next'>
+        Projects go here...
+    </TabsContent>
+</Tabs>

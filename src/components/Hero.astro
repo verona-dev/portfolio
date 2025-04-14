@@ -1,22 +1,38 @@
 ---
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/starwind/tabs';
-// import {Icon} from 'astro-icon/components';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/starwind/avatar';
+import ProfilePicture from '@/assets/images/profile-picture.jpg';
 ---
 
-<!--<Icon slot='suffix' class='w-7 h-7' name='logos:vue' />-->
+<div class='hero my-20 text-center'>
+    <Avatar class='border-pink-400'>
+        <AvatarImage
+            image={ProfilePicture}
+            alt='John Doe'
+        />
+        <AvatarFallback>ZGV</AvatarFallback>
+    </Avatar>
 
-<Tabs
-    defaultValue='astro'
-    class='mx-auto max-w-2xl my-20'
->
-    <TabsList>
-        <TabsTrigger value='astro' class=''>Stack</TabsTrigger>
-        <TabsTrigger value='next'>Projects</TabsTrigger>
-    </TabsList>
-    <TabsContent value='astro'>
-        Stack goes here...
-    </TabsContent>
-    <TabsContent value='next'>
-        Projects go here...
-    </TabsContent>
-</Tabs>
+    <h1
+        class='title text-5xl md:text-8xl my-8'
+        set:html='Zoran G. Verona'
+    />
+
+
+    <p
+        class='tagline my-6 text-pink-400 text-1xl md:text-3xl tracking-widest uppercase'
+        set:html='Frontend Developer'
+    />
+
+    <p
+        class='subtitle'
+        set:html='Based in Croatia, Europe, with 3+ years of development experience. I am a frontend web developer who enjoys building websites and web applications that are both fun and functional.'
+    />
+</div>
+
+<style>
+    figure {
+        margin: 0 auto;
+        height: 300px;
+        width: 300px;
+    }
+</style>

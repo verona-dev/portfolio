@@ -1,0 +1,41 @@
+---
+import { Icon } from 'astro-icon/components';
+---
+
+<div class='socials max-w-xl mx-auto'>
+    <a href='https://github.com/verona-dev' target='_blank'>
+        <Icon
+            name='arcticons:github'
+            class='w-12 h-12'
+        />
+    </a>
+
+    <a href='https://linkedin.com/in/zoran-g-verona-489650328' target='_blank'>
+        <Icon
+            name='arcticons:linkedin'
+            class='w-12 h-12'
+        />
+    </a>
+
+    <a href='mailto:test@gmail.com' target='_blank'>
+        <Icon
+            name='arcticons:yahoo-mail'
+            class='w-12 h-12'
+        />
+    </a>
+</div>
+
+<style>
+    .socials {
+        display: flex;
+        justify-content: space-evenly;
+
+        svg {
+            color: var(--color-pink-400);
+
+            &:hover {
+                color: var(--color-pink-600);
+            }
+        }
+    }
+</style>
