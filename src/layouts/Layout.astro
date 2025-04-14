@@ -1,11 +1,61 @@
 ---
+import { SEO } from 'astro-seo';
 import CommonMeta from '../components/CommonMeta.astro';
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
+
+const {
+   title,
+   description,
+} = Astro.props;
+
+const pageTitle = `${title} | Zoran G Verona portfolio`
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<CommonMeta />
+
+        <!--<title>Zoran G Verona | Portfolio</title>-->
+
+        <SEO
+            title={pageTitle}
+            description={description}
+            canonical={canonicalURL}
+            meta={[
+               {
+                  name: 'keywords',
+                  content: 'portfolio website, web development, and more.',
+               },
+            ]}
+            extend={{
+               meta: [
+                  { name: "keywords", content: "zoran g verona, portfolio, website" },
+               ],
+               link: [
+                  { rel: "canonical", href: canonicalURL },
+               ],
+            }}
+            openGraph={{
+               basic: {
+                  url: canonicalURL,
+                  type: 'website',
+                  title: `Bistro Kod Kumova`,
+                  image: '',
+               },
+               image: {
+                  alt: '',
+               },
+            }}
+            twitter={{
+               card: 'summary_large_image',
+               title: pageTitle,
+               description: description,
+               image: '',
+            }}
+        />
+
 	</head>
 
 	<body>
