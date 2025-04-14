@@ -5,8 +5,9 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-    output: 'static',
-    trailingSlash: 'never',
+    site: 'https://zorang.netlify.app/',
+    // output: 'static',
+    // trailingSlash: 'never',
     
     integrations: [
        sitemap(),
