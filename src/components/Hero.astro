@@ -1,14 +1,15 @@
 ---
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/starwind/avatar';
+import ProfilePicture from '@/assets/images/profile-picture.jpg';
 ---
 
 <div class='hero my-20 text-center'>
     <Avatar class='border-pink-400'>
         <AvatarImage
-            src='https://i.pravatar.cc/500?u=a04258a2462d826712d'
+            image={ProfilePicture}
             alt='John Doe'
         />
-        <AvatarFallback>JD</AvatarFallback>
+        <AvatarFallback>ZGV</AvatarFallback>
     </Avatar>
 
     <h1
@@ -24,7 +25,7 @@ import { Avatar, AvatarImage, AvatarFallback } from '@/components/starwind/avata
 
     <p
         class='subtitle'
-        set:html='Based in Croatia, Europe, with 3+ years of development experience. I am a web developer who enjoys building sites that are both fun and functional.'
+        set:html='Based in Croatia, Europe, with 3+ years of development experience. I am a frontend web developer who enjoys building websites and web applications that are both fun and functional.'
     />
 </div>
 
