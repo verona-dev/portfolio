@@ -9,7 +9,7 @@ const {
    description,
 } = Astro.props;
 
-const pageTitle = `${title} | Zoran G Verona portfolio`
+const pageTitle = `Zoran G Verona - Frontend Developer | ${title}`
 ---
 
 <!doctype html>
@@ -26,22 +26,22 @@ const pageTitle = `${title} | Zoran G Verona portfolio`
             meta={[
                {
                   name: 'keywords',
-                  content: 'portfolio website, web development, and more.',
+                  content: 'portfolio, website, web development, frontend,',
                },
             ]}
             extend={{
                meta: [
-                  { name: "keywords", content: "zoran g verona, portfolio, website" },
+                  { name: 'keywords', content: 'zoran g verona, portfolio, website' },
                ],
                link: [
-                  { rel: "canonical", href: canonicalURL },
+                  { rel: 'canonical', href: canonicalURL },
                ],
             }}
             openGraph={{
                basic: {
                   url: canonicalURL,
                   type: 'website',
-                  title: `Bistro Kod Kumova`,
+                  title: pageTitle,
                   image: '',
                },
                image: {
