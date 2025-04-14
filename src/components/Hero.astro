@@ -1,19 +1,22 @@
 ---
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/starwind/tabs';
-import {Icon} from 'astro-icon/components';
+// import {Icon} from 'astro-icon/components';
 ---
 
-<!--<Icon slot='suffix' class='w-7 h-7 icon' name='' />-->
+<!--<Icon slot='suffix' class='w-7 h-7' name='logos:vue' />-->
 
-<Tabs defaultValue='astro' class='max-w-[400px]'>
+<Tabs
+    defaultValue='astro'
+    class='mx-auto max-w-2xl my-20'
+>
     <TabsList>
-        <TabsTrigger value='astro'>Astro</TabsTrigger>
-        <TabsTrigger value='next'>Next.js</TabsTrigger>
+        <TabsTrigger value='astro' class=''>Stack</TabsTrigger>
+        <TabsTrigger value='next'>Projects</TabsTrigger>
     </TabsList>
     <TabsContent value='astro'>
-        Build fast websites, faster with Astro's next-gen island architecture.
+        Stack goes here...
     </TabsContent>
     <TabsContent value='next'>
-        The React framework for production-grade applications that scale.
+        Projects go here...
     </TabsContent>
 </Tabs>

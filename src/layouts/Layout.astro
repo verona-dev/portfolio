@@ -16,61 +16,55 @@ const pageTitle = `Zoran G Verona - Frontend Developer | ${title}`
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<CommonMeta />
+<html lang='en' class='dark'>
+   <head>
+       <CommonMeta />
 
-        <!--<title>Zoran G Verona | Portfolio</title>-->
+       <!--<title>Zoran G Verona | Portfolio</title>-->
 
-        <SEO
-            title={pageTitle}
-            description={description}
-            canonical={canonicalURL}
-            meta={[
-               {
-                  name: 'keywords',
-                  content: 'portfolio, website, web development, frontend,',
-               },
-            ]}
-            extend={{
-               meta: [
-                  { name: 'keywords', content: 'zoran g verona, portfolio, website' },
-               ],
-               link: [
-                  { rel: 'canonical', href: canonicalURL },
-               ],
-            }}
-            openGraph={{
-               basic: {
-                  url: canonicalURL,
-                  type: 'website',
-                  title: pageTitle,
-                  image: '',
-               },
-               image: {
-                  alt: '',
-               },
-            }}
-            twitter={{
-               card: 'summary_large_image',
-               title: pageTitle,
-               description: description,
-               image: '',
-            }}
-        />
+       <SEO
+           title={pageTitle}
+           description={description}
+           canonical={canonicalURL}
+           meta={[
+              {
+                 name: 'keywords',
+                 content: 'portfolio, website, web development, frontend,',
+              },
+           ]}
+           extend={{
+              meta: [
+                 { name: 'keywords', content: 'zoran g verona, portfolio, website' },
+              ],
+              link: [
+                 { rel: 'canonical', href: canonicalURL },
+              ],
+           }}
+           openGraph={{
+              basic: {
+                 url: canonicalURL,
+                 type: 'website',
+                 title: pageTitle,
+                 image: '',
+              },
+              image: {
+                 alt: '',
+              },
+           }}
+           twitter={{
+              card: 'summary_large_image',
+              title: pageTitle,
+              description: description,
+              image: '',
+           }}
+       />
+       <title></title>
 
-	</head>
+   </head>
 
-	<body>
-		<slot />
-	</body>
+   <body>
+      <main class='mx-auto max-w-4xl relative'>
+          <slot />
+      </main>
+   </body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
