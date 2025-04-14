@@ -11,6 +11,10 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
     site: 'https://zorang.netlify.app',
     
+    devToolbar: {
+        enabled: false
+    },
+    
     // output: 'static',
     // trailingSlash: 'never',
     
