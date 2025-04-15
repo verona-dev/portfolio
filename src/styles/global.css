@@ -20,6 +20,10 @@ main {
     .page {
         @apply my-20;
     }
+    
+    .title {
+        @apply my-10 text-2xl font-bold leading-tight;
+    }
 }
 
 /* Desktop */
