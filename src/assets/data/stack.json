@@ -2,37 +2,37 @@
     "stack": [
         {
             "name": "Html",
-            "icon": "logos:html-5"
+            "icon": "skill-icons:html"
         },
         {
             "name": "CSS",
-            "icon": "logos:css-3"
+            "icon": "skill-icons:css"
         },
 
         {
             "name": "Javascript",
-            "icon": "logos:javascript"
+            "icon": "skill-icons:javascript"
         },
 
         {
             "name": "VueJS",
-            "icon": "logos:vue"
+            "icon": "skill-icons:vuejs-light"
         },
         {
             "name": "NuxtJS",
-            "icon": "logos:nuxt-icon"
+            "icon": "skill-icons:nuxtjs-light"
         },
         {
             "name": "Astro",
-            "icon": "logos:astro-icon"
+            "icon": "skill-icons:astro"
         },
         {
             "name": "TailwindCSS",
-            "icon": "logos:tailwindcss-icon"
+            "icon": "skill-icons:tailwindcss-light"
         },
         {
             "name": "Sass",
-            "icon": "logos:sass"
+            "icon": "skill-icons:sass"
         }
     ]
 }
