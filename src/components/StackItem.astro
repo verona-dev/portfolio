@@ -1,0 +1,25 @@
+---
+import {Icon} from 'astro-icon/components';
+const { name, icon } = Astro.props;
+---
+
+
+<div class='icon-container'>
+    <Icon
+        name={icon}
+        class='w-12 h-12'
+    />
+    <p>{ name }</p>
+</div>
+
+<style>
+    svg {
+        margin: 0 25px;
+    }
+
+    .icon-container {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+</style>
