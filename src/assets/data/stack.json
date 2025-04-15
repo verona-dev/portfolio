@@ -1,0 +1,16 @@
+{
+    "stack": [
+        {
+            "name": "Javascript",
+            "icon": "logos:javascript"
+        },
+        {
+            "name": "VueJS",
+            "icon": "logos:vue"
+        },
+        {
+            "name": "NuxtJS",
+            "icon": "logos:nuxt-icon"
+        }
+    ]
+}
