@@ -18,7 +18,7 @@ main {
 
 @layer base {
     .page {
-        @apply my-20;
+        @apply my-20 text-center max-w-2xl;
     }
     
     .title {

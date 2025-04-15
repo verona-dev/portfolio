@@ -1,5 +1,7 @@
 ---
+import data from '../assets/data/stack.json';
 import Layout from '../layouts/Layout.astro';
+import StackItem from '../components/StackItem.astro';
 ---
 
 <Layout
@@ -7,6 +9,23 @@ import Layout from '../layouts/Layout.astro';
     description='My tech stack and skills'
 >
     <section class='stack page'>
-        <h1>This is Stack page</h1>
+        <h1 class='title'>This is Stack page</h1>
+
+        <div class='flex justify-center flex-wrap'>
+           {
+              data?.stack?.map(item => (
+                  <StackItem
+                      name={item.name}
+                      icon={item.icon}
+                  />
+              ))
+           }
+        </div>
     </section>
 </Layout>
+
+<style>
+    .stack {
+        border: 1px solid #5b5959;
+    }
+</style>

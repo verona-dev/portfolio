@@ -1,9 +1,19 @@
 {
     "stack": [
         {
+            "name": "Html",
+            "icon": "logos:html-5"
+        },
+        {
+            "name": "CSS",
+            "icon": "logos:css-3"
+        },
+
+        {
             "name": "Javascript",
             "icon": "logos:javascript"
         },
+
         {
             "name": "VueJS",
             "icon": "logos:vue"
@@ -11,6 +21,18 @@
         {
             "name": "NuxtJS",
             "icon": "logos:nuxt-icon"
+        },
+        {
+            "name": "Astro",
+            "icon": "logos:astro-icon"
+        },
+        {
+            "name": "TailwindCSS",
+            "icon": "logos:tailwindcss-icon"
+        },
+        {
+            "name": "Sass",
+            "icon": "logos:sass"
         }
     ]
 }
