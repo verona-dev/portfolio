@@ -3,6 +3,7 @@ import "@/styles/global.css";
 import "@/styles/starwind.css";
 
 import CommonMeta from '../components/CommonMeta.astro';
+import Navigation from '../components/Navigation.astro';
 import Seo from '../components/Seo.astro';
 import Socials from '../components/Socials.astro';
 
@@ -25,9 +26,12 @@ title = `Zoran G Verona - Frontend Developer | ${title}`
    </head>
 
    <body>
+      <Navigation />
+
       <main class='mx-auto max-w-xl md:max-w-3xl relative'>
           <slot />
       </main>
-          <Socials />
+
+      <Socials />
    </body>
 </html>
