@@ -5,8 +5,15 @@ body {
     margin: 0;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 main {
     padding-left: 75px; /*  Header's width  */
+    flex: 1;
 }
 
 @layer base {
