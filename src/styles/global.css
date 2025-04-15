@@ -8,3 +8,9 @@ body {
 main {
     height: 80vh;
 }
+
+@layer base {
+    .page {
+        @apply my-20;
+    }
+}
