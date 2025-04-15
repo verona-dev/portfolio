@@ -3,7 +3,7 @@ import { Icon } from 'astro-icon/components';
 import { Tooltip, TooltipTrigger, TooltipContent } from '@/components/starwind/tooltip';
 ---
 
-<div class='socials max-w-xl mx-auto'>
+<div class='socials max-w-3xl mx-auto'>
     <Tooltip>
         <TooltipTrigger>
             <a href='https://github.com/verona-dev' target='_blank'>
@@ -52,8 +52,14 @@ import { Tooltip, TooltipTrigger, TooltipContent } from '@/components/starwind/t
 
 <style>
     .socials {
+        bottom: 50px;
         display: flex;
         justify-content: space-evenly;
+        left: 0;
+        margin-left: auto;
+        margin-right: auto;
+        position: fixed;
+        right: 0;
 
         svg {
             color: var(--color-pink-400);
