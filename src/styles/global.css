@@ -6,7 +6,7 @@ body {
 }
 
 main {
-    height: 80vh;
+    padding-left: 75px; /*  Header's width  */
 }
 
 @layer base {
@@ -14,3 +14,9 @@ main {
         @apply my-20;
     }
 }
+
+/* Desktop */
+@media (min-width: 1024px) {}
+
+/* Mobile */
+@media (max-width: 1023px) {}

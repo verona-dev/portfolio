@@ -16,24 +16,34 @@
 </header>
 
 <style>
-    header {
-        height: 100vh;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 75px;
-    }
-    
-    li {
-        letter-spacing: 0.5em;
-        padding: 40px 0px 0px 20px;
-        text-orientation: upright;
-        -webkit-writing-mode: vertical-rl;
-        -ms-writing-mode: tb-rl;
-        writing-mode: vertical-rl;
+    /* Desktop */
+    @media (min-width: 1024px) {
+        header {
+            height: 100vh;
+            left: 0;
+            position: fixed;
+            top: 0;
+            width: 75px;
+        }
+
+        li {
+            letter-spacing: 0.5em;
+            padding: 40px 0px 0px 20px;
+            text-orientation: upright;
+            -webkit-writing-mode: vertical-rl;
+            -ms-writing-mode: tb-rl;
+            writing-mode: vertical-rl;
+        }
+
+        a {
+            text-transform: uppercase;
+        }
     }
 
-    a {
-        text-transform: uppercase;
+    /* Mobile */
+    @media (max-width: 1023px) {
+        header {
+            display: none;
+        }
     }
 </style>
