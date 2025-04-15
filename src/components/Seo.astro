@@ -1,0 +1,43 @@
+---
+import {SEO} from 'astro-seo';
+const { title, description } = Astro.props;
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
+---
+
+
+<SEO
+    title={title}
+    description={description}
+    canonical={canonicalUrl}
+    meta={[
+       {
+          name: 'keywords',
+          content: 'portfolio, website, web development, frontend,',
+       },
+    ]}
+    extend={{
+       meta: [
+          { name: 'keywords', content: 'zoran g verona, portfolio, website' },
+       ],
+       link: [
+          { rel: 'canonical', href: canonicalUrl },
+       ],
+    }}
+    openGraph={{
+       basic: {
+          url: canonicalUrl,
+          type: 'website',
+          title: title,
+          image: '',
+       },
+       image: {
+          alt: '',
+       },
+    }}
+    twitter={{
+       card: 'summary_large_image',
+       title,
+       description,
+       image: '',
+    }}
+/>

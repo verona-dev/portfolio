@@ -2,65 +2,26 @@
 import "@/styles/global.css";
 import "@/styles/starwind.css";
 
-import { SEO } from 'astro-seo';
 import CommonMeta from '../components/CommonMeta.astro';
+import Seo from '../components/Seo.astro';
 import Socials from '../components/Socials.astro';
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
-
-const {
+let {
    title,
    description,
 } = Astro.props;
 
-const pageTitle = `Zoran G Verona - Frontend Developer | ${title}`
+title = `Zoran G Verona - Frontend Developer | ${title}`
 ---
 
 <!doctype html>
 <html lang='en' class='dark'>
    <head>
        <CommonMeta />
-
-       <!--<title>Zoran G Verona | Portfolio</title>-->
-
-       <SEO
-           title={pageTitle}
+       <Seo
+           title={title}
            description={description}
-           canonical={canonicalURL}
-           meta={[
-              {
-                 name: 'keywords',
-                 content: 'portfolio, website, web development, frontend,',
-              },
-           ]}
-           extend={{
-              meta: [
-                 { name: 'keywords', content: 'zoran g verona, portfolio, website' },
-              ],
-              link: [
-                 { rel: 'canonical', href: canonicalURL },
-              ],
-           }}
-           openGraph={{
-              basic: {
-                 url: canonicalURL,
-                 type: 'website',
-                 title: pageTitle,
-                 image: '',
-              },
-              image: {
-                 alt: '',
-              },
-           }}
-           twitter={{
-              card: 'summary_large_image',
-              title: pageTitle,
-              description: description,
-              image: '',
-           }}
        />
-       <title></title>
-
    </head>
 
    <body>
