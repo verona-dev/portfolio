@@ -27,67 +27,99 @@
         },
         {
             "name": "NuxtJS",
-            "icon": "skill-icons:nuxtjs-dark"
+            "icon": "skill-icons:nuxtjs-dark",
+            "description": "Nuxt is an open-source framework with an intuitive and extendable way to create type-safe, performant and production-grade full-stack web applications and websites with Vue.js.",
+            "url": "https://nuxt.com/"
         },
         {
             "name": "Astro",
-            "icon": "skill-icons:astro"
+            "icon": "skill-icons:astro",
+            "description": "Astro is the web framework for building content-driven websites like blogs, marketing, and e-commerce. Best-known for pioneering a new frontend architecture to reduce JavaScript overhead and complexity compared to other frameworks.",
+            "url": "https://astro.build/"
         },
         {
             "name": "TailwindCSS",
-            "icon": "skill-icons:tailwindcss-dark"
+            "icon": "skill-icons:tailwindcss-dark",
+            "description": "Tailwind CSS is a utility-first CSS framework for rapidly building modern websites without ever leaving your HTML.",
+            "url": "https://tailwindcss.com/"
         },
         {
             "name": "Sass",
-            "icon": "skill-icons:sass"
+            "icon": "skill-icons:sass",
+            "description": "Sass is a stylesheet language that’s compiled to CSS. It allows you to use variables, nested rules, mixins, functions, and more, all with a fully CSS-compatible syntax.",
+            "url": "https://sass-lang.com/"
         },
         {
             "name": "Git",
-            "icon": "skill-icons:git"
+            "icon": "skill-icons:git",
+            "description": "Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML.",
+            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
         },
         {
             "name": "Github",
-            "icon": "skill-icons:github-dark"
+            "icon": "skill-icons:github-dark",
+            "description": "Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML.",
+            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
         },
         {
             "name": "Linux",
-            "icon": "skill-icons:linux-dark"
+            "icon": "skill-icons:linux-dark",
+            "description": "Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML.",
+            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
         },
         {
             "name": "Arch",
-            "icon": "skill-icons:arch-dark"
+            "icon": "skill-icons:arch-dark",
+            "description": "Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML.",
+            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
         },
         {
             "name": "Figma",
-            "icon": "skill-icons:figma-dark"
+            "icon": "skill-icons:figma-dark",
+            "description": "Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML.",
+            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
         },
         {
             "name": "NPM",
-            "icon": "skill-icons:npm-dark"
+            "icon": "skill-icons:npm-dark",
+            "description": "Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML.",
+            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
         },
         {
             "name": "Obsidian",
-            "icon": "skill-icons:obsidian-dark"
+            "icon": "skill-icons:obsidian-dark",
+            "description": "Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML.",
+            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
         },
         {
             "name": "Pinia",
-            "icon": "skill-icons:pinia-dark"
+            "icon": "skill-icons:pinia-dark",
+            "description": "Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML.",
+            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
         },
         {
             "name": "Postman",
-            "icon": "skill-icons:postman"
+            "icon": "skill-icons:postman",
+            "description": "Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML.",
+            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
         },
         {
             "name": "Supabase",
-            "icon": "skill-icons:supabase-dark"
+            "icon": "skill-icons:supabase-dark",
+            "description": "Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML.",
+            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
         },
         {
             "name": "Vercel",
-            "icon": "skill-icons:vercel-dark"
+            "icon": "skill-icons:vercel-dark",
+            "description": "Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML.",
+            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
         },
         {
             "name": "Webstorm",
-            "icon": "skill-icons:webstorm-dark"
+            "icon": "skill-icons:webstorm-dark",
+            "description": "Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML.",
+            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
         }
     ]
 }
