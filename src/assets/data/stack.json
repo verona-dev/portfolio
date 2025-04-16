@@ -2,7 +2,8 @@
     "stack": [
         {
             "name": "Html",
-            "icon": "skill-icons:html"
+            "icon": "skill-icons:html",
+            "description": "HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content."
         },
         {
             "name": "CSS",
@@ -16,11 +17,11 @@
 
         {
             "name": "VueJS",
-            "icon": "skill-icons:vuejs-light"
+            "icon": "skill-icons:vuejs-dark"
         },
         {
             "name": "NuxtJS",
-            "icon": "skill-icons:nuxtjs-light"
+            "icon": "skill-icons:nuxtjs-dark"
         },
         {
             "name": "Astro",
@@ -28,11 +29,59 @@
         },
         {
             "name": "TailwindCSS",
-            "icon": "skill-icons:tailwindcss-light"
+            "icon": "skill-icons:tailwindcss-dark"
         },
         {
             "name": "Sass",
             "icon": "skill-icons:sass"
+        },
+        {
+            "name": "Git",
+            "icon": "skill-icons:git"
+        },
+        {
+            "name": "Github",
+            "icon": "skill-icons:github-dark"
+        },
+        {
+            "name": "Linux",
+            "icon": "skill-icons:linux-dark"
+        },
+        {
+            "name": "Arch",
+            "icon": "skill-icons:arch-dark"
+        },
+        {
+            "name": "Figma",
+            "icon": "skill-icons:figma-dark"
+        },
+        {
+            "name": "NPM",
+            "icon": "skill-icons:npm-dark"
+        },
+        {
+            "name": "Obsidian",
+            "icon": "skill-icons:obsidian-dark"
+        },
+        {
+            "name": "Pinia",
+            "icon": "skill-icons:pinia-dark"
+        },
+        {
+            "name": "Postman",
+            "icon": "skill-icons:postman"
+        },
+        {
+            "name": "Supabase",
+            "icon": "skill-icons:supabase-dark"
+        },
+        {
+            "name": "Vercel",
+            "icon": "skill-icons:vercel-dark"
+        },
+        {
+            "name": "Webstorm",
+            "icon": "skill-icons:webstorm-dark"
         }
     ]
 }
