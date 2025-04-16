@@ -62,18 +62,6 @@
             "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
         },
         {
-            "name": "Linux",
-            "icon": "skill-icons:linux-dark",
-            "description": "Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML.",
-            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
-        },
-        {
-            "name": "Arch",
-            "icon": "skill-icons:arch-dark",
-            "description": "Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML.",
-            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
-        },
-        {
             "name": "Figma",
             "icon": "skill-icons:figma-dark",
             "description": "Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML.",
@@ -82,12 +70,6 @@
         {
             "name": "NPM",
             "icon": "skill-icons:npm-dark",
-            "description": "Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML.",
-            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
-        },
-        {
-            "name": "Obsidian",
-            "icon": "skill-icons:obsidian-dark",
             "description": "Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML.",
             "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
         },
@@ -106,12 +88,6 @@
         {
             "name": "Supabase",
             "icon": "skill-icons:supabase-dark",
-            "description": "Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML.",
-            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
-        },
-        {
-            "name": "Vercel",
-            "icon": "skill-icons:vercel-dark",
             "description": "Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML.",
             "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
         },
