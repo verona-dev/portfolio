@@ -1,15 +1,26 @@
 ---
 import {Icon} from 'astro-icon/components';
-const { name, icon } = Astro.props;
+import { Tooltip, TooltipTrigger, TooltipContent } from '@/components/starwind/tooltip';
+const { name, icon, description, url } = Astro.props;
 ---
 
 
 <div class='icon-container'>
-    <Icon
-        name={icon}
-        class='w-12 h-12'
-    />
-    <p>{ name }</p>
+    <Tooltip>
+        <TooltipTrigger>
+            <div>
+                <Icon
+                    name={icon}
+                    class='w-12 h-12'
+                />
+                <p>{ name }</p>
+            </div>
+        </TooltipTrigger>
+
+        <TooltipContent>
+           {description}
+        </TooltipContent>
+    </Tooltip>
 </div>
 
 <style>
@@ -18,6 +29,10 @@ const { name, icon } = Astro.props;
         display: flex;
         flex-direction: column;
         margin: 15px;
+        
+        &:hover {
+            cursor: pointer;
+        }
 
         svg {
             margin: 0 25px;
