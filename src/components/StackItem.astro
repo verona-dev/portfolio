@@ -13,12 +13,27 @@ const { name, icon, description, url } = Astro.props;
                     name={icon}
                     class='w-12 h-12'
                 />
+
                 <p>{ name }</p>
             </div>
         </TooltipTrigger>
 
         <TooltipContent>
-           {description}
+           <div>
+               <a
+                   href={url}
+                   target='_blank'
+                   rel='noopener noreferrer'
+                   aria-label='Link to description'
+               >
+                   <Icon
+                       name='arcticons:easy-open-link'
+                       class='open-link-in-tab w-6 h-6'
+                   />
+               </a>
+
+               <p>{description}</p>
+           </div>
         </TooltipContent>
     </Tooltip>
 </div>
@@ -28,10 +43,14 @@ const { name, icon, description, url } = Astro.props;
         align-items: center;
         display: flex;
         flex-direction: column;
-        margin: 15px;
+        margin: 20px;
         
         &:hover {
             cursor: pointer;
+        }
+
+        a {
+            display: inline-block;
         }
 
         svg {
@@ -40,6 +59,28 @@ const { name, icon, description, url } = Astro.props;
 
         p {
             margin: 5px 0;
+        }
+
+        .starwind-tooltip-content {
+            background-color: var(--color-zinc-900);
+            border-radius: 8px;
+            padding: 35px 30px 50px;
+            white-space: normal;
+            width: 500px;
+
+            &:hover {
+                cursor: auto;
+            }
+        }
+
+        .open-link-in-tab {
+            position: absolute;
+            right: 10px;
+            top: 25px;
+
+            &:hover {
+                color: var(--color-pink-400);
+            }
         }
     }
 </style>

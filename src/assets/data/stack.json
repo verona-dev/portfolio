@@ -8,80 +8,94 @@
         },
         {
             "name": "CSS",
-            "icon": "skill-icons:css"
+            "icon": "skill-icons:css",
+            "description": "Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML.",
+            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
         },
 
         {
             "name": "Javascript",
-            "icon": "skill-icons:javascript"
+            "icon": "skill-icons:javascript",
+            "description": "JavaScript is a lightweight interpreted programming language with first-class functions. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g., functional programming) styles.",
+            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
         },
         {
-            "name": "VueJS",
-            "icon": "skill-icons:vuejs-dark"
+            "name": "Vue.js",
+            "icon": "skill-icons:vuejs-dark",
+            "description": "Vue (pronounced /vjuː/, like view) is a JavaScript framework for building user interfaces. It builds on top of standard HTML, CSS, and JavaScript and provides a declarative, component-based programming model that helps you efficiently develop user interfaces of any complexity.",
+            "url": "https://vuejs.org/"
         },
         {
             "name": "NuxtJS",
-            "icon": "skill-icons:nuxtjs-dark"
+            "icon": "skill-icons:nuxtjs-dark",
+            "description": "Nuxt is an open-source framework with an intuitive and extendable way to create type-safe, performant and production-grade full-stack web applications and websites with Vue.js.",
+            "url": "https://nuxt.com/"
         },
         {
             "name": "Astro",
-            "icon": "skill-icons:astro"
+            "icon": "skill-icons:astro",
+            "description": "Astro is the web framework for building content-driven websites like blogs, marketing, and e-commerce. Best-known for pioneering a new frontend architecture to reduce JavaScript overhead and complexity compared to other frameworks.",
+            "url": "https://astro.build/"
         },
         {
             "name": "TailwindCSS",
-            "icon": "skill-icons:tailwindcss-dark"
+            "icon": "skill-icons:tailwindcss-dark",
+            "description": "Tailwind CSS is a utility-first CSS framework for rapidly building modern websites without ever leaving your HTML.",
+            "url": "https://tailwindcss.com/"
         },
         {
             "name": "Sass",
-            "icon": "skill-icons:sass"
+            "icon": "skill-icons:sass",
+            "description": "Sass is a stylesheet language that’s compiled to CSS. It allows you to use variables, nested rules, mixins, functions, and more, all with a fully CSS-compatible syntax.",
+            "url": "https://sass-lang.com/"
         },
         {
             "name": "Git",
-            "icon": "skill-icons:git"
+            "icon": "skill-icons:git",
+            "description": "Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.",
+            "url": "https://git-scm.com/"
         },
         {
             "name": "Github",
-            "icon": "skill-icons:github-dark"
-        },
-        {
-            "name": "Linux",
-            "icon": "skill-icons:linux-dark"
-        },
-        {
-            "name": "Arch",
-            "icon": "skill-icons:arch-dark"
+            "icon": "skill-icons:github-dark",
+            "description": "GitHub is a cloud-based platform where you can store, share, and work together with others to write code.",
+            "url": "https://github.com/"
         },
         {
             "name": "Figma",
-            "icon": "skill-icons:figma-dark"
+            "icon": "skill-icons:figma-dark",
+            "description": "Figma is a powerful, collaborative design tool for teams.",
+            "url": "https://www.figma.com/"
         },
         {
             "name": "NPM",
-            "icon": "skill-icons:npm-dark"
-        },
-        {
-            "name": "Obsidian",
-            "icon": "skill-icons:obsidian-dark"
+            "icon": "skill-icons:npm-dark",
+            "description": "npm is the world's largest software registry. The registry is a large public database of JavaScript software and the meta-information surrounding it.",
+            "url": "https://www.npmjs.com/"
         },
         {
             "name": "Pinia",
-            "icon": "skill-icons:pinia-dark"
+            "icon": "skill-icons:pinia-dark",
+            "description": "Pinia is a store library for Vue.js, it allows you to share a state across components/pages.",
+            "url": "https://pinia.vuejs.org/"
         },
         {
             "name": "Postman",
-            "icon": "skill-icons:postman"
+            "icon": "skill-icons:postman",
+            "description": "Postman is an all-in-one API platform for building and working with APIs. It takes the pain out of every stage of the API lifecycle—from designing and testing to delivery and monitoring.",
+            "url": "https://www.postman.com/"
         },
         {
             "name": "Supabase",
-            "icon": "skill-icons:supabase-dark"
-        },
-        {
-            "name": "Vercel",
-            "icon": "skill-icons:vercel-dark"
+            "icon": "skill-icons:supabase-dark",
+            "description": "Supabase is a serverless backend service provider and an open-source Firebase alternative. It allows you to build highly optimized and performant applications using Postgres backend with little configuration.",
+            "url": "https://supabase.com/"
         },
         {
             "name": "Webstorm",
-            "icon": "skill-icons:webstorm-dark"
+            "icon": "skill-icons:webstorm-dark",
+            "description": "WebStorm is a cutting-edge IDE that supports JavaScript, HTML, and CSS, including modern innovations like TypeScript, React, Angular, Vue.js, and Node.js.",
+            "url": "https://www.jetbrains.com/webstorm/"
         }
     ]
 }

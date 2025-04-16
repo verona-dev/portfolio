@@ -24,7 +24,8 @@ export default defineConfig({
                 arcticons: [
                    'github',
                    'linkedin',
-                   'yahoo-mail'
+                   'yahoo-mail',
+                   'easy-open-link',
                 ],
             }
         }),
