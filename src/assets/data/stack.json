@@ -76,26 +76,26 @@
         {
             "name": "Pinia",
             "icon": "skill-icons:pinia-dark",
-            "description": "Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML.",
-            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+            "description": "Pinia is a store library for Vue.js, it allows you to share a state across components/pages.",
+            "url": "https://pinia.vuejs.org/"
         },
         {
             "name": "Postman",
             "icon": "skill-icons:postman",
-            "description": "Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML.",
-            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+            "description": "Postman is an all-in-one API platform for building and working with APIs. It takes the pain out of every stage of the API lifecycle—from designing and testing to delivery and monitoring.",
+            "url": "https://www.postman.com/"
         },
         {
             "name": "Supabase",
             "icon": "skill-icons:supabase-dark",
-            "description": "Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML.",
-            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+            "description": "Supabase is a serverless backend service provider and an open-source Firebase alternative. It allows you to build highly optimized and performant applications using Postgres backend with little configuration.",
+            "url": "https://supabase.com/"
         },
         {
             "name": "Webstorm",
             "icon": "skill-icons:webstorm-dark",
-            "description": "Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML.",
-            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+            "description": "WebStorm is a cutting-edge IDE that supports JavaScript, HTML, and CSS, including modern innovations like TypeScript, React, Angular, Vue.js, and Node.js.",
+            "url": "https://www.jetbrains.com/webstorm/"
         }
     ]
 }
