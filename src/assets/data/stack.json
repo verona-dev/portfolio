@@ -52,26 +52,26 @@
         {
             "name": "Git",
             "icon": "skill-icons:git",
-            "description": "Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML.",
-            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+            "description": "Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.",
+            "url": "https://git-scm.com/"
         },
         {
             "name": "Github",
             "icon": "skill-icons:github-dark",
-            "description": "Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML.",
-            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+            "description": "GitHub is a cloud-based platform where you can store, share, and work together with others to write code.",
+            "url": "https://github.com/"
         },
         {
             "name": "Figma",
             "icon": "skill-icons:figma-dark",
-            "description": "Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML.",
-            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+            "description": "Figma is a powerful, collaborative design tool for teams.",
+            "url": "https://www.figma.com/"
         },
         {
             "name": "NPM",
             "icon": "skill-icons:npm-dark",
-            "description": "Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML.",
-            "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+            "description": "npm is the world's largest software registry. The registry is a large public database of JavaScript software and the meta-information surrounding it.",
+            "url": "https://www.npmjs.com/"
         },
         {
             "name": "Pinia",
