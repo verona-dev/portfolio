@@ -1,41 +1,64 @@
 ---
 import { Icon } from 'astro-icon/components';
+import { Tooltip, TooltipTrigger, TooltipContent } from '@/components/starwind/tooltip';
 ---
 
-<div class='socials max-w-xl mx-auto'>
-    <a href='https://github.com/verona-dev' target='_blank'>
-        <Icon
-            name='arcticons:github'
-            class='w-12 h-12'
-        />
-    </a>
+<div class='socials max-w-2xl mx-auto'>
+    <Tooltip>
+        <TooltipTrigger>
+            <a href='https://github.com/verona-dev' target='_blank'>
+                <Icon
+                    name='arcticons:github'
+                    class='w-10 h-10'
+                />
+            </a>
+        </TooltipTrigger>
 
-    <a href='https://linkedin.com/in/zoran-g-verona-489650328' target='_blank'>
-        <Icon
-            name='arcticons:linkedin'
-            class='w-12 h-12'
-        />
-    </a>
+        <TooltipContent>
+            Github profile
+        </TooltipContent>
+    </Tooltip>
 
-    <a href='mailto:test@gmail.com' target='_blank'>
-        <Icon
-            name='arcticons:yahoo-mail'
-            class='w-12 h-12'
-        />
-    </a>
+    <Tooltip>
+        <TooltipTrigger>
+            <a href='https://linkedin.com/in/zoran-g-verona-489650328' target='_blank'>
+                <Icon
+                    name='arcticons:linkedin'
+                    class='w-10 h-10'
+                />
+            </a>
+        </TooltipTrigger>
+
+        <TooltipContent>
+            Linkedin profile
+        </TooltipContent>
+    </Tooltip>
+
+    <Tooltip>
+        <TooltipTrigger>
+            <a href='mailto:veronadev@tuta.io' target='_blank'>
+                <Icon
+                    name='arcticons:yahoo-mail'
+                    class='w-10 h-10'
+                />
+            </a>
+        </TooltipTrigger>
+
+        <TooltipContent>
+            Send email
+        </TooltipContent>
+    </Tooltip>
 </div>
 
 <style>
     .socials {
         display: flex;
         justify-content: space-evenly;
+        padding: 75px;
+        width: 100%;
 
-        svg {
+        svg:hover {
             color: var(--color-pink-400);
-
-            &:hover {
-                color: var(--color-pink-600);
-            }
         }
     }
 </style>

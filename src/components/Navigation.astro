@@ -1,0 +1,55 @@
+
+<header>
+    <nav>
+        <ul>
+            <li>
+                <a href='/'>Home</a>
+            </li>
+            <li>
+                <a href='/stack'>Stack</a>
+            </li>
+            <li>
+                <a href='/projects'>Projects</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<style>
+    /* Desktop */
+    @media (min-width: 765px) {
+        header {
+            color: var(--color-zinc-50);
+            font-weight: 200;
+            height: 100vh;
+            left: 0;
+            position: fixed;
+            top: 0;
+            width: 75px;
+        }
+
+        li {
+            letter-spacing: 0.5em;
+            padding: 40px 0px 0px 20px;
+            text-orientation: upright;
+            -webkit-writing-mode: vertical-rl;
+            -ms-writing-mode: tb-rl;
+            writing-mode: vertical-rl;
+        }
+
+        a {
+            text-transform: uppercase;
+
+            &:hover {
+                color: var(--color-teal-400);
+            }
+        }
+    }
+
+    /* Mobile */
+    @media (max-width: 764px) {
+        header {
+            display: none;
+        }
+    }
+</style>

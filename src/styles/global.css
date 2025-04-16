@@ -5,6 +5,29 @@ body {
     margin: 0;
 }
 
-main {
-    height: 80vh;
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
+
+main {
+    padding-left: 75px; /*  Header's width  */
+    flex: 1;
+}
+
+@layer base {
+    .page {
+        @apply my-20 text-center max-w-2xl;
+    }
+    
+    .title {
+        @apply my-10 text-2xl font-bold leading-tight;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {}
+
+/* Mobile */
+@media (max-width: 1023px) {}
