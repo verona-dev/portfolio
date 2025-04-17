@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@astrojs/sitemap": "3.3.0",
+    "@fontsource/roboto-mono": "5.2.5",
     "@iconify-json/arcticons": "1.2.22",
     "@iconify-json/logos": "1.2.4",
     "@iconify-json/skill-icons": "1.2.0",
