@@ -16,13 +16,13 @@
         {
             "name": "Javascript",
             "icon": "skill-icons:javascript",
-            "description": "JavaScript is a lightweight interpreted programming language with first-class functions. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g., functional programming) styles.",
+            "description": "JavaScript is a lightweight interpreted programming language with first-class functions. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative styles.",
             "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
         },
         {
             "name": "Vue.js",
             "icon": "skill-icons:vuejs-dark",
-            "description": "Vue (pronounced /vjuː/, like view) is a JavaScript framework for building user interfaces. It builds on top of standard HTML, CSS, and JavaScript and provides a declarative, component-based programming model that helps you efficiently develop user interfaces of any complexity.",
+            "description": "Vue is a JavaScript framework for building user interfaces. It builds on top of standard HTML, CSS, and JavaScript and provides a declarative, component-based programming model that helps you efficiently develop user interfaces of any complexity.",
             "url": "https://vuejs.org/"
         },
         {
