@@ -25,10 +25,9 @@ export default defineConfig({
                    'github',
                    'linkedin',
                    'yahoo-mail',
-                   'easy-open-link',
                 ],
                 iconoir: [
-                   'open-new-window'
+                   'open-new-window',
                 ],
             }
         }),
