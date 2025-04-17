@@ -22,11 +22,11 @@ main {
 
 @layer base {
     .page {
-        @apply my-20 text-center max-w-2xl;
+        @apply mt-20 p-10 text-center max-w-2xl;
     }
     
     .title {
-        @apply my-10 text-2xl font-bold leading-tight;
+        @apply my-10 text-2xl;
     }
 }
 
