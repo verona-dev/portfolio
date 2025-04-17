@@ -1,15 +1,18 @@
+---
+import Logo from '@/components/Logo.astro';
+---
 
 <header>
     <nav>
         <ul>
-            <li>
-                <a href='/'>Home</a>
+            <li class='logo-container'>
+                <a href='/' aria-label='Home' ><Logo /></a>
             </li>
             <li>
-                <a href='/stack'>Stack</a>
+                <a href='/stack' aria-label='Stack'>Stack</a>
             </li>
             <li>
-                <a href='/projects'>Projects</a>
+                <a href='/projects' aria-label='Projects'>Projects</a>
             </li>
         </ul>
     </nav>
@@ -28,9 +31,21 @@
             width: 75px;
         }
 
-        li {
+        nav {
+            display: flex;
+            justify-content: center;
+        }
+
+        .logo-container {
+            margin: 20px 0;
+            position: relative;
+            right: 3px;
+            top: 0;
+        }
+
+        li:not(:first-child) {
+            margin: 30px 0;
             letter-spacing: 0.25em;
-            padding: 40px 0px 0px 20px;
             text-orientation: upright;
             -webkit-writing-mode: vertical-rl;
             -ms-writing-mode: tb-rl;
