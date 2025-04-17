@@ -27,6 +27,9 @@ export default defineConfig({
                    'yahoo-mail',
                    'easy-open-link',
                 ],
+                iconoir: [
+                   'open-new-window'
+                ],
             }
         }),
         sitemap(),
