@@ -1,8 +1,9 @@
 ---
-import { Image } from 'astro:assets';
+import data from '../assets/data/projects.json';
 import Layout from '../layouts/Layout.astro';
-import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogFooter, DialogTitle, DialogDescription, DialogClose } from '@/components/starwind/dialog';
-import { Button } from '@/components/starwind/button';
+import ProjectsItem from '../components/ProjectsItem.astro';
+const images = import.meta.glob('../assets/images/*.{png,jpg,jpeg,svg}');
+console.log(images)
 ---
 
 <Layout
@@ -13,31 +14,28 @@ import { Button } from '@/components/starwind/button';
         <h1 class='title'>These are my projects</h1>
 
         <div class='image-container'>
-            <Dialog>
-                <DialogTrigger asChild>
-                    <Button>Open Dialog</Button>
-                </DialogTrigger>
-                <DialogContent>
-                    <DialogHeader>
-                        <DialogTitle>Example Dialog</DialogTitle>
-                        <DialogDescription>
-                            This is a simple dialog example that demonstrates the basic functionality.
-                        </DialogDescription>
-                    </DialogHeader>
-                    <Image src="https://images.unsplash.com/photo-1494548162494-384bba4ab999?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bmF0dXJlfGVufDB8MnwwfHx8MA%3D%3D" alt="A bird." width="250" height="250" />
-                    <DialogFooter>
-                        <DialogClose asChild>
-                            <Button variant="outline">Cancel</Button>
-                        </DialogClose>
-                        <Button>Save Changes</Button>
-                    </DialogFooter>
-                </DialogContent>
-            </Dialog>
+           {
+              data.projects.map(project => (
+                 <ProjectsItem
+                     key={project.id}
+                     thumbnail={project.thumbnail}
+                     title={project.title}
+                     description={project.description}
+                     url={project.url}
+                     tech={project.tech}
+                     image={project.image}
+                 />
+              ))
+           }
+        </div>
 
+        <!--
+        <div class='image-container'>
             <Image src="https://images.unsplash.com/photo-1707525643387-301c31a1f88d?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG5hdHVyZXxlbnwwfDJ8MHx8fDA%3D" alt="A bird." width="250" height="250" />
             <Image src="https://plus.unsplash.com/premium_photo-1672146845456-9356a9daae9b?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bmF0dXJlfGVufDB8MnwwfHx8MA%3D%3D" alt="A bird." width="250" height="250" />
             <Image src="https://plus.unsplash.com/premium_photo-1672146835758-8232f3df9fb7?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fG5hdHVyZXxlbnwwfDJ8MHx8fDA%3D" alt="A bird." width="250" height="250" />
         </div>
+        -->
     </section>
 </Layout>
 
@@ -50,13 +48,18 @@ import { Button } from '@/components/starwind/button';
         .image-container {
             align-items: center;
             align-content: center;
-            /*background-color: #fff;*/
             display: flex;
             flex-wrap: wrap;
             justify-content: space-evenly;
 
             img {
+                border: 1px solid transparent;
                 margin: 20px;
+                
+                &:hover {
+                    border: 1px solid var(--color-pink-400);
+                    cursor: pointer;
+                }
             }
         }
     }

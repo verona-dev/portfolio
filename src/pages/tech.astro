@@ -15,6 +15,7 @@ import TechItem from '../components/TechItem.astro';
            {
               data?.tech?.map(item => (
                   <TechItem
+                      key={item.name}
                       name={item.name}
                       icon={item.icon}
                       description={item.description}
