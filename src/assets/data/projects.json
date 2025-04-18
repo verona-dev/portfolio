@@ -7,7 +7,7 @@
             "description": "GRHeute is an independent online news and entertainment platform focused on the Swiss canton of Graubünden. It provides daily updated content Monday to Friday starting at 6 am, covering news, culture, sports, analysis, and commentary relevant to the region. The site emphasizes media diversity and community engagement, offering selected news, interviews, and background reports that highlight local culture, economy, tourism, and sports.",
             "url": "https://www.grheute.ch/",
             "tech": "Vue.js, NuxtJS, Wordpress, Sass, Axios, Vuex, Vuetify, TailwindCSS",
-            "image": "../assets/images/thumbnail-grheute-2.png"
+            "image": "images/grheute-2-thumbnail.png"
         }
     ]
 }
