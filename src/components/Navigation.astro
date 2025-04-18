@@ -1,18 +1,42 @@
 ---
+const currentPath = Astro.url.pathname;
 import Logo from '@/components/Logo.astro';
+const isActive = path => currentPath === path ? 'active' : '';
 ---
 
 <header>
     <nav>
         <ul>
             <li class='logo-container'>
-                <a href='/' aria-label='Home' ><Logo /></a>
+                <a
+                    href='/'
+                    class={isActive('/')}
+                    aria-label='Home'
+                >
+                    <Logo />
+                </a>
             </li>
             <li>
-                <a href='/stack' aria-label='Stack'>Stack</a>
+                <a
+                    href='/tech'
+                    class={isActive('/tech')}
+                    aria-label='Tech'
+                >
+                    <span>
+                        Tech
+                    </span>
+                </a>
             </li>
             <li>
-                <a href='/projects' aria-label='Projects'>Projects</a>
+                <a
+                    href='/projects'
+                    class={isActive('/projects')}
+                    aria-label='Projects'
+                >
+                    <span>
+                        Projects
+                    </span>
+                </a>
             </li>
         </ul>
     </nav>
@@ -44,8 +68,8 @@ import Logo from '@/components/Logo.astro';
         }
 
         li:not(:first-child) {
-            margin: 30px 0;
-            letter-spacing: 0.25em;
+            margin: 40px 0;
+            letter-spacing: 0.35em;
             text-orientation: upright;
             -webkit-writing-mode: vertical-rl;
             -ms-writing-mode: tb-rl;
@@ -55,8 +79,14 @@ import Logo from '@/components/Logo.astro';
         a {
             text-transform: uppercase;
 
+            /*
             &:hover {
-                color: var(--color-teal-400);
+                color: var(--color-pink-300);
+            }
+            */
+
+            &.active {
+                color: var(--color-pink-400);
             }
         }
     }

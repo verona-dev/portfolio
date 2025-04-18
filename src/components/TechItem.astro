@@ -1,7 +1,12 @@
 ---
 import {Icon} from 'astro-icon/components';
 import { Tooltip, TooltipTrigger, TooltipContent } from '@/components/starwind/tooltip';
-const { name, icon, description, url } = Astro.props;
+const {
+   name,
+   icon,
+   description,
+   url,
+} = Astro.props;
 ---
 
 
@@ -20,6 +25,8 @@ const { name, icon, description, url } = Astro.props;
 
         <TooltipContent>
            <div>
+               <p>{description}</p>
+
                <a
                    href={url}
                    target='_blank'
@@ -27,12 +34,10 @@ const { name, icon, description, url } = Astro.props;
                    aria-label='Link to description'
                >
                    <Icon
-                       name='arcticons:easy-open-link'
+                       name='iconoir:open-new-window'
                        class='open-link-in-tab w-6 h-6'
                    />
                </a>
-
-               <p>{description}</p>
            </div>
         </TooltipContent>
     </Tooltip>
@@ -64,7 +69,7 @@ const { name, icon, description, url } = Astro.props;
         .starwind-tooltip-content {
             background-color: var(--color-zinc-900);
             border-radius: 8px;
-            padding: 35px 30px 50px;
+            padding: 35px;
             white-space: normal;
             width: 500px;
 
@@ -74,9 +79,8 @@ const { name, icon, description, url } = Astro.props;
         }
 
         .open-link-in-tab {
-            position: absolute;
-            right: 10px;
-            top: 25px;
+            position: relative;
+            top: 10px;
 
             &:hover {
                 color: var(--color-pink-400);

@@ -1,20 +1,20 @@
 ---
-import data from '../assets/data/stack.json';
+import data from '../assets/data/tech.json';
 import Layout from '../layouts/Layout.astro';
-import StackItem from '../components/StackItem.astro';
+import TechItem from '../components/TechItem.astro';
 ---
 
 <Layout
     title='Tech stack'
     description='My tech stack and skills'
 >
-    <section class='stack page'>
-        <h1 class='title'>My Stack and the tools I use</h1>
+    <section class='tech page'>
+        <h1 class='title mb-16'>My tech stack and the tools I use</h1>
 
         <div class='flex justify-center flex-wrap'>
            {
-              data?.stack?.map(item => (
-                  <StackItem
+              data?.tech?.map(item => (
+                  <TechItem
                       name={item.name}
                       icon={item.icon}
                       description={item.description}
@@ -27,8 +27,8 @@ import StackItem from '../components/StackItem.astro';
 </Layout>
 
 <style>
-    .stack {
-        border: 1px solid #5b5959;
-        padding: 40px;
+    .tech {
+        border: 1px solid var(--color-pink-400);
+        border-radius: 8px;
     }
 </style>
