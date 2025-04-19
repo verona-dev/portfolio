@@ -1,8 +1,13 @@
 @import 'tailwindcss';
+@plugin "daisyui";
 
 html,
 body {
     margin: 0;
+}
+
+html {
+    scrollbar-gutter: auto !important;
 }
 
 body {
