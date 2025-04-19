@@ -1,39 +1,53 @@
 @import 'tailwindcss';
-@plugin "daisyui";
-
-html,
-body {
-    margin: 0;
-}
-
-html {
-    scrollbar-gutter: auto !important;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    font-family: 'Roboto Mono', monospace;
-    min-height: 100vh;
-}
-
-main {
-    flex: 1;
-    
-    @media (min-width: 1024px) {
-        padding-left: 75px; /*  Header's width  */
-    }
+@plugin "daisyui" {
+    /* Fix for modal bug shifting layout */
+    exclude: rootscrollgutter;
 }
 
 @layer base {
-    .page {
-        @apply mt-20 p-10 text-center max-w-2xl;
+    html,
+    body {
+        margin: 0;
     }
     
-    .title {
-        @apply my-10 text-2xl;
+    body {
+        display: flex;
+        flex-direction: column;
+        font-family: 'Roboto Mono', monospace;
+        min-height: 100vh;
+    }
+    
+    main {
+        @apply flex-1 mx-auto relative text-center max-w-2xl lg:max-w-4xl;
+        
+        @media (min-width: 1024px) {
+            padding-left: 75px; /*  Header's width  */
+        }
+    }
+    
+    .homepage {
+        @apply mt-10 p-10;
+    }
+    
+    .page {
+        @apply mt-20 p-10 lg:max-w-3xl;
     }
 }
+
+@layer components {
+    h1 {
+        @apply text-4xl md:text-7xl my-8;
+    }
+    
+    h2 {
+        @apply text-xl md:text-3xl my-6 text-pink-400 tracking-widest uppercase;
+    }
+    
+    h3 {
+        @apply text-xl md:text-2xl my-10;
+    }
+}
+
 
 /* Desktop */
 @media (min-width: 1024px) {}
