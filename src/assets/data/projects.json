@@ -2,12 +2,12 @@
     "projects": [
         {
             "id": 1,
-            "thumbnail": "https://images.unsplash.com/photo-1494548162494-384bba4ab999?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bmF0dXJlfGVufDB8MnwwfHx8MA%3D%3D",
+            "thumbnail": "https://res.cloudinary.com/dgcyv1ehi/image/upload/v1745184083/thumbnail-grheute-2_q06gcm.png",
             "title": "GRHeute",
             "description": "GRHeute is an independent online news and entertainment platform focused on the Swiss canton of Graubünden. It provides daily updated content Monday to Friday starting at 6 am, covering news, culture, sports, analysis, and commentary relevant to the region. The site emphasizes media diversity and community engagement, offering selected news, interviews, and background reports that highlight local culture, economy, tourism, and sports.",
             "url": "https://www.grheute.ch/",
             "tech": "Vue.js, NuxtJS, Wordpress, Sass, Axios, Vuex, Vuetify, TailwindCSS",
-            "image": "images/grheute-2-thumbnail.png"
+            "image": "../assets/images/grheute-2-thumbnail.png"
         }
     ]
 }

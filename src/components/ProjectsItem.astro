@@ -1,9 +1,9 @@
 ---
 import { Image } from 'astro:assets';
-import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogFooter, DialogTitle, DialogDescription, DialogClose } from '@/components/starwind/dialog';
 import { Button } from '@/components/starwind/button';
 
 const {
+   id,
    thumbnail,
    title,
    description,
@@ -15,34 +15,40 @@ const {
 ---
 
 <div class='projects-item'>
-    <Dialog>
-        <DialogTrigger asChild>
-            <Image src={thumbnail} alt="A bird." width="250" height="250" />
-        </DialogTrigger>
-        <DialogContent style={{ width: '800px', maxWidth: 'none' }}>
-            <DialogHeader>
-                <!--<Image src={image} alt="A bird." width="250" height="250" />-->
-                <DialogTitle>{ title }</DialogTitle>
-                <DialogDescription class='my-4'>Technologies: { tech }</DialogDescription>
-                <DialogDescription class='my-4'>{ description }</DialogDescription>
-            </DialogHeader>
+    <!--  Modal Trigger  -->
+    <Image
+        onclick={`my_modal_${id}.showModal()`}
+        src={thumbnail}
+        alt='Project image'
+        width='250'
+        height='250'
+    />
 
-            <DialogClose asChild>
-                <Button
-                    href={url}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    aria-label={`${title} website`}
-                    class='my-4'
-                >
-                    View Project
-                </Button>
-            </DialogClose>
-        </DialogContent>
-    </Dialog>
+    <dialog id={`my_modal_${id}`} class='modal'>
+        <div class='modal-box'>
+            <!--  Modal Header  -->
+            <h3 class='text-lg font-bold'>{ title }</h3>
+
+            <!--  Modal Body  -->
+            <p class='py-4'>{ description }</p>
+
+            <Button
+                href={url}
+                target='_blank'
+                rel='noopener noreferrer'
+                aria-label={`${title} website`}
+                class='my-4'
+            >
+                View Project
+            </Button>
+        </div>
+
+        <form method='dialog' class='modal-backdrop'>
+            <button>close</button>
+        </form>
+    </dialog>
 </div>
 
 <style>
-    .projects-item {
-    }
+    .projects-item {}
 </style>
