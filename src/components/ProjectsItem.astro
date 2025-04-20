@@ -25,22 +25,39 @@ const {
     />
 
     <dialog id={`my_modal_${id}`} class='modal'>
-        <div class='modal-box'>
-            <!--  Modal Header  -->
-            <h3 class='text-lg font-bold'>{ title }</h3>
+        <div class='modal-box w-11/12 max-w-3xl'>
+            <form method='dialog'>
+                <button class='btn btn-lg btn-circle btn-ghost absolute right-2 top-2 z-100'>✕</button>
+            </form>
 
-            <!--  Modal Body  -->
-            <p class='py-4'>{ description }</p>
+            <div class='card p-10 mx-auto bg-base-100 shadow-sm'>
+                <figure>
+                    <Image
+                        src={thumbnail}
+                        alt='Project image'
+                        width='300'
+                        height='250'
+                    />
+                </figure>
 
+                <div class='card-body'>
+                    <h2 class='card-title'>
+                       { title }
+                        <div class='badge badge-secondary'>Vue.js</div>
+                    </h2>
+                    <p>{ description }</p>
+                </div>
             <Button
                 href={url}
                 target='_blank'
                 rel='noopener noreferrer'
                 aria-label={`${title} website`}
-                class='my-4'
+                class=''
             >
                 View Project
             </Button>
+            </div>
+
         </div>
 
         <form method='dialog' class='modal-backdrop'>

@@ -1,5 +1,5 @@
 @import 'tailwindcss';
-@plugin "daisyui" {
+@plugin 'daisyui' {
     /* Fix for modal bug shifting layout */
     exclude: rootscrollgutter;
 }
@@ -18,7 +18,7 @@
     }
     
     main {
-        @apply flex-1 mx-auto relative text-center max-w-2xl lg:max-w-4xl;
+        @apply flex-1 mx-auto relative max-w-2xl lg:max-w-4xl;
         
         @media (min-width: 1024px) {
             padding-left: 75px; /*  Header's width  */
