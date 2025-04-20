@@ -50,10 +50,10 @@
             "url": "https://sass-lang.com/"
         },
         {
-            "name": "Git",
-            "icon": "skill-icons:git",
-            "description": "Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.",
-            "url": "https://git-scm.com/"
+            "name": "Wordpress",
+            "icon": "skill-icons:wordpress",
+            "description": "WordPress (WP, or WordPress.org) is a web content management system. Written in the PHP programming language and paired with a MySQL or MariaDB database.",
+            "url": "https://wordpress.org/"
         },
         {
             "name": "Github",

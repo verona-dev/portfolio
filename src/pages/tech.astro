@@ -8,13 +8,14 @@ import TechItem from '../components/TechItem.astro';
     title='Tech stack'
     description='My tech stack and skills'
 >
-    <section class='tech page'>
-        <h1 class='title mb-16'>My tech stack and the tools I use</h1>
+    <section class='tech page text-center'>
+        <h3 class=''>My tech stack and the tools I use</h3>
 
         <div class='flex justify-center flex-wrap'>
            {
               data?.tech?.map(item => (
                   <TechItem
+                      key={item.name}
                       name={item.name}
                       icon={item.icon}
                       description={item.description}

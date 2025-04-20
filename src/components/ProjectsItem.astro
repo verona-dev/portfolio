@@ -1,0 +1,71 @@
+---
+import { Image } from 'astro:assets';
+import { Button } from '@/components/starwind/button';
+
+const {
+   id,
+   thumbnail,
+   title,
+   description,
+   url,
+   tech,
+   image
+} = Astro.props;
+
+---
+
+<div class='projects-item'>
+    <!--  Modal Trigger  -->
+    <Image
+        onclick={`my_modal_${id}.showModal()`}
+        src={thumbnail}
+        alt='Project image'
+        width='250'
+        height='250'
+    />
+
+    <dialog id={`my_modal_${id}`} class='modal'>
+        <div class='modal-box w-11/12 max-w-3xl'>
+            <form method='dialog'>
+                <button class='btn btn-lg btn-circle btn-ghost absolute right-2 top-2 z-100'>✕</button>
+            </form>
+
+            <div class='card p-10 mx-auto bg-base-100 shadow-sm'>
+                <figure>
+                    <Image
+                        src={thumbnail}
+                        alt='Project image'
+                        width='300'
+                        height='250'
+                    />
+                </figure>
+
+                <div class='card-body'>
+                    <h2 class='card-title'>
+                       { title }
+                        <div class='badge badge-secondary'>Vue.js</div>
+                    </h2>
+                    <p>{ description }</p>
+                </div>
+            <Button
+                href={url}
+                target='_blank'
+                rel='noopener noreferrer'
+                aria-label={`${title} website`}
+                class=''
+            >
+                View Project
+            </Button>
+            </div>
+
+        </div>
+
+        <form method='dialog' class='modal-backdrop'>
+            <button>close</button>
+        </form>
+    </dialog>
+</div>
+
+<style>
+    .projects-item {}
+</style>
