@@ -30,7 +30,7 @@
     }
     
     .page {
-        @apply mt-20 p-10 lg:max-w-3xl;
+        @apply mt-30 p-10 lg:max-w-3xl;
     }
 }
 

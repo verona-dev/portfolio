@@ -19,13 +19,14 @@ const {
     <Image
         onclick={`my_modal_${id}.showModal()`}
         src={thumbnail}
+        class='thumbnail'
         alt='Project image'
         width='250'
         height='250'
     />
 
     <dialog id={`my_modal_${id}`} class='modal'>
-        <div class='modal-box w-11/12 max-w-3xl'>
+        <div class='modal-box border w-11/12 max-w-3xl'>
             <form method='dialog'>
                 <button class='btn btn-lg btn-circle btn-ghost absolute right-2 top-2 z-100'>✕</button>
             </form>
@@ -33,7 +34,7 @@ const {
             <div class='card p-10 mx-auto bg-base-100 shadow-sm'>
                 <figure>
                     <Image
-                        src={thumbnail}
+                        src={image}
                         alt='Project image'
                         width='300'
                         height='250'
@@ -41,23 +42,31 @@ const {
                 </figure>
 
                 <div class='card-body'>
-                    <h2 class='card-title'>
+                    <h2 class='text-emerald-300'>
                        { title }
-                        <div class='badge badge-secondary'>Vue.js</div>
                     </h2>
-                    <p>{ description }</p>
-                </div>
-            <Button
-                href={url}
-                target='_blank'
-                rel='noopener noreferrer'
-                aria-label={`${title} website`}
-                class=''
-            >
-                View Project
-            </Button>
-            </div>
 
+                    <div class='badges'>
+                        <div class='badge badge-primary'>Vue</div>
+                        <div class='badge badge-primary'>Nuxt</div>
+                        <div class='badge badge-secondary'>Tailwind</div>
+                        <div class='badge badge-primary'>Vuetify</div>
+                        <div class='badge badge-secondary'>Sass</div>
+                    </div>
+
+                    <p class='description'>{ description }</p>
+
+                    <Button
+                        href={url}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        aria-label={`${title} website`}
+                        class=''
+                    >
+                        Website
+                    </Button>
+                </div>
+            </div>
         </div>
 
         <form method='dialog' class='modal-backdrop'>
@@ -67,5 +76,30 @@ const {
 </div>
 
 <style>
-    .projects-item {}
+    .projects-item {
+        .thumbnail {
+            margin: 20px;
+            transition: all .25s;
+
+            &:hover {
+                border-top-left-radius: 8px;
+                border-bottom-right-radius: 8px;
+                cursor: pointer;
+                transform: scale(1.25);
+            }
+        }
+
+        h2 {
+            margin-block: calc(var(--spacing) * 0);
+            margin: 10px 0 5px;
+        }
+
+        .badges {
+            margin-bottom: 10px;
+        }
+
+        .description {
+            margin-bottom: 20px;
+        }
+    }
 </style>
