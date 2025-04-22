@@ -9,7 +9,8 @@ const {
    description,
    url,
    tech,
-   image
+   image,
+   video
 } = Astro.props;
 
 ---
@@ -25,6 +26,7 @@ const {
         height='250'
     />
 
+    <!--  Modal Content  -->
     <dialog id={`my_modal_${id}`} class='modal'>
         <div class='modal-box border w-11/12 max-w-3xl'>
             <form method='dialog'>
@@ -32,14 +34,29 @@ const {
             </form>
 
             <div class='card p-10 mx-auto bg-base-100 shadow-sm'>
-                <figure>
-                    <Image
-                        src={image}
-                        alt='Project image'
-                        width='300'
-                        height='250'
-                    />
-                </figure>
+               <div class='media-container h-[350px]'>
+                  {
+                     video && (
+                          <video controls>
+                              <source src={video} type="video/mp4">
+                              Your browser does not support HTML video.
+                          </video>
+                     )
+                  }
+
+                  {
+                     image && (
+                          <figure>
+                              <Image
+                                  src={image}
+                                  alt='Project image'
+                                  width='300'
+                                  height='250'
+                              />
+                          </figure>
+                     )
+                  }
+               </div>
 
                 <div class='card-body'>
                     <h2 class='text-emerald-300'>
@@ -73,13 +90,15 @@ const {
                     <p class='description'>{ description }</p>
 
                     <Button
-                        href={url}
+                        id='button'
+                        href={url || undefined}
                         target='_blank'
                         rel='noopener noreferrer'
                         aria-label={`${title} website`}
-                        class=''
+                        disabled={!url}
+
                     >
-                        Website
+                       {url ? 'Visit Website' : '\uD83D\uDC94 Website not available \uD83D\uDC94'}
                     </Button>
                 </div>
             </div>
@@ -93,15 +112,25 @@ const {
 
 <style>
     .projects-item {
-        .thumbnail {
-            margin-right: 50px;
+
+        figure,
+        .media-container img,
+        video {
+            height: 100%;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        img.thumbnail {
+            //margin-right: 50px;
             transition: all .25s;
+            height: 175px;
 
             &:hover {
                 border-top-left-radius: 12px;
                 border-bottom-right-radius: 12px;
                 cursor: pointer;
-                transform: scale(1.15);
+                //transform: scale(1.15);
             }
         }
 
@@ -117,7 +146,7 @@ const {
         }
 
         .description {
-            margin-bottom: 20px;
+            margin: 10px 0 30px;
         }
     }
 </style>

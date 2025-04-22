@@ -10,7 +10,7 @@
                 "stack": ["Vue", "Nuxt", "Wordpress", "Tailwind"],
                 "modules": ["Sass","Axios", "Vuex", "Vuetify", "Dayjs"]
             },
-            "image": "https://res.cloudinary.com/dgcyv1ehi/image/upload/v1745184083/thumbnail-grheute-2_q06gcm.png"
+            "image": "https://res.cloudinary.com/dgcyv1ehi/image/upload/v1745340942/grheute_-_screenshot_zoomedout_hmcdsv.png"
         },
         {
             "id": 2,
@@ -22,8 +22,18 @@
                 "stack": ["Vue", "Nuxt", "Wordpress", "Tailwind"],
                 "modules": ["DaisyUI", "Sass","Supabase", "Axios", "Pinia", "Algolia", "Dayjs", "Vueuse"]
             },
-            "image": "https://res.cloudinary.com/dgcyv1ehi/image/upload/v1745192703/dno_mhvrr9.png"
+            "image": "https://res.cloudinary.com/dgcyv1ehi/image/upload/v1745340313/dno_-_screenshot_xdfkd1.png"
+        },
+        {
+            "id": 3,
+            "thumbnail": "https://res.cloudinary.com/dgcyv1ehi/image/upload/v1745334675/enjoyme_-_logo-2_zjzpiz.png",
+            "title": "EnjoyMe",
+            "description": "EnjoyMe is an adult web application and social media platform that enables content creators to monetize exclusive content by charging subscribers for access.",
+            "tech": {
+                "stack": ["Vue", "Nuxt", "Wordpress", "Tailwind"],
+                "modules": ["DaisyUI", "Sass","Supabase", "Axios", "Pinia", "Algolia", "Dayjs", "Vueuse"]
+            },
+            "video": "https://res.cloudinary.com/dgcyv1ehi/video/upload/v1745336712/enjoyme_-_video_fn0vtz.mp4"
         }
-
     ]
 }

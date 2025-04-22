@@ -23,6 +23,7 @@ import ProjectsItem from '../components/ProjectsItem.astro';
                      url={project.url}
                      tech={project.tech}
                      image={project.image}
+                     video={project.video}
                  />
               ))
            }
@@ -31,9 +32,14 @@ import ProjectsItem from '../components/ProjectsItem.astro';
 </Layout>
 
 <style>
-    .image-container {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
+    .projects {
+        .image-container {
+            background-color: mediumseagreen;
+            display: flex;
+            flex-wrap: wrap;
+            //gap: 20px;
+            justify-content: space-evenly;
+            width: 900px;
+        }
     }
 </style>
