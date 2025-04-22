@@ -30,13 +30,13 @@
     }
     
     .page {
-        @apply mt-30 p-10 lg:max-w-3xl;
+        @apply mt-20 p-10 lg:max-w-2xl;
     }
 }
 
 @layer components {
     h1 {
-        @apply text-4xl md:text-7xl my-8;
+        @apply text-4xl md:text-6xl my-8;
     }
     
     h2 {
