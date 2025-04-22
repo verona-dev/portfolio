@@ -8,7 +8,7 @@ import ProjectsItem from '../components/ProjectsItem.astro';
     title='Projects'
     description='Projects I worked on'
 >
-    <section class='projects page'>
+    <section class='projects page max-w-4xl'>
         <h3 class='mb-20 text-center'>The projects I worked on</h3>
 
         <div class='image-container'>
@@ -23,6 +23,7 @@ import ProjectsItem from '../components/ProjectsItem.astro';
                      url={project.url}
                      tech={project.tech}
                      image={project.image}
+                     video={project.video}
                  />
               ))
            }
@@ -31,9 +32,15 @@ import ProjectsItem from '../components/ProjectsItem.astro';
 </Layout>
 
 <style>
-    .image-container {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
+    .projects {
+
+        .image-container {
+            align-content: center;
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+            justify-content: center;
+        }
     }
 </style>

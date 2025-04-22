@@ -21,7 +21,7 @@
         @apply flex-1 mx-auto relative max-w-2xl lg:max-w-4xl;
         
         @media (min-width: 1024px) {
-            padding-left: 75px; /*  Header's width  */
+            padding-left: 100px; /*  Header's width  */
         }
     }
     
@@ -30,13 +30,13 @@
     }
     
     .page {
-        @apply mt-30 p-10 lg:max-w-3xl;
+        @apply mt-20 p-10 lg:max-w-2xl;
     }
 }
 
 @layer components {
     h1 {
-        @apply text-4xl md:text-7xl my-8;
+        @apply text-4xl md:text-6xl my-8;
     }
     
     h2 {
