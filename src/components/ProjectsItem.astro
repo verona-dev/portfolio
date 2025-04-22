@@ -77,16 +77,6 @@ const {
                         </div>
                     </div>
 
-                    <!--
-                    <div class='badges'>
-                        <div class='badge badge-primary'>Vue</div>
-                        <div class='badge badge-primary'>Nuxt</div>
-                        <div class='badge badge-secondary'>Tailwind</div>
-                        <div class='badge badge-primary'>Vuetify</div>
-                        <div class='badge badge-secondary'>Sass</div>
-                    </div>
-                    -->
-
                     <p class='description'>{ description }</p>
 
                     <Button
@@ -112,6 +102,9 @@ const {
 
 <style>
     .projects-item {
+        dialog {
+            padding-left: 100px !important;
+        }
 
         figure,
         .media-container img,
@@ -122,15 +115,15 @@ const {
         }
 
         img.thumbnail {
-            //margin-right: 50px;
             transition: all .25s;
-            height: 175px;
+            height: 225px;
+            width: 320px;
 
             &:hover {
                 border-top-left-radius: 12px;
                 border-bottom-right-radius: 12px;
                 cursor: pointer;
-                //transform: scale(1.15);
+                transform: scale(1.15);
             }
         }
 

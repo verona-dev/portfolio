@@ -8,7 +8,7 @@ import ProjectsItem from '../components/ProjectsItem.astro';
     title='Projects'
     description='Projects I worked on'
 >
-    <section class='projects page'>
+    <section class='projects page max-w-4xl'>
         <h3 class='mb-20 text-center'>The projects I worked on</h3>
 
         <div class='image-container'>
@@ -33,13 +33,14 @@ import ProjectsItem from '../components/ProjectsItem.astro';
 
 <style>
     .projects {
+
         .image-container {
-            background-color: mediumseagreen;
+            align-content: center;
+            align-items: center;
             display: flex;
             flex-wrap: wrap;
-            //gap: 20px;
-            justify-content: space-evenly;
-            width: 900px;
+            gap: 50px;
+            justify-content: center;
         }
     }
 </style>
