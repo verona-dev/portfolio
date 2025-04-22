@@ -72,10 +72,19 @@ const {
             padding: 35px;
             --tooltip-offset: calc(100% + 20px) !important;
             white-space: normal;
-            width: 500px;
+            width: 700px;
 
             &:hover {
                 cursor: auto;
+            }
+
+            @media (max-width: 1200px) {
+                width: 500px;
+            }
+
+            /* Mobile */
+            @media (max-width: 1100px) {
+                display: none !important;
             }
         }
 
