@@ -43,6 +43,10 @@ const isActive = path => currentPath === path ? 'active' : '';
 </header>
 
 <style>
+    .active {
+        color: var(--color-pink-400);
+    }
+
     /* Desktop */
     @media (min-width: 765px) {
         header {
@@ -84,10 +88,6 @@ const isActive = path => currentPath === path ? 'active' : '';
                 color: var(--color-pink-300);
             }
             */
-
-            &.active {
-                color: var(--color-pink-400);
-            }
         }
     }
 

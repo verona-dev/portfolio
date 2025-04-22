@@ -2,12 +2,28 @@
     "projects": [
         {
             "id": 1,
-            "thumbnail": "https://res.cloudinary.com/dgcyv1ehi/image/upload/v1745184083/thumbnail-grheute-2_q06gcm.png",
+            "thumbnail": "https://res.cloudinary.com/dgcyv1ehi/image/upload/v1745190708/logo_rcnnwz.jpg",
             "title": "GRHeute",
             "description": "GRHeute is an independent online news and entertainment platform focused on the Swiss canton of Graubünden. It provides daily content covering news, culture, sports, analysis, and commentary relevant to the region. The site offers news, interviews, and background reports that highlight local culture, economy, tourism, and sports.",
             "url": "https://www.grheute.ch/",
-            "tech": "Vue.js, NuxtJS, Wordpress, Sass, Axios, Vuex, Vuetify, TailwindCSS",
-            "image": "../assets/images/grheute-2-thumbnail.png"
+            "tech": {
+                "stack": ["Vue", "Nuxt", "Wordpress", "Tailwind"],
+                "modules": ["Sass","Axios", "Vuex", "Vuetify", "Dayjs"]
+            },
+            "image": "https://res.cloudinary.com/dgcyv1ehi/image/upload/v1745184083/thumbnail-grheute-2_q06gcm.png"
+        },
+        {
+            "id": 2,
+            "thumbnail": "https://res.cloudinary.com/dgcyv1ehi/image/upload/v1745192703/dno_mhvrr9.png",
+            "title": "DNO",
+            "description": "DNO focuses on guiding and supporting businesses through digital transformation and digital reorganization. It offers insights, strategies, and practical advice on sustainable digital strategies, digital operating and business models, agile teams, scalable organizations, continuous innovation, and strategic leadership using frameworks like OKR (Objectives & Key Results).",
+            "url": "https://digitaleneuordnung.de/",
+            "tech": {
+                "stack": ["Vue", "Nuxt", "Wordpress", "Tailwind"],
+                "modules": ["DaisyUI", "Sass","Supabase", "Axios", "Pinia", "Algolia", "Dayjs", "Vueuse"]
+            },
+            "image": "https://res.cloudinary.com/dgcyv1ehi/image/upload/v1745192703/dno_mhvrr9.png"
         }
+
     ]
 }

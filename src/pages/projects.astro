@@ -9,7 +9,7 @@ import ProjectsItem from '../components/ProjectsItem.astro';
     description='Projects I worked on'
 >
     <section class='projects page'>
-        <h3>These are my projects</h3>
+        <h3 class='mb-20 text-center'>The projects I worked on</h3>
 
         <div class='image-container'>
            {
@@ -30,11 +30,10 @@ import ProjectsItem from '../components/ProjectsItem.astro';
     </section>
 </Layout>
 
-<style lang='scss'>
-    .projects {
-        border: 1px solid var(--color-pink-400);
-        border-radius: 8px;
-
-        .image-container {}
+<style>
+    .image-container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
     }
 </style>
