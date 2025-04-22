@@ -46,6 +46,21 @@ const {
                        { title }
                     </h2>
 
+                    <div class='badges-container'>
+                        <div class='badges flex gap-2 flex-wrap'>
+                           {
+                              tech.stack.map((item, index) => <div key={index} class='badge badge-primary'>{item}</div>)
+                           }
+                        </div>
+
+                        <div class='badges flex gap-2 flex-wrap'>
+                           {
+                              tech.modules.map(item => <div class='badge badge-neutral'>{item}</div>)
+                           }
+                        </div>
+                    </div>
+
+                    <!--
                     <div class='badges'>
                         <div class='badge badge-primary'>Vue</div>
                         <div class='badge badge-primary'>Nuxt</div>
@@ -53,6 +68,7 @@ const {
                         <div class='badge badge-primary'>Vuetify</div>
                         <div class='badge badge-secondary'>Sass</div>
                     </div>
+                    -->
 
                     <p class='description'>{ description }</p>
 
@@ -78,14 +94,14 @@ const {
 <style>
     .projects-item {
         .thumbnail {
-            margin: 20px;
+            margin-right: 50px;
             transition: all .25s;
 
             &:hover {
-                border-top-left-radius: 8px;
-                border-bottom-right-radius: 8px;
+                border-top-left-radius: 12px;
+                border-bottom-right-radius: 12px;
                 cursor: pointer;
-                transform: scale(1.25);
+                transform: scale(1.15);
             }
         }
 
@@ -94,8 +110,10 @@ const {
             margin: 10px 0 5px;
         }
 
-        .badges {
-            margin-bottom: 10px;
+        .badges-container {
+            .badges {
+                margin-bottom: 10px;
+            }
         }
 
         .description {
