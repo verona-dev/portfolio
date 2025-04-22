@@ -34,6 +34,18 @@
                 "modules": ["DaisyUI", "Sass","Supabase", "Axios", "Pinia", "Algolia", "Dayjs", "Vueuse"]
             },
             "video": "https://res.cloudinary.com/dgcyv1ehi/video/upload/v1745336712/enjoyme_-_video_fn0vtz.mp4"
+        },
+        {
+            "id": 4,
+            "thumbnail": "https://res.cloudinary.com/dgcyv1ehi/image/upload/v1745343097/zlatko_-_logo_dt0tqa.svg",
+            "title": "Autoservis Zlatko",
+            "description": "Autoservis Zlatko is a family-owned car mechanic shop known for its honest, reliable, and affordable vehicle maintenance and repair services. With decades of experience passed down through generations, the shop treats every customer like part of the family, ensuring vehicles run safely and smoothly.",
+            "url": "https://autoservis-zlatko.netlify.app/",
+            "tech": {
+                "stack": ["Astro", "Tailwind"],
+                "modules": ["Flowbite", "i18n", "Astro-Icon", "Astro-SEO"]
+            },
+            "image": "https://res.cloudinary.com/dgcyv1ehi/image/upload/v1745343205/zlatko_-_screenshot_rox4qz.png"
         }
     ]
 }
