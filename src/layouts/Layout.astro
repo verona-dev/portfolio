@@ -5,6 +5,7 @@ import '@/styles/global.css';
 
 import CommonMeta from '../components/CommonMeta.astro';
 import Navigation from '../components/Navigation.astro';
+import PageAnimation from '../components/gsap/PageAnimation.astro';
 import Seo from '../components/Seo.astro';
 import Socials from '../components/Socials.astro';
 
@@ -27,6 +28,8 @@ title = `Zoran G Verona - Frontend Developer | ${title}`
    </head>
 
    <body>
+      <PageAnimation />
+
       <Navigation />
 
       <main>
