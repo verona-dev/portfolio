@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets';
+import {Icon} from 'astro-icon/components';
 import { Button } from '@/components/starwind/button';
 
 const {
@@ -30,33 +31,38 @@ const {
     <dialog id={`my_modal_${id}`} class='modal'>
         <div class='modal-box border w-11/12 max-w-3xl'>
             <form method='dialog'>
-                <button class='btn btn-lg btn-circle btn-ghost absolute right-2 top-2 z-100'>✕</button>
+                <button class='btn btn-lg btn-circle btn-ghost absolute right-2 top-2 z-100'>
+                    <Icon
+                        name='iconoir:xmark'
+                        class='w-6 h-6'
+                    />
+                </button>
             </form>
 
-            <div class='card p-10 mx-auto bg-base-100 shadow-sm'>
-               <div class='media-container h-[350px]'>
-                  {
-                     video && (
-                          <video controls>
-                              <source src={video} type="video/mp4">
-                              Your browser does not support HTML video.
-                          </video>
-                     )
-                  }
+            <div class='card py-12 px-10 mx-auto bg-base-100 shadow-sm'>
+                <div class='media-container h-[350px]'>
+                   {
+                      video && (
+                           <video controls>
+                               <source src={video} type="video/mp4">
+                               Your browser does not support HTML video.
+                           </video>
+                      )
+                   }
 
-                  {
-                     image && (
-                          <figure>
-                              <Image
-                                  src={image}
-                                  alt='Project image'
-                                  width='300'
-                                  height='250'
-                              />
-                          </figure>
-                     )
-                  }
-               </div>
+                   {
+                      image && (
+                           <figure>
+                               <Image
+                                   src={image}
+                                   alt='Project image'
+                                   width='300'
+                                   height='250'
+                               />
+                           </figure>
+                      )
+                   }
+                </div>
 
                 <div class='card-body'>
                     <h2 class='text-emerald-300'>
@@ -64,24 +70,28 @@ const {
                     </h2>
 
                     <div class='badges-container'>
-                        <div class='badges flex gap-2 flex-wrap'>
+                        <ul class='badges flex gap-2 flex-wrap'>
                            {
-                              tech.stack.map((item, index) => <div key={index} class='badge badge-primary'>{item}</div>)
+                              tech.stack.map((item, index) =>
+                                  <li key={index} class='badge badge-primary'>{item}</li>
+                              )
                            }
-                        </div>
+                        </ul>
 
-                        <div class='badges flex gap-2 flex-wrap'>
+                        <ul class='badges flex gap-2 flex-wrap'>
                            {
-                              tech.modules.map(item => <div class='badge badge-neutral'>{item}</div>)
+                              tech.modules.map(item =>
+                                  <li class='badge badge-dash'>{item}</li>
+                              )
                            }
-                        </div>
+                        </ul>
                     </div>
 
                     <p class='description'>{ description }</p>
 
                     <Button
                         id='button'
-                        href={url || undefined}
+                        href={url}
                         target='_blank'
                         rel='noopener noreferrer'
                         aria-label={`${title} website`}
@@ -127,19 +137,31 @@ const {
             }
         }
 
-        h2 {
-            margin-block: calc(var(--spacing) * 0);
-            margin: 10px 0 5px;
-        }
-
-        .badges-container {
-            .badges {
-                margin-bottom: 10px;
+        .card {
+            .media-container img {
+                border-top-left-radius: 8px;
+                border-top-right-radius: 8px;
             }
-        }
 
-        .description {
-            margin: 10px 0 30px;
+            .card-body {
+                gap: calc(0.45rem * 2);
+                padding: var(--card-p, 1.5rem) 0 0;
+
+                h2 {
+                    margin-block: calc(var(--spacing) * 0);
+                    margin: 10px 0 5px;
+                }
+
+                .badges-container {
+                    .badges {
+                        margin-bottom: 10px;
+                    }
+                }
+
+                .description {
+                    margin: 10px 0 30px;
+                }
+            }
         }
     }
 </style>
