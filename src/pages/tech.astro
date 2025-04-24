@@ -8,8 +8,8 @@ import TechItem from '../components/TechItem.astro';
     title='Tech stack'
     description='My tech stack and skills'
 >
-    <section class='tech page text-center'>
-        <h3 class=''>The tools I use</h3>
+    <section class='tech page opacity-0 text-center'>
+        <h3>The tools I use</h3>
 
         <div class='flex justify-center flex-wrap'>
            {
@@ -26,3 +26,20 @@ import TechItem from '../components/TechItem.astro';
         </div>
     </section>
 </Layout>
+
+<script>
+   import { gsap } from 'gsap';
+   const tech = document.querySelector('.tech');
+   const techItem = document.querySelectorAll('.tech-icon');
+
+   gsap.to(tech, {
+      duration: 2,
+      opacity: 1,
+   });
+
+   gsap.to(techItem, {
+      delay: 1,
+      opacity: 1,
+      stagger: 0.25,
+   });
+</script>

@@ -18,16 +18,11 @@
     }
     
     main {
-        /*  Opacity: 0 - GSAP  */
-        @apply opacity-0 flex-1 mx-auto relative max-w-2xl lg:max-w-4xl;
+        @apply flex-1 mx-auto relative max-w-2xl lg:max-w-4xl;
         
         @media (min-width: 1024px) {
             padding-left: 100px; /*  Header's width  */
         }
-    }
-    
-    .homepage {
-        @apply mt-10 p-10;
     }
     
     .page {
