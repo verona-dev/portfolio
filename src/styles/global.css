@@ -25,17 +25,8 @@
         }
     }
     
-    .homepage {
-        @apply mt-10 p-10;
-    }
-    
     .page {
         @apply mt-20 p-10 lg:max-w-2xl;
-    }
-    
-    /*   GSAP  */
-    .main-animation {
-        @apply opacity-0;
     }
 }
 

@@ -5,14 +5,12 @@ import '@/styles/global.css';
 
 import CommonMeta from '../components/CommonMeta.astro';
 import Navigation from '../components/Navigation.astro';
-import MainAnimation from '../components/gsap/MainAnimation.astro';
 import Seo from '../components/Seo.astro';
 import Socials from '../components/Socials.astro';
 
 let {
    title,
    description,
-   mainAnimation = false,
 } = Astro.props;
 
 title = `Zoran G Verona - Frontend Developer | ${title}`
@@ -27,8 +25,6 @@ title = `Zoran G Verona - Frontend Developer | ${title}`
            title={title}
            description={description}
        />
-
-      { mainAnimation && <MainAnimation /> }
    </head>
 
    <body>

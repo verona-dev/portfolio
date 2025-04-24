@@ -3,17 +3,21 @@ import { Avatar, AvatarImage, AvatarFallback } from '@/components/starwind/avata
 import ProfilePicture from '@/assets/images/profile-picture.jpg';
 ---
 
-<section class='homepage main-animation text-center'>
+<section class='homepage page opacity-0 text-center'>
     <Avatar class='border-pink-400'>
         <AvatarImage
             image={ProfilePicture}
-            alt='John Doe'
+            alt='Zoran G. Verona'
         />
         <AvatarFallback>ZGV</AvatarFallback>
     </Avatar>
 
     <h1>Zoran G. Verona</h1>
-    <h2>Frontend Developer</h2>
+
+    <h2>
+        <span>Frontend Developer</span>
+        <span class='underline'></span>
+    </h2>
 
     <p
         class='subtitle mb-10'
@@ -22,9 +26,59 @@ import ProfilePicture from '@/assets/images/profile-picture.jpg';
 </section>
 
 <style>
-    figure {
-        margin: 0 auto;
-        height: 300px;
-        width: 300px;
+    .homepage {
+        position: relative;
+
+        figure {
+            margin: 0 auto;
+            height: 300px;
+            width: 300px;
+        }
+
+        h2 {
+            position: relative;
+            display: inline-block;
+            text-shadow: 0 0.5rem 2rem, 0 -0.5rem 1rem rgba(80, 76, 76, 0.75);
+        }
+
+        .underline {
+            display: block;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--color-emerald-400);
+            border-radius: 12px;
+        }
     }
 </style>
+
+<script>
+   import { gsap } from 'gsap';
+
+   const homepage = document.querySelector('.homepage');
+   const underline = document.querySelector('.underline');
+
+   gsap.to(homepage, {
+      opacity: 1,
+      duration: 2,
+   });
+
+   gsap.fromTo('h2', {
+      transform: 'scale(1.35)'
+   }, {
+      delay: 0.5,
+      transform: 'scale(1)',
+      duration: 1.75,
+      ease: 'power3.inOut',
+      yoyo: true,
+   });
+
+   gsap.to(underline, {
+      delay: 2.5,
+      duration: 1.25,
+      ease: 'sine',
+      width: '100%',
+   });
+</script>
