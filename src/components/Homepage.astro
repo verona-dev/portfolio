@@ -4,7 +4,7 @@ import ProfilePicture from '@/assets/images/profile-picture.jpg';
 ---
 
 <section class='homepage page opacity-0 text-center'>
-    <Avatar class='border-pink-400'>
+    <Avatar class='border-pink-400 min-h-[300px]'>
         <AvatarImage
             image={ProfilePicture}
             alt='Zoran G. Verona'
@@ -20,7 +20,7 @@ import ProfilePicture from '@/assets/images/profile-picture.jpg';
     </h2>
 
     <p
-        class='subtitle mb-10'
+        class='description mb-10'
         set:html='Based in Croatia, Europe, with 3+ years of development experience. I am a frontend web developer who enjoys building websites and web applications that are both fun and functional.'
     />
 </section>
@@ -31,8 +31,6 @@ import ProfilePicture from '@/assets/images/profile-picture.jpg';
 
         figure {
             margin: 0 auto;
-            height: 300px;
-            width: 300px;
         }
 
         h2 {
@@ -58,27 +56,47 @@ import ProfilePicture from '@/assets/images/profile-picture.jpg';
    import { gsap } from 'gsap';
 
    const homepage = document.querySelector('.homepage');
+   const figure = document.querySelector('figure');
    const underline = document.querySelector('.underline');
+   const description = document.querySelector('.description');
 
    gsap.to(homepage, {
       opacity: 1,
       duration: 2,
    });
 
-   gsap.fromTo('h2', {
-      transform: 'scale(1.35)'
+   gsap.fromTo(figure, {
+      opacity: 0,
+      height: '0px',
+      width: '0px',
    }, {
-      delay: 0.5,
-      transform: 'scale(1)',
+      duration: 2,
+      opacity: 1,
+      height: '300px',
+      width: '300px',
+   });
+
+   gsap.fromTo('h2', {
+      transform: 'scale(1.25)'
+   }, {
+      delay: 2,
       duration: 1.75,
+      transform: 'scale(1)',
       ease: 'power3.inOut',
-      yoyo: true,
    });
 
    gsap.to(underline, {
-      delay: 2.5,
-      duration: 1.25,
+      delay: 3.5,
+      duration: 1.5,
       ease: 'sine',
       width: '100%',
+   });
+
+   gsap.fromTo(description, {
+      opacity: 0,
+   }, {
+      delay: 5,
+      duration: 3,
+      opacity: 1,
    });
 </script>
