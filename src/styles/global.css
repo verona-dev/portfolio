@@ -18,8 +18,7 @@
     }
     
     main {
-        /*  Opacity: 0 - GSAP  */
-        @apply opacity-0 flex-1 mx-auto relative max-w-2xl lg:max-w-4xl;
+        @apply flex-1 mx-auto relative max-w-2xl lg:max-w-4xl;
         
         @media (min-width: 1024px) {
             padding-left: 100px; /*  Header's width  */
@@ -32,6 +31,11 @@
     
     .page {
         @apply mt-20 p-10 lg:max-w-2xl;
+    }
+    
+    /*   GSAP  */
+    .main-animation {
+        @apply opacity-0;
     }
 }
 
