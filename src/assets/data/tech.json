@@ -20,13 +20,13 @@
             "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
         },
         {
-            "name": "Vue.js",
+            "name": "Vue",
             "icon": "skill-icons:vuejs-dark",
             "description": "Vue is a JavaScript framework for building user interfaces. It builds on top of standard HTML, CSS, and JavaScript and provides a declarative, component-based programming model that helps you efficiently develop user interfaces of any complexity.",
             "url": "https://vuejs.org/"
         },
         {
-            "name": "NuxtJS",
+            "name": "Nuxt",
             "icon": "skill-icons:nuxtjs-dark",
             "description": "Nuxt is an open-source framework with an intuitive and extendable way to create type-safe, performant and production-grade full-stack web applications and websites with Vue.js.",
             "url": "https://nuxt.com/"
@@ -38,7 +38,7 @@
             "url": "https://astro.build/"
         },
         {
-            "name": "TailwindCSS",
+            "name": "Tailwind",
             "icon": "skill-icons:tailwindcss-dark",
             "description": "Tailwind CSS is a utility-first CSS framework for rapidly building modern websites without ever leaving your HTML.",
             "url": "https://tailwindcss.com/"
