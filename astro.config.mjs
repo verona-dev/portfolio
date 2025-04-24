@@ -30,6 +30,7 @@ export default defineConfig({
                 ],
                 iconoir: [
                    'open-new-window',
+                   'xmark'
                 ],
             }
         }),
