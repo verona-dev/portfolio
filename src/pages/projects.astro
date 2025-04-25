@@ -52,6 +52,7 @@ import ProjectsItem from '../components/ProjectsItem.astro';
    const timeline = gsap.timeline({
       defaults: {
          duration: 1,
+         ease: 'expo.in',
       }
    });
 
@@ -61,11 +62,11 @@ import ProjectsItem from '../components/ProjectsItem.astro';
       })
       .from(h3, {
          y: '-25vh',
+         ease: 'circ',
       })
       .fromTo(thumbnail, {
          opacity: 0,
       }, {
-         delay: 0.5,
          opacity: 1,
          stagger: 1,
       });
