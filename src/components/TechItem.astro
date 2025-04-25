@@ -24,7 +24,7 @@ const {
         </TooltipTrigger>
 
         <TooltipContent>
-           <div>
+           <div class='flex items-center'>
                <p set:html={description}></p>
 
                <a
@@ -35,7 +35,7 @@ const {
                >
                    <Icon
                        name='iconoir:open-new-window'
-                       class='open-link-in-tab w-6 h-6'
+                       class=' w-6 h-6'
                    />
                </a>
            </div>
@@ -68,11 +68,11 @@ const {
 
         .starwind-tooltip-content {
             background-color: var(--color-zinc-900);
-            border-radius: 8px;
-            padding: 35px;
+            font-size: 14px;
+            padding: 20px 0 20px 30px;
             --tooltip-offset: calc(100% + 20px) !important;
             white-space: normal;
-            width: 700px;
+            width: 600px;
 
             &:hover {
                 cursor: auto;
@@ -88,10 +88,7 @@ const {
             }
         }
 
-        .open-link-in-tab {
-            position: relative;
-            top: 10px;
-
+        a {
             &:hover {
                 color: var(--color-pink-400);
             }
