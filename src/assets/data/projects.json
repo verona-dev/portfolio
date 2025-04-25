@@ -20,7 +20,7 @@
             "url": "https://digitaleneuordnung.de/",
             "tech": {
                 "stack": ["Vue", "Nuxt", "Wordpress", "Tailwind"],
-                "modules": ["DaisyUI", "Sass","Supabase", "Axios", "Pinia", "Algolia", "Dayjs", "Vueuse"]
+                "modules": ["DaisyUI", "Sass","Supabase", "Axios", "Pinia", "Algolia", "Dayjs"]
             },
             "image": "https://res.cloudinary.com/dgcyv1ehi/image/upload/v1745340313/dno_-_screenshot_xdfkd1.png"
         },
@@ -31,7 +31,7 @@
             "description": "Work in progress - EnjoyMe is an adult web application and social media platform that enables content creators to monetize exclusive content by charging subscribers for access.",
             "tech": {
                 "stack": ["Vue", "Nuxt", "Wordpress", "Tailwind"],
-                "modules": ["DaisyUI", "Sass","Supabase", "Axios", "Pinia", "Algolia", "Dayjs", "Vueuse"]
+                "modules": ["DaisyUI", "Sass", "Axios", "Pinia", "Dayjs", "Vueuse"]
             },
             "video": "https://res.cloudinary.com/dgcyv1ehi/video/upload/v1745336712/enjoyme_-_video_fn0vtz.mp4"
         },
