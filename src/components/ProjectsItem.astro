@@ -16,12 +16,12 @@ const {
 
 ---
 
-<div class='projects-item'>
+<div class='projects-item opacity-0'>
     <!--  Modal Trigger  -->
     <Image
         onclick={`my_modal_${id}.showModal()`}
         src={thumbnail}
-        class='thumbnail opacity-0'
+        class='thumbnail'
         alt='Project image'
         width='250'
         height='250'
@@ -130,10 +130,11 @@ const {
             width: 320px;
 
             &:hover {
-                border-top-left-radius: 12px;
-                border-bottom-right-radius: 12px;
+                border-top-left-radius: 22px;
+                border-bottom-right-radius: 22px;
                 cursor: pointer;
-                transform: scale(1.15);
+                opacity: 0.925;
+                transform: scale(1.1);
             }
         }
 
