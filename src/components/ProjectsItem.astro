@@ -7,6 +7,7 @@ const {
    id,
    thumbnail,
    title,
+   tagline,
    description,
    url,
    tech,
@@ -70,7 +71,7 @@ const {
                     </h2>
 
                     <div class='badges-container'>
-                        <ul class='badges flex gap-2 flex-wrap'>
+                        <ul class='badges flex gap-2.5 flex-wrap'>
                            {
                               tech.stack.map((item, index) =>
                                   <li key={index} class='badge badge-primary'>{item}</li>
@@ -78,7 +79,7 @@ const {
                            }
                         </ul>
 
-                        <ul class='badges flex gap-2 flex-wrap'>
+                        <ul class='badges flex gap-2.5 flex-wrap'>
                            {
                               tech.modules.map(item =>
                                   <li class='badge badge-dash'>{item}</li>
@@ -86,6 +87,10 @@ const {
                            }
                         </ul>
                     </div>
+
+                   {
+                      tagline && <p class='font-bold underline tracking-tighter text-lg  m-0'>{ tagline }</p>
+                   }
 
                     <p class='description'>{ description }</p>
 
@@ -152,9 +157,9 @@ const {
 
 
         img.thumbnail {
+            height: 225px;
             opacity: 0.95;
             transition: all .25s;
-            height: 225px;
             width: 320px;
 
             &:hover {
@@ -171,7 +176,7 @@ const {
             }
 
             .card-body {
-                gap: calc(0.45rem * 2);
+                gap: 0.7rem;
                 padding: var(--card-p, 1.5rem) 0 0;
 
                 h2 {
@@ -186,7 +191,7 @@ const {
                 }
 
                 .description {
-                    margin: 10px 0 30px;
+                    margin-bottom: 20px;
                 }
             }
         }

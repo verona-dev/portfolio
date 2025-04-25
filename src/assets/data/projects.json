@@ -16,7 +16,8 @@
             "id": 2,
             "thumbnail": "https://res.cloudinary.com/dgcyv1ehi/image/upload/v1745334675/enjoyme_-_logo-2_zjzpiz.png",
             "title": "EnjoyMe",
-            "description": "Work in progress - EnjoyMe is an adult web application and social media platform that enables content creators to monetize exclusive content by charging subscribers for access.",
+            "tagline": "Work in progress",
+            "description": "EnjoyMe is an adult web application and social media platform that enables content creators to monetize exclusive content by charging subscribers for access.",
             "tech": {
                 "stack": ["Vue", "Nuxt", "Quasar", "Tailwind"],
                 "modules": ["Ably", "CropperJs", "SwiperJs", "Sass", "Axios", "Pinia", "DayJs", "Vueuse", "i18n", "ApexCharts", "VideoJs"]
