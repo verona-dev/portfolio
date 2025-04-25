@@ -24,21 +24,17 @@ const {
         </TooltipTrigger>
 
         <TooltipContent>
-           <div class='flex items-center'>
-               <p set:html={description}></p>
-
                <a
                    href={url}
                    target='_blank'
                    rel='noopener noreferrer'
                    aria-label='Link to description'
+                   class='inline'
                >
-                   <Icon
-                       name='iconoir:open-new-window'
-                       class=' w-6 h-6'
-                   />
+                   <span class='text-accent underline'>{name}</span>
                </a>
-           </div>
+
+               <span set:html={description.replace(name, '')}></span>
         </TooltipContent>
     </Tooltip>
 </div>
@@ -69,7 +65,8 @@ const {
         .starwind-tooltip-content {
             background-color: var(--color-zinc-900);
             font-size: 14px;
-            padding: 20px 0 20px 30px;
+            //padding: 20px 0 20px 30px;
+            padding: 35px;
             --tooltip-offset: calc(100% + 20px) !important;
             white-space: normal;
             width: 600px;
