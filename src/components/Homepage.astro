@@ -73,25 +73,17 @@ import ProfilePicture from '@/assets/images/profile-picture.jpg';
       .fromTo(avatar, {
          opacity: 0,
       }, {
-         duration: 2,
+         duration: 1.5,
          opacity: 1,
+         ease: 'expo',
          height: '300px',
          width: '300px',
       })
-      .fromTo('h1', {
+      .fromTo(['h1', 'h2', description], {
          opacity: 0,
       }, {
          opacity: 1,
-      })
-      .fromTo('h2', {
-         opacity: 0,
-      }, {
-         opacity: 1,
-      })
-      .fromTo(description, {
-         opacity: 0,
-      }, {
-         opacity: 1,
+         stagger: 1,
       })
       .fromTo('h2', {
          transform: 'scale(1.25)'
@@ -100,6 +92,7 @@ import ProfilePicture from '@/assets/images/profile-picture.jpg';
          transform: 'scale(1)',
       })
       .to(underline, {
+         duration: 1,
          ease: 'sine',
          width: '100%',
       })
