@@ -24,21 +24,17 @@ const {
         </TooltipTrigger>
 
         <TooltipContent>
-           <div>
-               <p set:html={description}></p>
-
                <a
                    href={url}
                    target='_blank'
                    rel='noopener noreferrer'
                    aria-label='Link to description'
+                   class='inline'
                >
-                   <Icon
-                       name='iconoir:open-new-window'
-                       class='open-link-in-tab w-6 h-6'
-                   />
+                   <span class='text-accent underline'>{name}</span>
                </a>
-           </div>
+
+               <span set:html={description.replace(name, '')}></span>
         </TooltipContent>
     </Tooltip>
 </div>
@@ -55,7 +51,9 @@ const {
         }
 
         a {
-            display: inline-block;
+            &:hover {
+                color: var(--color-pink-400);
+            }
         }
 
         svg {
@@ -67,33 +65,11 @@ const {
         }
 
         .starwind-tooltip-content {
-            background-color: var(--color-zinc-900);
-            border-radius: 8px;
             padding: 35px;
-            --tooltip-offset: calc(100% + 20px) !important;
-            white-space: normal;
-            width: 700px;
-
-            &:hover {
-                cursor: auto;
-            }
+            width: 600px;
 
             @media (max-width: 1200px) {
                 width: 500px;
-            }
-
-            /* Mobile */
-            @media (max-width: 1100px) {
-                display: none !important;
-            }
-        }
-
-        .open-link-in-tab {
-            position: relative;
-            top: 10px;
-
-            &:hover {
-                color: var(--color-pink-400);
             }
         }
     }

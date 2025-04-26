@@ -29,7 +29,6 @@ export default defineConfig({
                    'yahoo-mail',
                 ],
                 iconoir: [
-                   'open-new-window',
                    'xmark'
                 ],
             }

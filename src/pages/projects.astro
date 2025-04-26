@@ -14,17 +14,18 @@ import ProjectsItem from '../components/ProjectsItem.astro';
         <div class='image-container'>
            {
               data.projects.map(project => (
-                 <ProjectsItem
-                     key={project.id}
-                     id={project.id}
-                     thumbnail={project.thumbnail}
-                     title={project.title}
-                     description={project.description}
-                     url={project.url}
-                     tech={project.tech}
-                     image={project.image}
-                     video={project.video}
-                 />
+                  <ProjectsItem
+                      key={project.id}
+                      id={project.id}
+                      thumbnail={project.thumbnail}
+                      title={project.title}
+                      tagline={project.tagline}
+                      description={project.description}
+                      url={project.url}
+                      tech={project.tech}
+                      image={project.image}
+                      video={project.video}
+                  />
               ))
            }
         </div>
@@ -33,10 +34,6 @@ import ProjectsItem from '../components/ProjectsItem.astro';
 
 <style>
     .projects {
-        position: relative;
-        top: -100%;
-        right: 0;
-
         .image-container {
             align-content: center;
             align-items: center;
@@ -51,22 +48,27 @@ import ProjectsItem from '../components/ProjectsItem.astro';
 <script>
    import { gsap } from 'gsap';
    const projects = document.querySelector('.projects');
-   const thumbnail = document.querySelectorAll('.thumbnail');
-
-   gsap.from(projects, {
-      duration: 1.5,
-      y: '-100%',
-      ease: 'expoScale',
+   const h3 = document.querySelector('h3');
+   const thumbnail = document.querySelectorAll('.projects-item');
+   const timeline = gsap.timeline({
+      defaults: {
+         duration: 1,
+         ease: 'expo.in',
+      }
    });
 
-   gsap.to(projects, {
-      duration: 2,
-      opacity: 1,
-   });
-
-   gsap.to(thumbnail, {
-      delay: 1.5,
-      opacity: 1,
-      stagger: 0.5,
-   });
+   timeline
+      .to(projects, {
+         opacity: 1,
+      })
+      .from(h3, {
+         y: '-25vh',
+         ease: 'circ',
+      })
+      .fromTo(thumbnail, {
+         opacity: 0,
+      }, {
+         opacity: 1,
+         stagger: 1,
+      });
 </script>

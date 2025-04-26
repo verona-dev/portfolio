@@ -31,15 +31,16 @@ import TechItem from '../components/TechItem.astro';
    import { gsap } from 'gsap';
    const tech = document.querySelector('.tech');
    const techItem = document.querySelectorAll('.tech-icon');
-
-   gsap.to(tech, {
-      duration: 2,
-      opacity: 1,
+   const timeline = gsap.timeline({
+      defaults: { duration: 1 }
    });
 
-   gsap.to(techItem, {
-      delay: 1,
-      opacity: 1,
-      stagger: 0.25,
-   });
+   timeline
+      .to(tech, {
+         opacity: 1,
+      })
+      .to(techItem, {
+         opacity: 1,
+         stagger: 0.25,
+      });
 </script>

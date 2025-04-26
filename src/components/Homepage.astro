@@ -56,65 +56,44 @@ import ProfilePicture from '@/assets/images/profile-picture.jpg';
    import { gsap } from 'gsap';
 
    const homepage = document.querySelector('.homepage');
-   const figure = document.querySelector('figure');
+   const avatar = document.querySelector('figure');
    const underline = document.querySelector('.underline');
    const description = document.querySelector('.description');
-
-   gsap.to(homepage, {
-      opacity: 1,
-      duration: 1,
+   const timeline = gsap.timeline({
+      defaults: {
+         duration: 1,
+         ease: 'power3.inOut'}
    });
 
-   gsap.fromTo(figure, {
-      opacity: 0,
-      height: '0px',
-      width: '0px',
-   }, {
-      duration: 2,
-      opacity: 1,
-      height: '300px',
-      width: '300px',
-   });
-
-   gsap.fromTo('h1', {
-      opacity: 0,
-   }, {
-      delay: 1,
-      duration: 1.5,
-      opacity: 1,
-      ease: 'power3.inOut',
-   });
-
-   gsap.fromTo('h2', {
-      opacity: 0,
-   }, {
-      delay: 1.5,
-      duration: 2,
-      opacity: 1,
-      ease: 'power3.inOut',
-   });
-
-   gsap.fromTo('h2', {
-      transform: 'scale(1.25)'
-   }, {
-      delay: 2,
-      duration: 2.5,
-      transform: 'scale(1)',
-      ease: 'power3.inOut',
-   });
-
-   gsap.to(underline, {
-      delay: 4,
-      duration: 1,
-      ease: 'sine',
-      width: '100%',
-   });
-
-   gsap.fromTo(description, {
-      opacity: 0,
-   }, {
-      delay: 2.5,
-      duration: 2,
-      opacity: 1,
-   });
+   timeline
+      .to(homepage, {
+         duration: 0,
+         opacity: 1
+      })
+      .fromTo(avatar, {
+         opacity: 0,
+      }, {
+         duration: 1.5,
+         opacity: 1,
+         ease: 'expo',
+         height: '300px',
+         width: '300px',
+      })
+      .fromTo(['h1', 'h2', description], {
+         opacity: 0,
+      }, {
+         opacity: 1,
+         stagger: 1,
+      })
+      .fromTo('h2', {
+         transform: 'scale(1.25)'
+      }, {
+         duration: 2,
+         transform: 'scale(1)',
+      })
+      .to(underline, {
+         duration: 1,
+         ease: 'sine',
+         width: '100%',
+      })
 </script>

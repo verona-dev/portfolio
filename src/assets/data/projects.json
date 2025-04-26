@@ -8,32 +8,33 @@
             "url": "https://www.grheute.ch/",
             "tech": {
                 "stack": ["Vue", "Nuxt", "Wordpress", "Tailwind"],
-                "modules": ["Sass","Axios", "Vuex", "Vuetify", "Dayjs"]
+                "modules": ["Sass","Axios", "Vuex", "Vuetify", "DayJs"]
             },
             "image": "https://res.cloudinary.com/dgcyv1ehi/image/upload/v1745340942/grheute_-_screenshot_zoomedout_hmcdsv.png"
         },
         {
             "id": 2,
+            "thumbnail": "https://res.cloudinary.com/dgcyv1ehi/image/upload/v1745334675/enjoyme_-_logo-2_zjzpiz.png",
+            "title": "EnjoyMe",
+            "tagline": "Work in progress",
+            "description": "EnjoyMe is an adult web application and social media platform that enables content creators to monetize exclusive content by charging subscribers for access.",
+            "tech": {
+                "stack": ["Vue", "Nuxt", "Quasar", "Tailwind"],
+                "modules": ["Ably", "CropperJs", "SwiperJs", "Sass", "Axios", "Pinia", "DayJs", "Vueuse", "i18n", "ApexCharts", "VideoJs"]
+            },
+            "video": "https://res.cloudinary.com/dgcyv1ehi/video/upload/v1745336712/enjoyme_-_video_fn0vtz.mp4"
+        },
+        {
+            "id": 3,
             "thumbnail": "https://res.cloudinary.com/dgcyv1ehi/image/upload/v1745192703/dno_mhvrr9.png",
             "title": "DNO",
             "description": "DNO focuses on guiding and supporting businesses through digital transformation and digital reorganization. It offers insights, strategies, and practical advice on sustainable digital strategies, digital operating and business models, agile teams, scalable organizations, continuous innovation, and strategic leadership using frameworks like OKR (Objectives & Key Results).",
             "url": "https://digitaleneuordnung.de/",
             "tech": {
                 "stack": ["Vue", "Nuxt", "Wordpress", "Tailwind"],
-                "modules": ["DaisyUI", "Sass","Supabase", "Axios", "Pinia", "Algolia", "Dayjs", "Vueuse"]
+                "modules": ["DaisyUI", "Sass","Supabase", "Axios", "Pinia", "Algolia", "DayJs"]
             },
             "image": "https://res.cloudinary.com/dgcyv1ehi/image/upload/v1745340313/dno_-_screenshot_xdfkd1.png"
-        },
-        {
-            "id": 3,
-            "thumbnail": "https://res.cloudinary.com/dgcyv1ehi/image/upload/v1745334675/enjoyme_-_logo-2_zjzpiz.png",
-            "title": "EnjoyMe",
-            "description": "EnjoyMe is an adult web application and social media platform that enables content creators to monetize exclusive content by charging subscribers for access.",
-            "tech": {
-                "stack": ["Vue", "Nuxt", "Wordpress", "Tailwind"],
-                "modules": ["DaisyUI", "Sass","Supabase", "Axios", "Pinia", "Algolia", "Dayjs", "Vueuse"]
-            },
-            "video": "https://res.cloudinary.com/dgcyv1ehi/video/upload/v1745336712/enjoyme_-_video_fn0vtz.mp4"
         },
         {
             "id": 4,
