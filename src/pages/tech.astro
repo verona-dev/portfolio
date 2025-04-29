@@ -9,7 +9,11 @@ import TechItem from '../components/TechItem.astro';
     description='My tech stack and skills'
 >
     <section class='tech page opacity-0 text-center'>
-        <h3>The tools I use</h3>
+        <h3>
+            <span>The</span>
+            <span class='underline-container'>tools<span class='underline'></span><span class='underline2'></span></span>
+            <span>I use</span>
+        </h3>
 
         <div class='flex justify-center flex-wrap'>
            {
@@ -31,6 +35,8 @@ import TechItem from '../components/TechItem.astro';
    import { gsap } from 'gsap';
    const tech = document.querySelector('.tech');
    const techItem = document.querySelectorAll('.tech-icon');
+   const underline = document.querySelector('.underline');
+   const underline2 = document.querySelector('.underline2');
    const timeline = gsap.timeline({
       defaults: { duration: 1 }
    });
@@ -42,5 +48,16 @@ import TechItem from '../components/TechItem.astro';
       .to(techItem, {
          opacity: 1,
          stagger: 0.25,
+      })
+      .to(underline, {
+         delay: 0.5,
+         ease: 'sine.out',
+         width: '100%',
+      })
+      .to(underline2, {
+         delay: 0.5,
+         duration: 4,
+         ease: 'elastic.out',
+         width: 'calc(105% + 5px)',
       });
 </script>
