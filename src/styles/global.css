@@ -42,32 +42,6 @@
     h3 {
         @apply text-xl md:text-2xl my-10;
     }
-    
-    h3 {
-        text-shadow: 0 0.5rem 2rem, 0 -0.5rem 1rem rgba(80, 76, 76, 0.75);
-    }
-    
-    .underline-container {
-        position: relative;
-    }
-    
-    .underline,
-    .underline2 {
-        display: block;
-        position: absolute;
-        bottom: -5px;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background-color: var(--color-pink-400);
-        border-radius: 12px;
-    }
-    
-    .underline2 {
-        left: -5px;
-        bottom: -12px;
-        background-color: var(--color-emerald-500);
-    }
 }
 
 
