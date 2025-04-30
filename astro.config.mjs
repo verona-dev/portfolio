@@ -29,7 +29,8 @@ export default defineConfig({
                    'yahoo-mail',
                 ],
                 iconoir: [
-                   'xmark'
+                   'xmark',
+                   'info-circle',
                 ],
             }
         }),

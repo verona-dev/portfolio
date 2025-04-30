@@ -40,36 +40,39 @@ const {
                 </button>
             </form>
 
-            <div class='card py-12 px-10 mx-auto bg-base-100 shadow-sm'>
-                <div class='media-container h-[350px]'>
-                   {
-                      video && (
-                           <video controls>
-                               <source src={video} type='video/webm'>
-                               Your browser does not support HTML video.
-                           </video>
-                      )
-                   }
-
-                   {
-                      image && (
-                           <figure>
-                               <Image
-                                   src={image}
-                                   alt='Project image'
-                                   width='300'
-                                   height='250'
-                               />
-                           </figure>
-                      )
-                   }
-                </div>
-
+            <div class='card py-12 px-10 shadow-sm'>
                 <div class='card-body'>
-                    <h2 class='text-emerald-300'>
-                       { title }
-                    </h2>
+                    <!--  Media  -->
+                    <div class='media-container h-[350px]'>
+                       {
+                          video && (
+                               <video controls>
+                                   <source src={video} type='video/webm'>
+                                   Your browser does not support HTML video.
+                               </video>
+                          )
+                       }
 
+                       {
+                          image && (
+                               <figure>
+                                   <Image
+                                       src={image}
+                                       alt='Project image'
+                                       width='300'
+                                       height='250'
+                                   />
+                               </figure>
+                          )
+                       }
+                    </div>
+
+                    <!--  Title  -->
+                    <div class='title-container'>
+                       <h2 class='text-emerald-300'>{ title }</h2>
+                    </div>
+
+                    <!--  Badges  -->
                     <div class='badges-container'>
                         <ul class='badges flex gap-2.5 flex-wrap'>
                            {
@@ -88,12 +91,26 @@ const {
                         </ul>
                     </div>
 
+                    <!--  Tagline  -->
                    {
-                      tagline && <p class='font-bold underline tracking-tighter text-lg  m-0'>{ tagline }</p>
+                      tagline && (
+                           <div
+                               role='alert'
+                               class='alert alert-warning alert-soft'
+                           >
+                               <Icon
+                                   name='iconoir:info-circle'
+                                   class='w-6 h-6'
+                               />
+                               <div class='text-xs text-warning'>{ tagline }</div>
+                           </div>
+                      )
                    }
 
+                    <!--  Description  -->
                     <p class='description'>{ description }</p>
 
+                    <!--  Link to website  -->
                     <Button
                         id='button'
                         href={url}
@@ -170,18 +187,20 @@ const {
         }
 
         .card {
-            .media-container img {
-                border-top-left-radius: 8px;
-                border-top-right-radius: 8px;
-            }
-
             .card-body {
                 gap: 0.7rem;
-                padding: var(--card-p, 1.5rem) 0 0;
+                padding: 0 var(--card-p, 1.5rem);
 
-                h2 {
-                    margin-block: calc(var(--spacing) * 0);
-                    margin: 10px 0 5px;
+                .media-container img {
+                    border-top-left-radius: 8px;
+                    border-top-right-radius: 8px;
+                }
+
+                .title-container {
+                    h2 {
+                        margin-block: calc(var(--spacing) * 0);
+                        margin: 10px 20px 5px 0;
+                    }
                 }
 
                 .badges-container {
