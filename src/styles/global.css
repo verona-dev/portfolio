@@ -70,6 +70,18 @@
     }
 }
 
+@layer utilities {
+    .modal {
+        &.modal-open, &[open], &:target {
+            & .modal-box {
+                translate: 0 -25px;
+                scale: 1;
+                opacity: 1;
+            }
+        }
+    }
+}
+
 
 /* Desktop */
 @media (min-width: 1024px) {}
