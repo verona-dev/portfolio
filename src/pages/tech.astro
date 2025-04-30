@@ -11,7 +11,7 @@ import TechItem from '../components/TechItem.astro';
     <section class='tech page opacity-0 text-center'>
         <h3>
             <span>The</span>
-            <span class='underline-container'>tools<span class='underline'></span><span class='underline2'></span></span>
+            <span class='underline-container'>tools<span class='underline-1'></span><span class='underline-2'></span></span>
             <span>I use</span>
         </h3>
 
@@ -30,36 +30,6 @@ import TechItem from '../components/TechItem.astro';
         </div>
     </section>
 </Layout>
-
-<style>
-    .tech {
-        h3 {
-            text-shadow: 0 0.5rem 2rem, 0 -0.5rem 1rem rgba(80, 76, 76, 0.75);
-        }
-
-        .underline-container {
-            position: relative;
-        }
-
-        .underline,
-        .underline2 {
-            display: block;
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--color-pink-400);
-            border-radius: 12px;
-        }
-
-        .underline2 {
-            left: -5px;
-            bottom: -12px;
-            background-color: var(--color-emerald-500);
-        }
-    }
-</style>
 
 <script>
    import { gsap } from 'gsap';
