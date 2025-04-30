@@ -10,19 +10,19 @@
                 "stack": ["Vue", "Nuxt", "Wordpress", "Tailwind"],
                 "modules": ["Sass","Axios", "Vuex", "Vuetify", "DayJs"]
             },
-            "image": "https://res.cloudinary.com/dgcyv1ehi/image/upload/v1745340942/grheute_-_screenshot_zoomedout_hmcdsv.png"
+            "image": "https://res.cloudinary.com/dgcyv1ehi/image/upload/v1746009866/grheute_-_screenshot-2_nyo7r3.png"
         },
         {
             "id": 2,
             "thumbnail": "https://res.cloudinary.com/dgcyv1ehi/image/upload/v1745334675/enjoyme_-_logo-2_zjzpiz.png",
             "title": "EnjoyMe",
             "tagline": "Work in progress",
-            "description": "EnjoyMe is an adult web application and social media platform that enables content creators to monetize exclusive content by charging subscribers for access.",
+            "description": "EnjoyMe is an adult web application and social media platform that enables content creators to monetize exclusive content by charging subscribers for access. The platform emphasizes interactive features, enabling customers to participate in streams and engage directly with performers. ",
             "tech": {
                 "stack": ["Vue", "Nuxt", "Quasar", "Tailwind"],
                 "modules": ["Ably", "CropperJs", "SwiperJs", "Sass", "Axios", "Pinia", "DayJs", "Vueuse", "i18n", "ApexCharts", "VideoJs"]
             },
-            "video": "https://res.cloudinary.com/dgcyv1ehi/video/upload/v1745336712/enjoyme_-_video_fn0vtz.mp4"
+            "video": "https://res.cloudinary.com/dgcyv1ehi/video/upload/v1746027537/Screen_Recording_2024-04-24_at_00.06.09_xnunkr.webm"
         },
         {
             "id": 3,
