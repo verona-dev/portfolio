@@ -22,7 +22,7 @@
                 "stack": ["Vue", "Nuxt", "Quasar", "Tailwind"],
                 "modules": ["Ably", "CropperJs", "SwiperJs", "Sass", "Axios", "Pinia", "DayJs", "Vueuse", "i18n", "ApexCharts", "VideoJs"]
             },
-            "video": "https://res.cloudinary.com/dgcyv1ehi/video/upload/v1745336712/enjoyme_-_video_fn0vtz.mp4"
+            "video": "https://res.cloudinary.com/dgcyv1ehi/video/upload/v1746027537/Screen_Recording_2024-04-24_at_00.06.09_xnunkr.webm"
         },
         {
             "id": 3,
@@ -46,7 +46,7 @@
                 "stack": ["Astro", "Tailwind"],
                 "modules": ["Flowbite", "i18n", "Astro-Icon", "Astro-SEO"]
             },
-            "image": "https://res.cloudinary.com/dgcyv1ehi/image/upload/v1745343205/zlatko_-_screenshot_rox4qz.png"
+            "image": "https://res.cloudinary.com/dgcyv1ehi/image/upload/v1746015573/zlatko_-_screenshot-2_bt0f7m.png"
         }
     ]
 }
