@@ -1,7 +1,40 @@
 @import 'tailwindcss';
+
 @plugin 'daisyui' {
     /* Fix for modal bug shifting layout */
     exclude: rootscrollgutter;
+}
+
+@font-face {
+    font-family: 'Acens';
+    src: url('/fonts/Acens.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Apple';
+    src: url('/fonts/Apple.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FuturaLight';
+    src: url('/fonts/FuturaLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FuturaMedium';
+    src: url('/fonts/FuturaMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 @layer base {
@@ -22,7 +55,7 @@
     }
     
     main {
-        @apply flex-1 mx-auto relative max-w-2xl lg:max-w-4xl;
+        @apply flex-1 mx-auto relative max-w-2xl lg:max-w-5xl;
         
         @media (min-width: 1024px) {
             padding-left: 100px; /*  Header's width  */
@@ -30,25 +63,41 @@
     }
     
     .page {
-        @apply mt-6 p-10 lg:max-w-2xl;
+        @apply mt-6 p-10 lg:max-w-3xl;
     }
 }
 
 @layer components {
     h1 {
-        @apply text-4xl lg:text-6xl my-8;
+        font-family: 'Acens', sans-serif;
+        @apply text-4xl lg:text-5xl my-8 text-pink-400 tracking-widest uppercase;
     }
     
     h2 {
-        @apply text-xl lg:text-3xl my-6 text-pink-400 tracking-widest uppercase;
+        font-family: 'FuturaLight', sans-serif;
+        @apply text-3xl lg:text-5xl  my-8;
     }
     
     h3 {
         @apply text-xl lg:text-2xl my-10;
+        font-family: 'FuturaMedium', serif;
+        font-size: 32px;
+        text-shadow: 0 0.5rem 2rem, 0 -0.5rem 1rem rgba(80, 76, 76, 0.75);
     }
     
-    h3 {
-        text-shadow: 0 0.5rem 2rem, 0 -0.5rem 1rem rgba(80, 76, 76, 0.75);
+    h4.developer-info {
+        @apply text-xl;
+        font-family: 'FuturaLight', monospace;
+    }
+    
+    li {
+        font-family: 'Acens', serif;
+        font-size: 18px;
+    }
+    
+    p.tech-name {
+        font-family: 'Acens', monospace;
+        letter-spacing: 0.1em;
     }
     
     .underline-container {
@@ -80,9 +129,15 @@
             & .modal-box {
                 /* Desktop */
                 @media (min-width: 1024px) {
-                    margin-left: 100px;
-                    translate: 0 -25px;
+                    translate: 50px -50px;
                 }
+            }
+        }
+        
+        & .modal-box {
+            /* Desktop */
+            @media (min-width: 1024px) {
+                translate: 50px -50px;
             }
         }
     }
