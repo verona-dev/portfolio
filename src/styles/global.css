@@ -74,6 +74,7 @@
     .modal {
         &.modal-open, &[open], &:target {
             & .modal-box {
+                margin-left: 100px;
                 translate: 0 -25px;
             }
         }
