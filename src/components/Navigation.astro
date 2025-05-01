@@ -97,7 +97,10 @@ const isActive = path => currentPath === path ? 'active' : '';
             }
 
             li {
-                margin: 0 50px;
+                /* Desktop */
+                @media (min-width: 1024px) {
+                    margin: 0 50px;
+                }
             }
         }
     }

@@ -36,15 +36,15 @@
 
 @layer components {
     h1 {
-        @apply text-4xl md:text-6xl my-8;
+        @apply text-4xl lg:text-6xl my-8;
     }
     
     h2 {
-        @apply text-xl md:text-3xl my-6 text-pink-400 tracking-widest uppercase;
+        @apply text-xl lg:text-3xl my-6 text-pink-400 tracking-widest uppercase;
     }
     
     h3 {
-        @apply text-xl md:text-2xl my-10;
+        @apply text-xl lg:text-2xl my-10;
     }
     
     h3 {
@@ -78,8 +78,11 @@
     .modal {
         &.modal-open, &[open], &:target {
             & .modal-box {
-                margin-left: 100px;
-                translate: 0 -25px;
+                /* Desktop */
+                @media (min-width: 1024px) {
+                    margin-left: 100px;
+                    translate: 0 -25px;
+                }
             }
         }
     }
