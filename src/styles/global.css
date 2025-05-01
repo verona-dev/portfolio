@@ -95,7 +95,12 @@
         @apply text-xl;
         font-family: 'FuturaLight', monospace;
     }
-
+    
+    li {
+        font-family: 'Acens', serif;
+        font-size: 18px;
+    }
+    
     .underline-container {
         position: relative;
     }

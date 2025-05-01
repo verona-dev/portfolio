@@ -71,8 +71,8 @@ const isActive = path => currentPath === path ? 'active' : '';
         }
 
         li:not(:first-child) {
-            margin: 40px 0;
-            letter-spacing: 0.35em;
+            margin: 50px 0;
+            letter-spacing: 0.5em;
             text-orientation: upright;
             -webkit-writing-mode: vertical-rl;
             -ms-writing-mode: tb-rl;
@@ -99,6 +99,7 @@ const isActive = path => currentPath === path ? 'active' : '';
             li {
                 /* Desktop */
                 @media (min-width: 1024px) {
+                    letter-spacing: 0.5em;
                     margin: 0 50px;
                 }
             }
