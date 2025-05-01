@@ -5,6 +5,10 @@
 }
 
 @layer base {
+    html {
+        scrollbar-gutter: stable;
+    }
+    
     html,
     body {
         @apply m-0;
