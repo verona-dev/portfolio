@@ -37,14 +37,6 @@
     font-display: swap;
 }
 
-@font-face {
-    font-family: 'Seattle';
-    src: url('/fonts/SeattleSans.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
 @layer base {
     html {
         scrollbar-gutter: stable;
@@ -88,6 +80,8 @@
     
     h3 {
         @apply text-xl lg:text-2xl my-10;
+        font-family: 'FuturaMedium', serif;
+        font-size: 32px;
         text-shadow: 0 0.5rem 2rem, 0 -0.5rem 1rem rgba(80, 76, 76, 0.75);
     }
     
@@ -99,6 +93,11 @@
     li {
         font-family: 'Acens', serif;
         font-size: 18px;
+    }
+    
+    p.tech-name {
+        font-family: 'Acens', monospace;
+        letter-spacing: 0.1em;
     }
     
     .underline-container {
