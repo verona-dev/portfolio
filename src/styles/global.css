@@ -80,9 +80,15 @@
             & .modal-box {
                 /* Desktop */
                 @media (min-width: 1024px) {
-                    margin-left: 100px;
-                    translate: 0 -25px;
+                    translate: 50px -50px;
                 }
+            }
+        }
+        
+        & .modal-box {
+            /* Desktop */
+            @media (min-width: 1024px) {
+                translate: 50px -50px;
             }
         }
     }
