@@ -48,10 +48,9 @@ const isActive = path => currentPath === path ? 'active' : '';
     }
 
     /* Desktop */
-    @media (min-width: 765px) {
+    @media (min-width: 1024px) {
         header {
             color: var(--color-zinc-50);
-            //font-weight: 200;
             height: 100vh;
             left: 0;
             position: fixed;
@@ -82,19 +81,27 @@ const isActive = path => currentPath === path ? 'active' : '';
 
         a {
             text-transform: uppercase;
-
-            /*
-            &:hover {
-                color: var(--color-pink-300);
-            }
-            */
         }
     }
 
     /* Mobile */
-    @media (max-width: 764px) {
+    @media (max-width: 1023px) {
         header {
-            display: none;
+            //display: none;
+            padding: 40px 0;
+
+            ul {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+
+            li {
+                /* Desktop */
+                @media (min-width: 1024px) {
+                    margin: 0 50px;
+                }
+            }
         }
     }
 </style>
