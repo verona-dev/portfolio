@@ -45,15 +45,9 @@ const {
         display: flex;
         flex-direction: column;
         margin: 20px;
-        
+
         &:hover {
             cursor: pointer;
-        }
-
-        a {
-            &:hover {
-                color: var(--color-pink-400);
-            }
         }
 
         svg {
@@ -64,12 +58,35 @@ const {
             margin: 5px 0;
         }
 
+        .starwind-tooltip {
+            &:hover {
+                cursor: auto;
+            }
+
+            /* Desktop */
+            @media (min-width: 1199px) {
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
         .starwind-tooltip-content {
+            background-color: var(--color-zinc-900);
+            display: none;
+            font-size: 14px;
             padding: 35px;
+            --tooltip-offset: calc(100% + 20px) !important;
+            white-space: normal;
             width: 600px;
 
+            &:hover {
+                cursor: auto;
+            }
+
+            /* Tablet/Mobile */
             @media (max-width: 1200px) {
-                width: 500px;
+                display: none !important;
             }
         }
     }

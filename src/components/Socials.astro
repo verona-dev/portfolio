@@ -3,7 +3,7 @@ import { Icon } from 'astro-icon/components';
 ---
 
 <div class='socials lg:pl-[100px]'>
-    <div class='container max-w-2xl mx-auto'>
+    <div class='container lg:max-w-4xl mx-auto py-10 md:p-14 lg:p-20 flex justify-evenly'>
         <div class='social-item'>
             <a
                 href='https://github.com/verona-dev'
@@ -51,10 +51,6 @@ import { Icon } from 'astro-icon/components';
 <style>
     .socials {
         .container {
-            display: flex;
-            justify-content: space-evenly;
-            padding: 75px;
-
             a:hover {
                 color: var(--color-pink-400);
             }

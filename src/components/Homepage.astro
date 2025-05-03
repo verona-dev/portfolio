@@ -4,7 +4,7 @@ import ProfilePicture from '@/assets/images/profile-picture.jpg';
 ---
 
 <section class='homepage page opacity-0 text-center'>
-    <Avatar class='border-pink-400 min-h-[300px]'>
+    <Avatar class='!my-10'>
         <AvatarImage
             image={ProfilePicture}
             alt='Zoran G. Verona'
@@ -15,12 +15,12 @@ import ProfilePicture from '@/assets/images/profile-picture.jpg';
     <h2>Zoran G. Verona</h2>
 
     <h1>
-        <span>Frontend Developer</span>
+        Frontend Developer
         <span class='underline'></span>
     </h1>
 
     <h4
-        class='developer-info mb-10'
+        class='developer-info'
         set:html='Based in Croatia, Europe, with 3+ years of development experience. I am a frontend web developer who enjoys building websites and web applications that are both fun and functional.'
     />
 </section>
@@ -31,6 +31,18 @@ import ProfilePicture from '@/assets/images/profile-picture.jpg';
 
         figure {
             margin: 0 auto;
+
+            /* Desktop */
+            @media (min-width: 1024px) {
+                height: 300px;
+                width: 300px;
+            }
+
+            /* Mobile */
+            @media (max-width: 1023px) {
+                height: 200px;
+                width: 200px;
+            }
         }
 
         h1 {
@@ -56,7 +68,6 @@ import ProfilePicture from '@/assets/images/profile-picture.jpg';
    import { gsap } from 'gsap';
 
    const homepage = document.querySelector('.homepage');
-   const avatar = document.querySelector('figure');
    const underline = document.querySelector('.underline');
    const description = document.querySelector('.developer-info');
    const timeline = gsap.timeline({
@@ -69,15 +80,6 @@ import ProfilePicture from '@/assets/images/profile-picture.jpg';
       .to(homepage, {
          duration: 0,
          opacity: 1
-      })
-      .fromTo(avatar, {
-         opacity: 0,
-      }, {
-         duration: 1.5,
-         opacity: 1,
-         ease: 'expo',
-         height: '300px',
-         width: '300px',
       })
       .fromTo(['h2', 'h1', description], {
          opacity: 0,
