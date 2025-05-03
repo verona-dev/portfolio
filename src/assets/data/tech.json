@@ -46,7 +46,7 @@
         {
             "name": "Sass",
             "icon": "skill-icons:sass",
-            "description": "is a stylesheet language that’s compiled to CSS. It allows you to use variables, nested rules, mixins, functions, and more, all with a fully CSS-compatible syntax.",
+            "description": "is a stylesheet language that’s compiled to CSS. It allows you to use variables, nested rules, mixins, functions, and more, all with a fully CSS compatible syntax.",
             "url": "https://sass-lang.com/"
         },
         {
@@ -68,7 +68,7 @@
             "url": "https://www.figma.com/"
         },
         {
-            "name": "NPM",
+            "name": "npm",
             "icon": "skill-icons:npm-dark",
             "description": "is the world's largest software registry. The registry is a large public database of JavaScript software and the meta-information surrounding it.",
             "url": "https://www.npmjs.com/"

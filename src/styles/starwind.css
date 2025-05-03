@@ -148,19 +148,3 @@
 		transition-duration: var(--default-transition-duration);
 	}
 }
-
-.starwind-tooltip-content {
-    background-color: var(--color-zinc-900);
-    font-size: 14px;
-    --tooltip-offset: calc(100% + 20px) !important;
-    white-space: normal;
-    
-    &:hover {
-        cursor: auto;
-    }
-    
-    /* Mobile */
-    @media (max-width: 1100px) {
-        display: none !important;
-    }
-}
