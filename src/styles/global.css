@@ -93,6 +93,7 @@
     }
     
     li.badge {
+        font-family: 'FuturaMedium', monospace;
         @apply p-3.5 pt-4;
     }
     
