@@ -14,14 +14,6 @@
 }
 
 @font-face {
-    font-family: 'Apple';
-    src: url('/fonts/Apple.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
     font-family: 'FuturaLight';
     src: url('/fonts/FuturaLight.woff') format('woff');
     font-weight: normal;
@@ -50,7 +42,7 @@
     body {
         display: flex;
         flex-direction: column;
-        font-family: 'Roboto Mono', monospace;
+        font-family: 'FuturaLight', monospace;
         min-height: 100vh;
     }
     
@@ -63,7 +55,7 @@
     }
     
     .page {
-        @apply mt-6 lg:p-10 lg:max-w-3xl;
+        @apply my-6 lg:p-10 lg:max-w-3xl;
     }
 }
 
@@ -74,8 +66,11 @@
     }
     
     h2 {
-        font-family: 'FuturaLight', monospace;
         @apply text-4xl md:text-4xl lg:text-5xl my-4 lg:my-10;
+    }
+    
+    .projects-item h2 {
+        @apply text-2xl lg:text-4xl my-10;
     }
     
     h3 {
@@ -87,18 +82,28 @@
     
     h4.developer-info {
         @apply text-xl lg:text-xl my-4 lg:my-10;
-        font-family: 'FuturaLight', sans-serif;
     }
     
-    li {
-        @apply text-sm lg:text-xl;
-        font-family: 'Acens', serif;
-        text-transform: uppercase;
+    a {
+        font-family: 'Acens', serif !important;
+    }
+    
+    nav a {
+        @apply text-sm lg:text-xl uppercase;
+    }
+    
+    li.badge {
+        font-family: 'FuturaMedium', monospace;
+        @apply p-3.5 pt-4;
+    }
+    
+    p {
+        letter-spacing: 0.1em;
+        @apply lg:text-base;
     }
     
     p.tech-name {
         font-family: 'FuturaMedium', monospace;
-        letter-spacing: 0.1em;
     }
     
     .underline-container {
@@ -126,7 +131,6 @@
     .starwind-tooltip {
         a,
         span {
-            font-family: 'FuturaLight', monospace;
             font-size: 16px;
             letter-spacing: 0.05em;
         }
