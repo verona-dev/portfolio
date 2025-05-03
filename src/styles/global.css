@@ -42,7 +42,7 @@
     body {
         display: flex;
         flex-direction: column;
-        font-family: 'Roboto Mono', monospace;
+        font-family: 'FuturaLight', monospace;
         min-height: 100vh;
     }
     
@@ -66,12 +66,10 @@
     }
     
     h2 {
-        font-family: 'FuturaLight', monospace;
         @apply text-4xl md:text-4xl lg:text-5xl my-4 lg:my-10;
     }
     
     .projects-item h2 {
-        font-family: 'FuturaLight', monospace;
         @apply text-2xl lg:text-4xl my-10;
     }
     
@@ -84,7 +82,6 @@
     
     h4.developer-info {
         @apply text-xl lg:text-xl my-4 lg:my-10;
-        font-family: 'FuturaLight', sans-serif;
     }
     
     a {
@@ -96,12 +93,10 @@
     }
     
     li.badge {
-        font-family: 'FuturaLight', monospace;
         @apply p-3.5 pt-4;
     }
     
     p {
-        font-family: 'FuturaLight', monospace;
         letter-spacing: 0.1em;
         @apply lg:text-base;
     }
@@ -135,7 +130,6 @@
     .starwind-tooltip {
         a,
         span {
-            font-family: 'FuturaLight', monospace;
             font-size: 16px;
             letter-spacing: 0.05em;
         }
