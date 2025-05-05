@@ -47,11 +47,8 @@
     }
     
     main {
-        @apply flex-1 mx-auto relative max-w-[350px] md:max-w-2xl lg:max-w-5xl;
+        @apply flex-1 mx-auto relative;
         
-        @media (min-width: 1024px) {
-            padding-left: 100px; /*  Header's width  */
-        }
     }
     
     .page {
@@ -74,18 +71,13 @@
     }
     
     h3 {
-        @apply text-xl lg:text-2xl my-10;
+        @apply text-xl lg:text-4xl my-10;
         font-family: 'FuturaMedium', monospace;
-        font-size: 32px;
         text-shadow: 0 0.5rem 4rem, 0 -0.5rem 1rem rgba(80, 76, 76, 0.75);
     }
     
     h4.developer-info {
         @apply text-xl lg:text-xl my-4 lg:my-10;
-    }
-    
-    a {
-        /*font-family: 'Acens', serif;*/
     }
     
     nav a {
