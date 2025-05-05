@@ -1,0 +1,34 @@
+---
+import '@/styles/starwind.css';
+import '@fontsource/roboto-mono';
+import '@/styles/global.css';
+
+import CommonMeta from '../components/CommonMeta.astro';
+import Seo from '../components/Seo.astro';
+
+let {
+   title,
+   description,
+} = Astro.props;
+
+title = `Zoran G Verona - Frontend Developer | ${title}`
+---
+
+<html lang='en' class='dark'>
+   <head>
+       <CommonMeta />
+
+       <Seo
+           title={title}
+           description={description}
+       />
+   </head>
+
+   <body>
+
+   <main class='px-10'>
+       <slot />
+   </main>
+
+   </body>
+</html>
