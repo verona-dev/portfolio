@@ -1,0 +1,68 @@
+---
+import Layout from '../layouts/Layout404.astro';
+import { Button } from '@/components/starwind/button';
+
+---
+
+<Layout
+    title='404 - Page not found'
+    description='Page not found'
+>
+    <section class='my-20 lg:p-10 text-center'>
+        <div class='logo mx-auto'></div>
+
+        <p class='mt-8 text-xl md:text-2xl lg:text-3xl font-semibold'>Sorry, we couldn't find this page.</p>
+
+        <p class='mt-4 mb-16 text-base lg:text-lg text-muted dark:text-slate-400'>
+            But don't worry, you can find plenty of things on the Homepage.
+        </p>
+
+        <Button
+            id='button'
+            href='/'
+            rel='noopener noreferrer'
+            aria-label='homepage'
+        >
+            Back to homepage
+        </Button>
+    </section>
+</Layout>
+
+<style>
+    .logo {
+        background-image: url('/src/icons/404.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 600px;
+        width: 800px;
+    }
+
+    /* Tablet */
+    @media (max-width: 1000px) {
+        .logo {
+            height: 500px;
+            width: 650px;
+        }
+    }
+
+    @media (max-width: 800px) {
+        .logo {
+            width: 600px;
+        }
+    }
+
+    /* Mobile */
+    @media (max-width: 700px) {
+        .logo {
+            height: 300px;
+            width: 450px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .logo {
+            height: 200px;
+            width: 300px;
+        }
+    }
+</style>
