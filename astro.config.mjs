@@ -1,4 +1,4 @@
-import tailwindcss from "@tailwindcss/vite";
+import tailwindcss from '@tailwindcss/vite';
 
 // @ts-check
 import { defineConfig } from 'astro/config';
@@ -16,9 +16,11 @@ export default defineConfig({
         enabled: false
     },
     
+    /*
     experimental: {
         svg: true,
     },
+    */
     
     integrations: [
         icon({
@@ -31,6 +33,24 @@ export default defineConfig({
                 iconoir: [
                    'xmark',
                    'info-circle',
+                ],
+                'skill-icons': [
+                   'html',
+                   'css',
+                   'javascript',
+                   'vuejs-dark',
+                   'nuxtjs-dark',
+                   'astro',
+                   'tailwindcss-dark',
+                   'sass',
+                   'wordpress',
+                   'github-dark',
+                   'figma-dark',
+                   'npm-dark',
+                   'pinia-dark',
+                   'postman',
+                   'supabase-dark',
+                   'webstorm-dark',
                 ],
             }
         }),
