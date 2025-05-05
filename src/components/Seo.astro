@@ -2,6 +2,7 @@
 import {SEO} from 'astro-seo';
 const { title, description } = Astro.props;
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
+const imageUrl = 'https://res.cloudinary.com/dgcyv1ehi/image/upload/v1746455877/portfolio/ruabudfjanqwwc1ywgqk.jpg';
 ---
 
 
@@ -28,16 +29,17 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
           url: canonicalUrl,
           type: 'website',
           title: title,
-          image: '',
+          image: imageUrl,
        },
        image: {
-          alt: '',
+          url: imageUrl,
+          alt: 'Portfolio main image',
        },
     }}
     twitter={{
        card: 'summary_large_image',
        title,
        description,
-       image: '',
+       image: imageUrl,
     }}
 />
