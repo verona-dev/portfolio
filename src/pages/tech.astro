@@ -8,14 +8,14 @@ import TechItem from '../components/TechItem.astro';
     title='Tech stack'
     description='My tech stack and skills'
 >
-    <section class='tech page opacity-0 text-center'>
+    <section class='tech text-center max-w-2xl'>
         <h3>
             <span>The</span>
             <span class='underline-container'>tools<span class='underline-1'></span><span class='underline-2'></span></span>
             <span>I use</span>
         </h3>
 
-        <div class='flex justify-center flex-wrap'>
+        <div class='py-6 flex justify-center flex-wrap'>
            {
               data?.tech?.map(item => (
                   <TechItem

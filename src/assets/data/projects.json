@@ -5,7 +5,7 @@
             "thumbnail": "https://res.cloudinary.com/dgcyv1ehi/image/upload/v1745190708/logo_rcnnwz.jpg",
             "title": "GRHeute",
             "description": "GRHeute is an independent online news and entertainment platform focused on the Swiss canton of Graubünden. It provides daily content covering news, culture, sports, analysis, and commentary relevant to the region. The site offers news, interviews, and background reports that highlight local culture, economy, tourism, and sports.",
-            "url": "https://www.grheute.ch/",
+            "url": "https://www.grheute.ch",
             "tech": {
                 "stack": ["Vue", "Nuxt", "Wordpress", "Tailwind"],
                 "modules": ["Sass","Axios", "Vuex", "Vuetify", "DayJs"]
@@ -29,7 +29,7 @@
             "thumbnail": "https://res.cloudinary.com/dgcyv1ehi/image/upload/v1745192703/dno_mhvrr9.png",
             "title": "DNO",
             "description": "DNO focuses on guiding and supporting businesses through digital transformation and digital reorganization. It offers insights, strategies, and practical advice on sustainable digital strategies, digital operating and business models, agile teams, scalable organizations, continuous innovation, and strategic leadership using frameworks like OKR (Objectives & Key Results).",
-            "url": "https://digitaleneuordnung.de/",
+            "url": "https://digitaleneuordnung.de",
             "tech": {
                 "stack": ["Vue", "Nuxt", "Wordpress", "Tailwind"],
                 "modules": ["DaisyUI", "Sass","Supabase", "Axios", "Pinia", "Algolia", "DayJs"]
@@ -41,7 +41,7 @@
             "thumbnail": "https://res.cloudinary.com/dgcyv1ehi/image/upload/v1745343097/zlatko_-_logo_dt0tqa.svg",
             "title": "Autoservis Zlatko",
             "description": "Autoservis Zlatko is a family-owned car mechanic shop known for its honest, reliable, and affordable vehicle maintenance and repair services. With decades of experience passed down through generations, the shop treats every customer like part of the family, ensuring vehicles run safely and smoothly.",
-            "url": "https://autoservis-zlatko.netlify.app/",
+            "url": "https://autoserviszlatko.com",
             "tech": {
                 "stack": ["Astro", "Tailwind"],
                 "modules": ["Flowbite", "i18n", "Astro-Icon", "Astro-SEO"]
