@@ -30,18 +30,10 @@ title = `Zoran G Verona - Frontend Developer | ${title}`
    <body>
       <Navigation />
 
-      <main class='max-w-xl lg:max-w-4xl'>
+      <main class='max-w-xl lg:max-w-4xl lg:pl-[125px]'>
           <slot />
       </main>
 
       <Socials />
    </body>
 </html>
-
-<style>
-    main {
-        @media (min-width: 1024px) {
-            padding-left: 125px; /*  Header's width  */
-        }
-    }
-</style>
