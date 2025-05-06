@@ -4,9 +4,9 @@ import '@fontsource/roboto-mono';
 import '@/styles/global.css';
 
 import CommonMeta from '../components/CommonMeta.astro';
+import Footer from '../components/Footer.astro';
 import Navigation from '../components/Navigation.astro';
 import Seo from '../components/Seo.astro';
-import Socials from '../components/Socials.astro';
 
 let {
    title,
@@ -30,18 +30,10 @@ title = `Zoran G Verona - Frontend Developer | ${title}`
    <body>
       <Navigation />
 
-      <main class='max-w-xl lg:max-w-4xl'>
+      <main>
           <slot />
       </main>
 
-      <Socials />
+      <Footer />
    </body>
 </html>
-
-<style>
-    main {
-        @media (min-width: 1024px) {
-            padding-left: 125px; /*  Header's width  */
-        }
-    }
-</style>

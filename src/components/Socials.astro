@@ -2,58 +2,54 @@
 import { Icon } from 'astro-icon/components';
 ---
 
-<div class='socials lg:pl-[125px]'>
-    <div class='container lg:max-w-4xl mx-auto py-10 md:p-14 lg:p-20 flex justify-evenly'>
-        <div class='social-item'>
-            <a
-                href='https://github.com/verona-dev'
-                target='_blank'
-                rel='noopener noreferrer'
-                aria-label='Github profile'
-            >
-                <Icon
-                    name='arcticons:github'
-                    class='w-10 h-10'
-                />
-            </a>
-        </div>
+<div class='socials lg:max-w-4xl mx-auto py-10 md:p-14 lg:p-20 flex justify-evenly'>
+    <div class='social-item'>
+        <a
+            href='https://github.com/verona-dev'
+            target='_blank'
+            rel='noopener noreferrer'
+            aria-label='Github profile'
+        >
+            <Icon
+                name='arcticons:github'
+                class='w-10 h-10'
+            />
+        </a>
+    </div>
 
-        <div class='social-item'>
-            <a
-                href='https://linkedin.com/in/zoran-g-verona-489650328'
-                target='_blank'
-                rel='noopener noreferrer'
-                aria-label='Linkedin profile'
-            >
-                <Icon
-                    name='arcticons:linkedin'
-                    class='w-10 h-10'
-                />
-            </a>
-        </div>
+    <div class='social-item'>
+        <a
+            href='https://linkedin.com/in/zoran-g-verona-489650328'
+            target='_blank'
+            rel='noopener noreferrer'
+            aria-label='Linkedin profile'
+        >
+            <Icon
+                name='arcticons:linkedin'
+                class='w-10 h-10'
+            />
+        </a>
+    </div>
 
-        <div class='social-item'>
-            <a
-                href='mailto:veronadev@tuta.io'
-                target='_blank'
-                rel='noopener noreferrer'
-                aria-label='Personal email'
-            >
-                <Icon
-                    name='arcticons:yahoo-mail'
-                    class='w-10 h-10'
-                />
-            </a>
-        </div>
+    <div class='social-item'>
+        <a
+            href='mailto:veronadev@tuta.io'
+            target='_blank'
+            rel='noopener noreferrer'
+            aria-label='Personal email'
+        >
+            <Icon
+                name='arcticons:yahoo-mail'
+                class='w-10 h-10'
+            />
+        </a>
     </div>
 </div>
 
 <style>
     .socials {
-        .container {
-            a:hover {
-                color: var(--color-pink-400);
-            }
+        a:hover {
+            color: var(--color-pink-400);
         }
     }
 </style>

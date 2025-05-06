@@ -40,18 +40,20 @@
     }
     
     body {
+        color: var(--color-zinc-50);
         display: flex;
         flex-direction: column;
         font-family: 'FuturaLight', monospace;
         min-height: 100vh;
+        position: relative;
     }
     
     main {
-        @apply flex-1 mx-auto relative;
+        @apply flex-1 mx-auto max-w-xl lg:max-w-5xl;
     }
     
     section {
-        @apply my-6 lg:p-10 opacity-0;
+        @apply my-6 lg:p-10 opacity-0 lg:ml-[125px];
     }
 }
 
