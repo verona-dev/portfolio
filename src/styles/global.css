@@ -58,7 +58,7 @@
 @layer components {
     h1 {
         font-family: 'Acens', monospace;
-        @apply text-2xl md:text-4xl lg:text-5xl my-10 text-pink-400 tracking-widest uppercase;
+        @apply text-xl md:text-4xl lg:text-5xl my-4 lg:my-10 text-pink-400 tracking-widest uppercase;
     }
     
     h2 {
@@ -76,7 +76,7 @@
     }
     
     h4.developer-info {
-        @apply text-xl lg:text-xl my-4 lg:my-10;
+        @apply text-base lg:text-xl my-4 lg:my-10 px-6;
     }
     
     nav a {
