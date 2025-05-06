@@ -51,14 +51,14 @@
     }
     
     section {
-        @apply my-6 lg:p-10;
+        @apply my-6 lg:p-10 opacity-0;
     }
 }
 
 @layer components {
     h1 {
         font-family: 'Acens', monospace;
-        @apply text-xl md:text-4xl lg:text-5xl my-4 lg:my-10 text-pink-400 tracking-widest uppercase;
+        @apply text-xl md:text-3xl lg:text-4xl my-6 text-pink-400 tracking-widest uppercase;
     }
     
     h2 {
@@ -71,8 +71,7 @@
     
     h3 {
         @apply text-3xl lg:text-4xl my-10;
-        font-family: 'FuturaMedium', monospace;
-        text-shadow: 0 0.5rem 4rem, 0 -0.5rem 1rem rgba(80, 76, 76, 0.75);
+        text-shadow: 0 0.5rem 3rem, 0 -0.5rem 1rem rgba(80, 76, 76, 0.75);
     }
     
     h4.developer-info {

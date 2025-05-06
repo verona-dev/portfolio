@@ -3,7 +3,7 @@ import { Avatar, AvatarImage, AvatarFallback } from '@/components/starwind/avata
 import ProfilePicture from '@/assets/images/profile-picture.jpg';
 ---
 
-<section class='homepage page opacity-0 text-center'>
+<section class='homepage text-center'>
     <Avatar class='!my-10'>
         <AvatarImage
             image={ProfilePicture}
@@ -75,12 +75,12 @@ import ProfilePicture from '@/assets/images/profile-picture.jpg';
    const timeline = gsap.timeline({
       defaults: {
          duration: 1,
-         ease: 'power3.inOut'}
+         ease: 'power3.inOut'
+      }
    });
 
    timeline
       .to(homepage, {
-         duration: 0,
          opacity: 1
       })
       .fromTo(['h2', 'h1', description], {
