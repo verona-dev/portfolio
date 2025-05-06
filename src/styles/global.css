@@ -70,7 +70,7 @@
     }
     
     h3 {
-        @apply text-xl lg:text-4xl my-10;
+        @apply text-3xl lg:text-4xl my-10;
         font-family: 'FuturaMedium', monospace;
         text-shadow: 0 0.5rem 4rem, 0 -0.5rem 1rem rgba(80, 76, 76, 0.75);
     }
