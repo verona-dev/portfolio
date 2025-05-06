@@ -48,11 +48,10 @@
     
     main {
         @apply flex-1 mx-auto relative;
-        
     }
     
-    .page {
-        @apply my-6 lg:p-10 lg:max-w-3xl;
+    section {
+        @apply my-6 lg:p-10;
     }
 }
 
@@ -81,7 +80,6 @@
     }
     
     nav a {
-        font-family: 'FuturaLight', serif !important;
         @apply text-sm lg:text-xl uppercase;
     }
     
