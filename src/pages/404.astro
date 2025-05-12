@@ -8,7 +8,7 @@ import { Button } from '@/components/starwind/button';
     title='404 - Page not found'
     description='Page not found'
 >
-    <section class='my-20 lg:p-10 text-center'>
+    <section class='not-found my-20 lg:p-10 text-center'>
         <div class='logo mx-auto'></div>
 
         <p class='mt-8 text-xl md:text-2xl lg:text-3xl font-semibold'>Sorry, we couldn't find this page.</p>
@@ -66,3 +66,21 @@ import { Button } from '@/components/starwind/button';
         }
     }
 </style>
+
+<script>
+   import { gsap } from 'gsap';
+
+   const notFound = document.querySelector('.not-found');
+
+   const timeline = gsap.timeline({
+      defaults: {
+         duration: 1,
+         ease: 'power3.inOut'
+      }
+   });
+
+   timeline
+      .to(notFound, {
+         opacity: 1
+      })
+</script>
