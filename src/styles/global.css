@@ -137,27 +137,6 @@
     }
 }
 
-@layer utilities {
-    .modal {
-        &.modal-open, &[open], &:target {
-            & .modal-box {
-                /* Desktop */
-                @media (min-width: 1024px) {
-                    translate: 50px -50px;
-                }
-            }
-        }
-        
-        & .modal-box {
-            /* Desktop */
-            @media (min-width: 1024px) {
-                translate: 50px -50px;
-            }
-        }
-    }
-}
-
-
 /* Desktop */
 @media (min-width: 1024px) {}
 

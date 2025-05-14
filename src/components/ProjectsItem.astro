@@ -29,8 +29,11 @@ const {
     />
 
     <!--  Modal Content  -->
-    <dialog id={`my_modal_${id}`} class='modal'>
-        <div class='modal-box border max-w-3xl'>
+    <dialog
+        id={`my_modal_${id}`}
+        class='modal'
+    >
+        <div class='modal-box max-w-3xl'>
             <form method='dialog'>
                 <button class='btn btn-lg btn-circle btn-ghost absolute right-2 top-2 z-100'>
                     <Icon
@@ -40,7 +43,7 @@ const {
                 </button>
             </form>
 
-            <div class='card py-12 px-10 shadow-sm'>
+            <div class='card min-h-full shadow-sm'>
                 <div class='card-body'>
                     <!--  Media  -->
                     <div class='media-container h-[350px]'>
@@ -189,11 +192,46 @@ const {
                 }
             }
         }
+    }
+
+    .modal {
+        &.modal-open, &[open], &:target {
+            & .modal-box {
+                /* Desktop */
+                @media (min-width: 1024px) {
+                    translate: 50px 0;
+                }
+            }
+        }
+
+        & .modal-box {
+            height: 90%;
+
+            /* Desktop */
+            @media (min-width: 1024px) {
+                translate: 50px 0;
+            }
+
+            /* Mobile */
+            @media (max-width: 1023px) {
+                height: 100%;
+                width: 100%;
+            }
+        }
 
         .card {
             .card-body {
-                gap: 0.7rem;
-                padding: 0 var(--card-p, 1.5rem);
+                gap: 2rem;
+                justify-content: center;
+
+                /* Mobile */
+                @media (max-width: 800px) {
+                    padding: 60px 10px;
+                }
+
+                & :where(p) {
+                    flex-grow: initial;
+                }
 
                 .media-container img {
                     border-top-left-radius: 8px;
@@ -203,7 +241,6 @@ const {
                 .title-container {
                     h2 {
                         margin-block: calc(var(--spacing) * 0);
-                        margin: 10px 20px 5px 0;
                     }
                 }
 
@@ -214,7 +251,7 @@ const {
                 }
 
                 p.description {
-                    margin-bottom: 20px;
+                    margin-bottom: 30px;
                 }
             }
         }
