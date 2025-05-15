@@ -57,7 +57,7 @@
     }
     
     section:not(.not-found) {
-        @apply my-6 lg:p-10 opacity-0 lg:ml-[125px];
+        @apply lg:my-6 lg:p-10 opacity-0 lg:ml-[125px];
     }
 }
 
@@ -68,11 +68,7 @@
     }
     
     h2 {
-        @apply text-4xl md:text-4xl lg:text-5xl my-4 lg:my-10;
-    }
-    
-    .projects-item h2 {
-        @apply text-2xl lg:text-4xl my-10;
+        @apply text-4xl md:text-4xl lg:text-5xl;
     }
     
     h3 {
@@ -88,9 +84,15 @@
         @apply text-sm lg:text-xl uppercase;
     }
     
+    .projects-item a {
+        font-family: 'FuturaMedium', monospace;
+        
+    }
+    
     li.badge {
         font-family: 'FuturaMedium', monospace;
-        @apply p-3.5 pt-4;
+        font-size: 1rem !important;
+        @apply p-3.5 pt-4 text-base;
     }
     
     p {
@@ -100,6 +102,10 @@
     
     p.tech-name {
         font-family: 'FuturaMedium', monospace;
+    }
+    
+    p.description {
+        @apply text-base lg:text-lg;
     }
     
     .underline-container {
