@@ -57,7 +57,7 @@
     }
     
     section:not(.not-found) {
-        @apply my-6 lg:p-10 opacity-0 lg:ml-[125px];
+        @apply lg:my-6 lg:p-10 opacity-0 lg:ml-[125px];
     }
 }
 
