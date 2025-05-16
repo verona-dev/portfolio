@@ -10,16 +10,16 @@ const {
 ---
 
 
-<div class='tech-item'>
+<div class='tech-item mx-7 lg:mx-5 my-10'>
     <Tooltip>
         <TooltipTrigger>
             <div class='tech-icon opacity-0'>
                 <Icon
                     name={icon}
-                    class='w-12 h-12 mx-10 lg:mx-6'
+                    class='w-12 h-12 mx-8'
                 />
 
-                <p class='tech-name'>{ name }</p>
+                <p class='my-5'>{ name }</p>
             </div>
         </TooltipTrigger>
 
@@ -45,18 +45,9 @@ const {
         align-items: center;
         display: flex;
         flex-direction: column;
-        margin: 20px;
 
         &:hover {
             cursor: pointer;
-        }
-
-        /*  Tooltip trigger */
-        .tech-icon {
-            p {
-                letter-spacing: 0.1em;
-                margin: 5px 0;
-            }
         }
 
         /*  Tooltip content */
@@ -65,7 +56,7 @@ const {
             display: none;
             font-size: 14px;
             padding: 40px;
-            --tooltip-offset: calc(100% + 20px) !important;
+            --tooltip-offset: calc(100% - 10px) !important;
             white-space: normal;
             width: 400px;
 
