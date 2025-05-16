@@ -23,18 +23,19 @@ const {
             </div>
         </TooltipTrigger>
 
-        <TooltipContent>
-               <a
-                   href={url}
-                   target='_blank'
-                   rel='noopener noreferrer'
-                   aria-label='Link to description'
-                   class='inline'
-               >
-                   <span class='text-accent underline'>{name}</span>
-               </a>
+        <TooltipContent side='bottom'>
+            <a
+                href={url}
+                target='_blank'
+                rel='noopener noreferrer'
+                aria-label='Link to description'
+                class='inline'
+            >
+                <span class='text-accent underline'>{name}</span>
+            </a>
 
-               <span set:html={description.replace(name, '')}></span>
+            <span set:html={description.replace(name, '')}></span>
+
         </TooltipContent>
     </Tooltip>
 </div>
@@ -61,13 +62,13 @@ const {
 
         .starwind-tooltip {
             &:hover {
-                cursor: auto;
+                //cursor: pointer;
             }
 
             /* Desktop */
-            @media (min-width: 1199px) {
+            @media (min-width: 899px) {
                 &:hover {
-                    cursor: pointer;
+                    //cursor: pointer;
                 }
             }
         }
@@ -76,18 +77,19 @@ const {
             background-color: var(--color-zinc-900);
             display: none;
             font-size: 14px;
-            padding: 35px;
+            padding: 40px;
             --tooltip-offset: calc(100% + 20px) !important;
             white-space: normal;
-            width: 600px;
+            width: 400px;
 
             &:hover {
                 cursor: auto;
             }
 
             /* Tablet/Mobile */
-            @media (max-width: 1200px) {
-                display: none !important;
+            @media (max-width: 900px) {
+                //display: none !important;
+                width: 60vw;
             }
         }
     }
