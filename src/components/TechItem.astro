@@ -60,19 +60,6 @@ const {
             margin: 5px 0;
         }
 
-        .starwind-tooltip {
-            &:hover {
-                //cursor: pointer;
-            }
-
-            /* Desktop */
-            @media (min-width: 899px) {
-                &:hover {
-                    //cursor: pointer;
-                }
-            }
-        }
-
         .starwind-tooltip-content {
             background-color: var(--color-zinc-900);
             display: none;
@@ -88,8 +75,8 @@ const {
 
             /* Tablet/Mobile */
             @media (max-width: 900px) {
-                //display: none !important;
-                width: 75vw;
+                padding: 40px 20px;
+                width: 70vw;
             }
         }
     }

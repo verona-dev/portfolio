@@ -33,7 +33,6 @@ import TechItem from '../components/TechItem.astro';
 
 <script>
    import { gsap } from 'gsap';
-   let mm = gsap.matchMedia();
 
    const tech = document.querySelector('.tech');
    const techItem = document.querySelectorAll('.tech-icon');
@@ -43,35 +42,22 @@ import TechItem from '../components/TechItem.astro';
       defaults: { duration: 1 }
    });
 
-   mm.add('(min-width: 800px)', () => {
-      timeline
-         .to(tech, {
-            opacity: 1,
-         })
-         .to(techItem, {
-            opacity: 1,
-            stagger: 0.25,
-         })
-         .to(underline, {
-            duration: 0.5,
-            ease: 'sine.out',
-            width: '100%',
-         })
-         .to(underline2, {
-            duration: 4,
-            ease: 'elastic.out',
-            width: 'calc(105% + 5px)',
-         });
-   });
-
-   mm.add('(max-width: 799px)', () => {
-      timeline
-         .to(tech, {
-            opacity: 1,
-         })
-         .to(techItem, {
-            opacity: 1,
-            stagger: 0.25,
-         })
-   });
+   timeline
+      .to(tech, {
+         opacity: 1,
+      })
+      .to(techItem, {
+         opacity: 1,
+         stagger: 0.25,
+      })
+      .to(underline, {
+         duration: 0.5,
+         ease: 'sine.out',
+         width: '100%',
+      })
+      .to(underline2, {
+         duration: 4,
+         ease: 'elastic.out',
+         width: 'calc(105% + 5px)',
+      });
 </script>
