@@ -16,7 +16,7 @@ const {
             <div class='tech-icon opacity-0'>
                 <Icon
                     name={icon}
-                    class='w-12 h-12'
+                    class='w-12 h-12 mx-10 lg:mx-6'
                 />
 
                 <p class='tech-name'>{ name }</p>
@@ -51,15 +51,15 @@ const {
             cursor: pointer;
         }
 
-        svg {
-            margin: 0 25px;
+        /*  Tooltip trigger */
+        .tech-icon {
+            p {
+                letter-spacing: 0.1em;
+                margin: 5px 0;
+            }
         }
 
-        p {
-            letter-spacing: 0.1em;
-            margin: 5px 0;
-        }
-
+        /*  Tooltip content */
         .starwind-tooltip-content {
             background-color: var(--color-zinc-900);
             display: none;
