@@ -97,15 +97,7 @@
     
     p {
         letter-spacing: 0.1em;
-        @apply lg:text-base;
-    }
-    
-    p.tech-name {
-        font-family: 'FuturaMedium', monospace;
-    }
-    
-    p.description {
-        @apply text-base lg:text-lg;
+        @apply text-base lg:text-xl;
     }
     
     .underline-container {
