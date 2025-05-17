@@ -11,7 +11,7 @@ const {
 
 
 <div class='tech-item mx-7 lg:mx-5 my-10'>
-    <Tooltip>
+    <Tooltip openDelay={400}>
         <TooltipTrigger>
             <div class='tech-icon opacity-0'>
                 <Icon
@@ -24,18 +24,36 @@ const {
         </TooltipTrigger>
 
         <TooltipContent side='bottom'>
-            <a
-                href={url}
-                target='_blank'
-                rel='noopener noreferrer'
-                aria-label='Link to description'
-                class='inline'
-            >
-                <span class=''>{name}</span>
-            </a>
 
-            <span set:html={description.replace(name, '')}></span>
+            <div class='card card-side bg-base-100 shadow-sm'>
+                <figure>
+                    <img
+                        src='https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp'
+                        alt='Movie' />
+                </figure>
 
+                <div class='card-body'>
+                    <h4 class='card-title inline'>{ name }</h4>
+
+                    <span>{description}</span>
+
+                    <div class='card-actions justify-center'>
+                        <button class='btn btn-soft'>
+                            Learn more
+                        </button>
+
+                        <a
+                            href={url}
+                            target='_blank'
+                            rel='noopener noreferrer'
+                            aria-label='Link to description'
+                            class='btn btn-soft'
+                        >
+                            Learn more
+                        </a>
+                    </div>
+                </div>
+            </div>
         </TooltipContent>
     </Tooltip>
 </div>
@@ -50,13 +68,19 @@ const {
             cursor: pointer;
         }
 
+        &:hover svg,
+        &:hover p {
+            opacity: 0.8;
+        }
+
         /*  Tooltip content */
         .starwind-tooltip-content {
             background-color: var(--color-zinc-900);
             display: none;
-            font-size: 14px;
-            padding: 40px;
-            --tooltip-offset: calc(100% - 10px) !important;
+            //font-size: 14px;
+            //padding: 40px;
+            padding: 5px;
+            --tooltip-offset: calc(100% - 15px) !important;
             white-space: normal;
             width: 400px;
 
@@ -66,8 +90,8 @@ const {
 
             /* Tablet/Mobile */
             @media (max-width: 900px) {
-                padding: 40px 20px;
-                width: 70vw;
+                //padding: 40px 20px;
+                //width: 70vw;
             }
         }
     }
