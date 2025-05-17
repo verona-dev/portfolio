@@ -57,7 +57,7 @@
     }
     
     section:not(.not-found) {
-        @apply lg:my-6 lg:p-10 opacity-0 lg:ml-[125px];
+        @apply lg:p-10 opacity-0 lg:ml-[125px];
     }
 }
 
@@ -98,6 +98,10 @@
     p {
         letter-spacing: 0.1em;
         @apply text-base lg:text-xl;
+    }
+    
+    .tech-item a span {
+        @apply text-accent underline;
     }
     
     .underline-container {
