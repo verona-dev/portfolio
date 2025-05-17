@@ -100,10 +100,9 @@
         @apply text-base lg:text-xl;
     }
     
-    /*Delete*/
-    /*.tech-item a span {*/
-    /*    @apply text-accent underline;*/
-    /*}*/
+    .tech-item a span {
+        @apply text-sm font-thin;
+    }
     
     .underline-container {
         position: relative;
