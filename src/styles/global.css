@@ -100,6 +100,10 @@
         @apply text-base lg:text-xl;
     }
     
+    .tech-item a span {
+        @apply text-accent underline;
+    }
+    
     .underline-container {
         position: relative;
     }
