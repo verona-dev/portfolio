@@ -40,7 +40,8 @@
     }
     
     body {
-        color: var(--color-zinc-50);
+        /*background-color: var(--border);*/
+        /*color: var(--color-zinc-50);*/
         display: flex;
         flex-direction: column;
         font-family: 'FuturaLight', monospace;

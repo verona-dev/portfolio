@@ -25,30 +25,29 @@ const {
 
         <TooltipContent side='bottom'>
 
-            <div class='card card-side bg-base-100 shadow-sm'>
-                <div class='info-icon-container w-[100px]'>
-                    <Icon
-                        name='arcticons:devinfo'
-                        class='w-full h-full'
-                    />
+            <div class='card p-10 bg-base-100 shadow-lg'>
+
+                <div class='card-body'>
+                    <div>
+                        <Icon
+                            name='arcticons:devinfo'
+                            class='w-28 h-28'
+                        />
+                    </div>
+
+                    <span class='text-left'>{description}</span>
                 </div>
 
-                <div class='card-body basis-xs'>
-
-
-                    <span class='mb-3 text-left'>{description}</span>
-
-                    <div class='card-actions justify-center'>
-                        <a
-                            href={url}
-                            target='_blank'
-                            rel='noopener noreferrer'
-                            aria-label='Link to description'
-                            class='btn btn-soft'
-                        >
-                            <span>Learn more</span>
-                        </a>
-                    </div>
+                <div class='card-actions mt-6'>
+                    <a
+                        href={url}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        aria-label='Link to description'
+                        class='btn btn-soft w-full'
+                    >
+                        <span>Learn more</span>
+                    </a>
                 </div>
             </div>
         </TooltipContent>
@@ -72,43 +71,41 @@ const {
 
         /*  Tooltip content */
         .starwind-tooltip-content {
-            background-color: var(--color-pink-400);
             display: none;
-            display: flex;
-            //font-size: 14px;
-            //flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            align-content: center;
-            padding: 1px;
+            //display: flex;
+            //padding: 1px;
             --tooltip-offset: calc(100% - 15px) !important;
             white-space: normal;
-            height: 225px;
-            width: 500px;
 
             &:hover {
                 cursor: auto;
             }
 
             .card {
-                height: 100%;
-                padding: 10px;
+                background-color: var(--card);
+
+                //border-top: 1px solid var(--color-zinc-50);
+                //border-right: 1px solid var(--color-zinc-50);
+                //border-bottom: 2px solid var(--color-zinc-50);
+                //border-left: 1px solid var(--color-zinc-50);
+                //height: 250px;
+                width: 500px;
+
+                display: flex;
+                justify-content: center;
             }
 
             .card-body {
                 display: flex;
-                justify-content: center;
-                margin-top: 20px;
-                //padding: 0;
-                //padding: 0 20px 0 10px;
-
-                //padding: var(--card-p, 0.5rem);
+                flex-direction: row;
+                align-items: center;
+                padding: 0;
+                flex: initial;
+                gap: 1rem;
             }
 
             /* Tablet/Mobile */
             @media (max-width: 900px) {
-                //padding: 40px 20px;
-                //width: 70vw;
             }
         }
     }
