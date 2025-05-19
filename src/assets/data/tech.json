@@ -3,74 +3,74 @@
         {
             "name": "HTML",
             "icon": "catppuccin:html",
-            "description": "is the most basic building block of the Web. It defines the meaning and structure of web content.",
+            "description": "HTML is the most basic building block of the Web. It defines the meaning and structure of web content.",
             "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"
         },
         {
             "name": "CSS",
             "icon": "catppuccin:css3",
-            "description": "(Cascading Style Sheets) is a stylesheet language used to describe the presentation of a document written in HTML or XML.",
+            "description": "CSS (Cascading Style Sheets) is a stylesheet language used to describe the presentation of a document written in HTML or XML.",
             "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
         },
 
         {
             "name": "Javascript",
             "icon": "catppuccin:javascript",
-            "description": "is a lightweight interpreted programming language with first-class functions, a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative styles.",
+            "description": "Javascript is a lightweight interpreted programming language, prototype-based, single-threaded, dynamic language.",
             "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
         },
         {
             "name": "Vue",
             "icon": "catppuccin:vue",
-            "description": "is a JavaScript framework for building user interfaces. It builds on top of standard HTML, CSS, and JavaScript and provides a declarative, component-based programming model.",
+            "description": "Vue is a JavaScript framework for building user interfaces. It builds on top of standard HTML, CSS, and JavaScript.",
             "url": "https://vuejs.org/"
         },
         {
             "name": "Nuxt",
             "icon": "catppuccin:nuxt",
-            "description": "is an open-source framework with an intuitive and extendable way to create type-safe, performant and production-grade full-stack web applications and websites with Vue.js.",
+            "description": "Nuxt is an open-source framework with an intuitive and extendable way to create type-safe, performant and production-grade full-stack web applications and websites with Vue.js.",
             "url": "https://nuxt.com/"
         },
         {
             "name": "Astro",
             "icon": "catppuccin:astro",
-            "description": "is the web framework for building content-driven websites like blogs, marketing, and e-commerce. Best-known for pioneering a new frontend architecture to reduce JavaScript overhead and complexity compared to other frameworks.",
+            "description": "Astro is best-known for pioneering a new frontend architecture to reduce JavaScript overhead and complexity compared to other frameworks.",
             "url": "https://astro.build/"
         },
         {
             "name": "Tailwind",
             "icon": "catppuccin:tailwind",
-            "description": "CSS is a utility-first CSS framework for rapidly building modern websites without ever leaving your HTML.",
+            "description": "Tailwind is a utility-first CSS framework for rapidly building modern websites without ever leaving your HTML.",
             "url": "https://tailwindcss.com/"
         },
         {
             "name": "Sass",
             "icon": "catppuccin:sass",
-            "description": "is a stylesheet language that’s compiled to CSS. It allows you to use variables, nested rules, mixins, functions, and more, all with a fully CSS compatible syntax.",
+            "description": "Sass is a stylesheet language that’s compiled to CSS.",
             "url": "https://sass-lang.com/"
         },
         {
             "name": "Github",
             "icon": "hugeicons:github",
-            "description": "is a cloud-based platform where you can store, share, and work together with others to write code.",
+            "description": "Github is a cloud-based platform where you can store, share, and work together with others to write code.",
             "url": "https://github.com/"
         },
         {
             "name": "Figma",
             "icon": "catppuccin:figma",
-            "description": "is a powerful, collaborative design tool for teams.",
+            "description": "Figma is a powerful, collaborative design tool for teams.",
             "url": "https://www.figma.com/"
         },
         {
             "name": "npm",
             "icon": "catppuccin:npm",
-            "description": "is the world's largest software registry. The registry is a large public database of JavaScript software and the meta-information surrounding it.",
+            "description": "npm is the world's largest software registry, a large public database of JavaScript software.",
             "url": "https://www.npmjs.com/"
         },
         {
             "name": "Wordpress",
             "icon": "hugeicons:wordpress",
-            "description": "(WP, or WordPress.org) is a web content management system. Written in the PHP programming language and paired with a MySQL or MariaDB database.",
+            "description": "Wordpress (WP, or WordPress.org) is a web content management system. Written in the PHP programming language.",
             "url": "https://wordpress.org/"
         }
     ]
