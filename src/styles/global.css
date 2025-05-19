@@ -40,7 +40,8 @@
     }
     
     body {
-        color: var(--color-zinc-50);
+        /*background-color: var(--border);*/
+        /*color: var(--color-zinc-50);*/
         display: flex;
         flex-direction: column;
         font-family: 'FuturaLight', monospace;
@@ -81,7 +82,7 @@
     }
     
     nav a {
-        @apply text-sm lg:text-xl uppercase;
+        @apply text-xs lg:text-xl uppercase;
     }
     
     .projects-item a {

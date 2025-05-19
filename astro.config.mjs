@@ -29,6 +29,7 @@ export default defineConfig({
                    'github',
                    'linkedin',
                    'yahoo-mail',
+                   'devinfo',
                 ],
                 iconoir: [
                    'xmark',
@@ -45,6 +46,10 @@ export default defineConfig({
                    'sass',
                    'figma',
                    'npm',
+                ],
+                hugeicons: [
+                   'github',
+                   'wordpress',
                 ],
             }
         }),
