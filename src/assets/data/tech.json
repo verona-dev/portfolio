@@ -9,7 +9,7 @@
         {
             "name": "CSS",
             "icon": "catppuccin:css3",
-            "description": "CSS (Cascading Style Sheets) is a stylesheet language used to describe the presentation of a document written in HTML or XML.",
+            "description": "CSS (Cascading Style Sheets) is a stylesheet language used to describe the presentation of a document written in HTML.",
             "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
         },
 
@@ -28,13 +28,13 @@
         {
             "name": "Nuxt",
             "icon": "catppuccin:nuxt",
-            "description": "Nuxt is an open-source framework with an intuitive and extendable way to create type-safe, performant and production-grade full-stack web applications and websites with Vue.js.",
+            "description": "Nuxt is a framework with an intuitive and extendable way to create full-stack web applications and websites with Vue.js.",
             "url": "https://nuxt.com/"
         },
         {
             "name": "Astro",
             "icon": "catppuccin:astro",
-            "description": "Astro is best-known for pioneering a new frontend architecture to reduce JavaScript overhead and complexity compared to other frameworks.",
+            "description": "Astro is best-known for pioneering a new frontend architecture to reduce JavaScript overhead and complexity.",
             "url": "https://astro.build/"
         },
         {
@@ -52,7 +52,7 @@
         {
             "name": "Github",
             "icon": "hugeicons:github",
-            "description": "Github is a cloud-based platform where you can store, share, and work together with others to write code.",
+            "description": "Github is a cloud platform where you can store and work together with others to write code.",
             "url": "https://github.com/"
         },
         {
