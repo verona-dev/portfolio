@@ -16,7 +16,7 @@ const {
             <div class='tech-icon opacity-0'>
                 <Icon
                     name={icon}
-                    class='w-12 h-12 mx-8'
+                    class='w-12 h-12 mx-8 trigger-icon'
                 />
 
                 <p class='my-5'>{ name }</p>
@@ -25,26 +25,26 @@ const {
 
         <TooltipContent side='bottom'>
 
-            <div class='card p-10 bg-base-100 shadow-lg'>
+            <div class='card p-6 bg-base-100 shadow-lg'>
 
                 <div class='card-body'>
-                    <div>
+                    <div class='icon-info-container w-[65px]'>
                         <Icon
-                            name='arcticons:devinfo'
-                            class='w-28 h-28'
+                            name='hugeicons:information-circle'
+                            class='w-8 h-8'
                         />
                     </div>
 
-                    <span class='text-left'>{description}</span>
+                    <span class='text-left basis-full'>{description}</span>
                 </div>
 
-                <div class='card-actions mt-6'>
+                <div class='card-actions my-2 justify-center'>
                     <a
                         href={url}
                         target='_blank'
                         rel='noopener noreferrer'
                         aria-label='Link to description'
-                        class='btn btn-soft w-full'
+                        class='btn btn-soft align-center'
                     >
                         <span>Learn more</span>
                     </a>
@@ -64,7 +64,7 @@ const {
             cursor: pointer;
         }
 
-        &:hover svg,
+        &:hover svg.trigger-icon,
         &:hover p {
             opacity: 0.8;
         }
@@ -73,7 +73,6 @@ const {
         .starwind-tooltip-content {
             display: none;
             //display: flex;
-            //padding: 1px;
             --tooltip-offset: calc(100% - 15px) !important;
             white-space: normal;
 
@@ -83,25 +82,24 @@ const {
 
             .card {
                 background-color: var(--card);
-
-                //border-top: 1px solid var(--color-zinc-50);
-                //border-right: 1px solid var(--color-zinc-50);
-                //border-bottom: 2px solid var(--color-zinc-50);
-                //border-left: 1px solid var(--color-zinc-50);
-                //height: 250px;
-                width: 500px;
-
-                display: flex;
-                justify-content: center;
+                border-top: 4px solid var(--color-zinc-50);
             }
 
             .card-body {
+                align-items: center;
                 display: flex;
                 flex-direction: row;
-                align-items: center;
-                padding: 0;
                 flex: initial;
                 gap: 1rem;
+                padding: 0;
+                width: 550px;
+
+                .icon-info-container {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 75px;
+                }
             }
 
             /* Tablet/Mobile */

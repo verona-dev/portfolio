@@ -29,11 +29,9 @@ export default defineConfig({
                    'github',
                    'linkedin',
                    'yahoo-mail',
-                   'devinfo',
                 ],
                 iconoir: [
                    'xmark',
-                   'info-circle',
                 ],
                 catpuccin: [
                    'html',
@@ -50,6 +48,7 @@ export default defineConfig({
                 hugeicons: [
                    'github',
                    'wordpress',
+                   'information-circle'
                 ],
             }
         }),
