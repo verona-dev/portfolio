@@ -40,8 +40,7 @@
     }
     
     body {
-        /*background-color: var(--border);*/
-        /*color: var(--color-zinc-50);*/
+        color: var(--color-zinc-300);
         display: flex;
         flex-direction: column;
         font-family: 'FuturaLight', monospace;
@@ -70,12 +69,13 @@
     
     h2 {
         @apply text-4xl md:text-4xl lg:text-5xl;
+        color: var(--custom-color-salmon);
     }
     
     h3 {
         @apply text-3xl lg:text-4xl my-10;
         text-shadow: 0 0.5rem 3rem, 0 -0.5rem 1rem rgba(80, 76, 76, 0.75);
-        color: var(--custom-color-1);
+        color: var(--custom-color-snowy-mint);
     }
     
     h4.developer-info {
@@ -107,7 +107,7 @@
     }
     
     .active {
-        color: var(--custom-color-active);
+        color: var(--custom-color-salmon);
     }
     
     .underline-container {
