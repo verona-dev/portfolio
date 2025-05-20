@@ -33,7 +33,7 @@ import { Icon } from 'astro-icon/components';
 
     <div class='social-item'>
         <a
-            href='mailto:veronadev@tuta.io'
+            id='email'
             target='_blank'
             rel='noopener noreferrer'
             aria-label='Personal email'
@@ -59,6 +59,10 @@ import { Icon } from 'astro-icon/components';
 </style>
 
 <script>
+   const encEmail = 'dmVyb25hZGV2QHR1dGEuaW8=';
+   const mail = document.getElementById('email');
+   mail?.setAttribute('href', 'mailto:'.concat(atob(encEmail)));
+
    import { gsap } from 'gsap';
    const socialItem = document.querySelectorAll('.social-item');
    const timeline = gsap.timeline({ defaults: {
