@@ -65,7 +65,7 @@
 @layer components {
     h1 {
         font-family: 'Acens', monospace;
-        @apply text-xl md:text-3xl lg:text-4xl my-6 text-pink-400 tracking-widest uppercase;
+        @apply text-xl md:text-3xl lg:text-4xl my-6 tracking-widest uppercase;
     }
     
     h2 {
