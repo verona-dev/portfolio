@@ -48,15 +48,19 @@ import { Icon } from 'astro-icon/components';
 
 <style>
     .socials {
-        a:hover {
-            color: var(--custom-color-active);
+        .social-item {
+            transition: all .25s ease-in-out;
+
+            &:hover {
+                transform: scale(1.25);
+            }
         }
     }
 </style>
 
 <script>
    import { gsap } from 'gsap';
-   const items = document.querySelectorAll('.social-item');
+   const socialItem = document.querySelectorAll('.social-item');
    const timeline = gsap.timeline({ defaults: {
          duration: 2,
          ease: 'expo',
@@ -64,7 +68,7 @@ import { Icon } from 'astro-icon/components';
    });
 
    timeline
-      .fromTo(items, {
+      .fromTo(socialItem, {
          opacity: 0,
       }, {
          opacity: 1,
