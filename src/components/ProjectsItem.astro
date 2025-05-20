@@ -5,7 +5,6 @@ import { Button } from '@/components/starwind/button';
 
 const {
    id,
-   thumbnail,
    title,
    tagline,
    description,
@@ -18,21 +17,8 @@ const {
 ---
 
 <div class='projects-item opacity-0'>
-    <!--  Modal Trigger  -->
-    <Image
-        onclick={`my_modal_${id}.showModal()`}
-        src={thumbnail}
-        class='thumbnail'
-        alt='Project image'
-        width='250'
-        height='250'
-    />
-
     <!--  Modal Content  -->
-    <dialog
-        id={`my_modal_${id}`}
-        class='modal'
-    >
+    <dialog id={`my_modal_${id}`} class='modal'>
         <div class='modal-box flex h-full w-full max-w-full lg:h-auto lg:max-w-3xl px-0 py-8 md:px-14 lg:px-10'>
             <form method='dialog'>
                 <button class='btn btn-lg btn-circle btn-ghost absolute right-2 top-2 z-100'>
@@ -176,53 +162,6 @@ const {
             @media (max-width: 640px) {
                 height: 250px !important;
                 width: 100%;
-            }
-        }
-
-        /* Desktop */
-        @media (min-width: 1024px) {
-            &:nth-of-type(1) img.thumbnail {
-                border-radius: 32px 0 0 0;
-            }
-
-            &:nth-of-type(2) img.thumbnail {
-                border-radius: 0 32px 0 0;
-            }
-
-            &:nth-of-type(3) img.thumbnail {
-                border-radius: 0 0 0 32px;
-            }
-
-            &:nth-of-type(4) img.thumbnail {
-                border-radius: 0 0 32px 0;
-            }
-
-            &:nth-of-type(2) img.thumbnail:hover,
-            &:nth-of-type(3) img.thumbnail:hover {
-                border-radius: 0 16px 0 16px;
-            }
-
-            &:first-child img.thumbnail:hover,
-            &:last-child img.thumbnail:hover {
-                border-radius: 16px 0 16px 0;
-            }
-        }
-
-        img.thumbnail {
-            border-radius: 16px;
-            transition: all .25s;
-
-            &:hover {
-                cursor: pointer;
-                opacity: 1;
-                transform: scale(1.12);
-            }
-
-            /* Desktop */
-            @media (min-width: 1024px) {
-                height: 225px;
-                opacity: 0.95;
-                width: 320px;
             }
         }
     }

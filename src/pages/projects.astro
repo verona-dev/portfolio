@@ -2,6 +2,7 @@
 import data from '../assets/data/projects.json';
 import Layout from '../layouts/Layout.astro';
 import ProjectsItem from '../components/ProjectsItem.astro';
+import {Image} from 'astro:assets';
 ---
 
 <Layout
@@ -18,10 +19,19 @@ import ProjectsItem from '../components/ProjectsItem.astro';
         <div class='image-container'>
            {
               data.projects.map(project => (
+                 <!--  Modal Trigger  -->
+                  <Image
+                      onclick={`my_modal_${project.id}.showModal()`}
+                      src={project.thumbnail}
+                      class='thumbnail'
+                      alt='Project image'
+                      width='250'
+                      height='250'
+                  />
+
                   <ProjectsItem
                       key={project.id}
                       id={project.id}
-                      thumbnail={project.thumbnail}
                       title={project.title}
                       tagline={project.tagline}
                       description={project.description}
@@ -50,6 +60,55 @@ import ProjectsItem from '../components/ProjectsItem.astro';
             flex-wrap: wrap;
             gap: 50px;
             justify-content: center;
+
+            /* Desktop */
+            @media (min-width: 1024px) {
+                &:nth-of-type(1) img.thumbnail {
+                    border-radius: 32px 0 0 0;
+                }
+
+                &:nth-of-type(2) img.thumbnail {
+                    border-radius: 0 32px 0 0;
+                }
+
+                &:nth-of-type(3) img.thumbnail {
+                    border-radius: 0 0 0 32px;
+                }
+
+                &:nth-of-type(4) img.thumbnail {
+                    border-radius: 0 0 32px 0;
+                }
+
+                &:nth-of-type(2) img.thumbnail:hover,
+                &:nth-of-type(3) img.thumbnail:hover {
+                    border-radius: 0 16px 0 16px;
+                }
+
+                &:first-child img.thumbnail:hover,
+                &:last-child img.thumbnail:hover {
+                    border-radius: 16px 0 16px 0;
+                }
+            }
+
+            img.thumbnail {
+                border-radius: 16px;
+                transition: all .25s;
+                filter: grayscale(1) invert(1);
+
+                &:hover {
+                    cursor: pointer;
+                    opacity: 1;
+                    transform: scale(1.12);
+                    filter: none;
+                }
+
+                /* Desktop */
+                @media (min-width: 1024px) {
+                    height: 225px;
+                    opacity: 0.95;
+                    width: 320px;
+                }
+            }
         }
     }
 </style>
@@ -61,7 +120,7 @@ import ProjectsItem from '../components/ProjectsItem.astro';
    const h3 = document.querySelector('h3');
    const underline = document.querySelector('.underline-1');
    const underline2 = document.querySelector('.underline-2');
-   const thumbnail = document.querySelectorAll('.projects-item');
+   const thumbnail = document.querySelectorAll('.thumbnail');
    const timeline = gsap.timeline({
       defaults: {
          duration: 1,
