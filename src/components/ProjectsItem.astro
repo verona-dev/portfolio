@@ -179,45 +179,50 @@ const {
             }
         }
 
-        &:nth-of-type(1) img.thumbnail {
-            border-radius: 32px 0 0 0;
-        }
+        /* Desktop */
+        @media (min-width: 1024px) {
+            &:nth-of-type(1) img.thumbnail {
+                border-radius: 32px 0 0 0;
+            }
 
-        &:nth-of-type(2) img.thumbnail {
-            border-radius: 0 32px 0 0;
-        }
+            &:nth-of-type(2) img.thumbnail {
+                border-radius: 0 32px 0 0;
+            }
 
-        &:nth-of-type(3) img.thumbnail {
-            border-radius: 0 0 0 32px;
-        }
+            &:nth-of-type(3) img.thumbnail {
+                border-radius: 0 0 0 32px;
+            }
 
-        &:nth-of-type(4) img.thumbnail {
-            border-radius: 0 0 32px 0;
-        }
+            &:nth-of-type(4) img.thumbnail {
+                border-radius: 0 0 32px 0;
+            }
 
-        &:nth-of-type(2) img.thumbnail:hover,
-        &:nth-of-type(3) img.thumbnail:hover {
-            border-radius: 0 16px 0 16px;
-        }
+            &:nth-of-type(2) img.thumbnail:hover,
+            &:nth-of-type(3) img.thumbnail:hover {
+                border-radius: 0 16px 0 16px;
+            }
 
-        &:first-child img.thumbnail:hover,
-        &:last-child img.thumbnail:hover {
-            border-radius: 16px 0 16px 0;
+            &:first-child img.thumbnail:hover,
+            &:last-child img.thumbnail:hover {
+                border-radius: 16px 0 16px 0;
+            }
         }
 
         img.thumbnail {
+            border-radius: 16px;
+            transition: all .25s;
+
+            &:hover {
+                cursor: pointer;
+                opacity: 1;
+                transform: scale(1.12);
+            }
+
             /* Desktop */
             @media (min-width: 1024px) {
                 height: 225px;
                 opacity: 0.95;
-                transition: all .25s;
                 width: 320px;
-
-                &:hover {
-                    cursor: pointer;
-                    opacity: 1;
-                    transform: scale(1.1);
-                }
             }
         }
     }
