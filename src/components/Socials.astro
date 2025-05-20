@@ -33,7 +33,7 @@ import { Icon } from 'astro-icon/components';
 
     <div class='social-item'>
         <a
-            href='mailto:veronadev@tuta.io'
+            id='email'
             target='_blank'
             rel='noopener noreferrer'
             aria-label='Personal email'
@@ -48,15 +48,23 @@ import { Icon } from 'astro-icon/components';
 
 <style>
     .socials {
-        a:hover {
-            color: var(--color-pink-400);
+        .social-item {
+            transition: all .25s ease-in-out;
+
+            &:hover {
+                transform: scale(1.25);
+            }
         }
     }
 </style>
 
 <script>
+   const encEmail = 'dmVyb25hZGV2QHR1dGEuaW8=';
+   const mail = document.getElementById('email');
+   mail?.setAttribute('href', 'mailto:'.concat(atob(encEmail)));
+
    import { gsap } from 'gsap';
-   const items = document.querySelectorAll('.social-item');
+   const socialItem = document.querySelectorAll('.social-item');
    const timeline = gsap.timeline({ defaults: {
          duration: 2,
          ease: 'expo',
@@ -64,7 +72,7 @@ import { Icon } from 'astro-icon/components';
    });
 
    timeline
-      .fromTo(items, {
+      .fromTo(socialItem, {
          opacity: 0,
       }, {
          opacity: 1,

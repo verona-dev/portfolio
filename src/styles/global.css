@@ -31,7 +31,7 @@
 
 @layer base {
     html {
-        scrollbar-gutter: stable;
+        /*scrollbar-gutter: stable;*/
     }
     
     html,
@@ -40,8 +40,7 @@
     }
     
     body {
-        /*background-color: var(--border);*/
-        /*color: var(--color-zinc-50);*/
+        color: var(--color-zinc-300);
         display: flex;
         flex-direction: column;
         font-family: 'FuturaLight', monospace;
@@ -65,16 +64,21 @@
 @layer components {
     h1 {
         font-family: 'Acens', monospace;
-        @apply text-xl md:text-3xl lg:text-4xl my-6 text-pink-400 tracking-widest uppercase;
+        @apply text-xl md:text-3xl lg:text-4xl my-6 tracking-widest uppercase;
     }
     
     h2 {
         @apply text-4xl md:text-4xl lg:text-5xl;
     }
     
+    .projects h2 {
+        color: var(--custom-color-salmon);
+    }
+    
     h3 {
         @apply text-3xl lg:text-4xl my-10;
         text-shadow: 0 0.5rem 3rem, 0 -0.5rem 1rem rgba(80, 76, 76, 0.75);
+        /*color: var(--custom-color-snowy-mint);*/
     }
     
     h4.developer-info {
@@ -82,7 +86,7 @@
     }
     
     nav a {
-        @apply text-xs lg:text-xl uppercase;
+        @apply text-xl uppercase;
     }
     
     .projects-item a {
@@ -91,9 +95,10 @@
     }
     
     li.badge {
+        @apply p-3.5 pt-4 text-base;
+        color: var(--custom-color-snowy-mint);
         font-family: 'FuturaMedium', monospace;
         font-size: 1rem !important;
-        @apply p-3.5 pt-4 text-base;
     }
     
     p {
@@ -103,6 +108,10 @@
     
     .tech-item a span {
         @apply text-sm font-thin;
+    }
+    
+    .active {
+        color: var(--custom-color-salmon);
     }
     
     .underline-container {

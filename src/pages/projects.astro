@@ -56,7 +56,6 @@ import ProjectsItem from '../components/ProjectsItem.astro';
 
 <script>
    import { gsap } from 'gsap';
-   let mm = gsap.matchMedia();
 
    const projects = document.querySelector('.projects');
    const h3 = document.querySelector('h3');
@@ -70,47 +69,28 @@ import ProjectsItem from '../components/ProjectsItem.astro';
       }
    });
 
-   mm.add('(min-width: 800px)', () => {
-      timeline
-         .to(projects, {
-            opacity: 1,
-         })
-         .from(h3, {
-            y: '-50vh',
-            ease: 'circ',
-         })
-         .fromTo(thumbnail, {
-            opacity: 0,
-         }, {
-            opacity: 1,
-            stagger: 1,
-         })
-         .to(underline, {
-            duration: 0.5,
-            ease: 'sine.out',
-            width: '100%',
-         })
-         .to(underline2, {
-            duration: 4,
-            ease: 'elastic.out',
-            width: 'calc(105% + 5px)',
-         });
-   });
-
-   mm.add('(max-width: 799px)', () => {
-      timeline
-         .to(projects, {
-            opacity: 1,
-         })
-         .from(h3, {
-            y: '-25vh',
-            ease: 'circ',
-         })
-         .fromTo(thumbnail, {
-            opacity: 0,
-         }, {
-            opacity: 1,
-            stagger: 1,
-         })
-   });
+   timeline
+      .to(projects, {
+         opacity: 1,
+      })
+      .from(h3, {
+         y: '-50vh',
+         ease: 'circ',
+      })
+      .fromTo(thumbnail, {
+         opacity: 0,
+      }, {
+         opacity: 1,
+         stagger: 1,
+      })
+      .to(underline, {
+         duration: 0.5,
+         ease: 'sine.out',
+         width: '100%',
+      })
+      .to(underline2, {
+         duration: 4,
+         ease: 'elastic.out',
+         width: 'calc(105% + 5px)',
+      });
 </script>

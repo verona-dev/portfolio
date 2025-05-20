@@ -62,7 +62,7 @@ const {
 
                        {
                           image && (
-                               <figure class='max-h-[350px]'>
+                               <figure class='max-h-[350px] mx-auto'>
                                    <Image
                                        src={image}
                                        alt='Project image'
@@ -75,7 +75,7 @@ const {
                     </div>
 
                     <!--  Title  -->
-                    <h2 class='title my-4 text-emerald-300'>{ title }</h2>
+                    <h2 class='title my-4'>{ title }</h2>
 
                     <!--  Badges  -->
                     <div class='badges-container'>
@@ -159,6 +159,13 @@ const {
             width: 100% !important;
         }
 
+        figure {
+            /* Mobile */
+            @media (max-width: 1023px) {
+                width: 75% !important;
+            }
+        }
+
         .video-js {
             background: transparent !important;
             height: 350px;
@@ -172,45 +179,52 @@ const {
             }
         }
 
-        &:nth-of-type(1) img.thumbnail {
-            border-radius: 32px 0 0 0;
-        }
+        /* Desktop */
+        @media (min-width: 1024px) {
+            &:nth-of-type(1) img.thumbnail {
+                border-radius: 32px 0 0 0;
+            }
 
-        &:nth-of-type(2) img.thumbnail {
-            border-radius: 0 32px 0 0;
-        }
+            &:nth-of-type(2) img.thumbnail {
+                border-radius: 0 32px 0 0;
+            }
 
-        &:nth-of-type(3) img.thumbnail {
-            border-radius: 0 0 0 32px;
-        }
+            &:nth-of-type(3) img.thumbnail {
+                border-radius: 0 0 0 32px;
+            }
 
-        &:nth-of-type(4) img.thumbnail {
-            border-radius: 0 0 32px 0;
-        }
+            &:nth-of-type(4) img.thumbnail {
+                border-radius: 0 0 32px 0;
+            }
 
-        &:nth-of-type(2) img.thumbnail:hover,
-        &:nth-of-type(3) img.thumbnail:hover {
-            border-radius: 0 16px 0 16px;
-        }
+            &:nth-of-type(2) img.thumbnail:hover,
+            &:nth-of-type(3) img.thumbnail:hover {
+                border-radius: 0 16px 0 16px;
+            }
 
-        &:first-child img.thumbnail:hover,
-        &:last-child img.thumbnail:hover {
-            border-radius: 16px 0 16px 0;
+            &:first-child img.thumbnail:hover,
+            &:last-child img.thumbnail:hover {
+                border-radius: 16px 0 16px 0;
+            }
         }
 
         img.thumbnail {
+            border-radius: 16px;
+            transition: all .25s;
+            filter: brightness(0.95);
+
+            &:hover {
+                cursor: pointer;
+                opacity: 1;
+                transform: scale(1.12);
+                filter: none;
+            }
+
             /* Desktop */
             @media (min-width: 1024px) {
                 height: 225px;
                 opacity: 0.95;
-                transition: all .25s;
                 width: 320px;
-
-                &:hover {
-                    cursor: pointer;
-                    opacity: 1;
-                    transform: scale(1.1);
-                }
             }
         }
     }
