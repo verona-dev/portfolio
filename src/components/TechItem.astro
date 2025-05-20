@@ -64,9 +64,14 @@ const {
             cursor: pointer;
         }
 
+        svg.trigger-icon,
+        p {
+            filter: grayscale(1) brightness(0.9);
+        }
+
         &:hover svg.trigger-icon,
         &:hover p {
-            opacity: 0.8;
+            filter: none;
         }
 
         /*  Tooltip content */
