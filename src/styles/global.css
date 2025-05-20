@@ -105,6 +105,10 @@
         @apply text-sm font-thin;
     }
     
+    .active {
+        color: var(--custom-color-active);
+    }
+    
     .underline-container {
         position: relative;
     }

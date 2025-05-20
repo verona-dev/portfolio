@@ -124,6 +124,12 @@
 		--radius: 0.5rem;
         --active: var(--color-neutral-800);
         --active-foreground: var(--color-zinc-50);
+        
+        --custom-background: #27272a;
+        --custom-color-1: #b3c4e;
+        --custom-color-2: #9c5f72;
+        --custom-color-active: #dc8272;
+        --custom-color-4: #cfa616;
 	}
 
 	* {
