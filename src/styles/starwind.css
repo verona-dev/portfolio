@@ -125,15 +125,14 @@
         --active: var(--color-neutral-800);
         --active-foreground: var(--color-zinc-50);
         
-        --custom-color-active: #dc8272;
         --custom-background: #27272a;
-        --custom-color-aqua: #5cecc0;
+        --custom-color-active: #5cecc0;
+        --custom-color-salmon: #dc8272;
         
         --custom-color-1: #d3fbd8;
         
         --custom-color-2: #9c5f72;
         --custom-color-3: #cfa616;
-        --custom-color-4: #b3c4e;
 	}
 
 	* {

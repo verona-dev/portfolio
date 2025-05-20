@@ -75,6 +75,7 @@
     h3 {
         @apply text-3xl lg:text-4xl my-10;
         text-shadow: 0 0.5rem 3rem, 0 -0.5rem 1rem rgba(80, 76, 76, 0.75);
+        color: var(--custom-color-1);
     }
     
     h4.developer-info {
