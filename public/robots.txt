@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow:
 
-Sitemap: https://zorang.netlify.app/sitemap-index.xml
+Sitemap: https://zoranverona.com/sitemap-index.xml
