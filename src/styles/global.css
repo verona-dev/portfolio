@@ -83,7 +83,7 @@
     }
     
     nav a {
-        @apply text-xs lg:text-xl uppercase;
+        @apply text-xl uppercase;
     }
     
     .projects-item a {
@@ -92,9 +92,10 @@
     }
     
     li.badge {
+        @apply p-3.5 pt-4 text-base;
+        color: var(--custom-color-snowy-mint);
         font-family: 'FuturaMedium', monospace;
         font-size: 1rem !important;
-        @apply p-3.5 pt-4 text-base;
     }
     
     p {

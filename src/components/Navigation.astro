@@ -66,10 +66,10 @@ const isActive = path => currentPath === path ? 'active' : '';
         }
     }
 
-    /* Mobile */
+    /* Tablet and Mobile */
     @media (max-width: 1023px) {
         header {
-            padding: 40px 0;
+            padding: 40px;
 
             ul {
                 display: flex;
@@ -79,7 +79,18 @@ const isActive = path => currentPath === path ? 'active' : '';
 
             li {
                 letter-spacing: 0.5em;
-                margin: 0 20px;
+                margin: 0 3em;
+            }
+        }
+    }
+
+    /* Mobile */
+    @media (max-width: 640px) {
+        header {
+            padding: 40px 10px;
+
+            li {
+                margin: 0;
             }
         }
     }
