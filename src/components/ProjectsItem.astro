@@ -62,7 +62,7 @@ const {
 
                        {
                           image && (
-                               <figure class='max-h-[350px]'>
+                               <figure class='max-h-[350px] mx-auto'>
                                    <Image
                                        src={image}
                                        alt='Project image'
@@ -139,10 +139,6 @@ const {
 
 <style>
     .projects-item {
-        h2 {
-            color: var(--custom-color-aqua);
-        }
-
         a, button {
             font-family: 'FuturaMedium', monospace;
             letter-spacing: 0.2em;
@@ -161,6 +157,13 @@ const {
             height: 100% !important;
             margin: 0 auto;
             width: 100% !important;
+        }
+
+        figure {
+            /* Mobile */
+            @media (max-width: 1023px) {
+                width: 75% !important;
+            }
         }
 
         .video-js {
