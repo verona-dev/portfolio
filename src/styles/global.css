@@ -87,7 +87,7 @@
         text-shadow: 0 0.5rem 3rem, 0 -0.5rem 1rem rgba(80, 76, 76, 0.75);
     }
     
-    h4.developer-info {
+    h5 {
         @apply text-base lg:text-xl my-4 lg:my-10 px-6;
     }
     
