@@ -97,16 +97,8 @@
         @apply text-xl uppercase;
     }
     
-    li.badge {
-        @apply p-3.5 pt-4 text-base;
-        color: var(--custom-color-snowy-mint);
-        font-family: 'FuturaMedium', monospace;
-        font-size: 1rem !important;
-    }
-    
     p {
-        letter-spacing: 0.1em;
-        @apply text-base lg:text-xl;
+        @apply text-base lg:text-xl tracking-[0.075rem];
         color: var(--color-zinc-300);
     }
     
