@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@import './gsap.css';
 
 @plugin 'daisyui' {
     /* Fix for modal bug shifting layout */
@@ -30,17 +31,19 @@
 }
 
 @layer base {
+    /*
     html {
-        /*scrollbar-gutter: stable;*/
+        scrollbar-gutter: stable;
     }
+    */
     
     html,
     body {
-        @apply m-0;
+        @apply m-0 overflow-x-hidden;
     }
     
     body {
-        color: var(--color-zinc-300);
+        color: var(--color-zinc-50);
         display: flex;
         flex-direction: column;
         font-family: 'FuturaLight', monospace;
@@ -49,15 +52,15 @@
     }
     
     main {
-        @apply flex-1 mx-auto max-w-xl lg:max-w-5xl;
+        @apply opacity-0 flex-1 mx-auto max-w-xl lg:max-w-5xl;
     }
     
-    main.main-not-found {
-        @apply flex-1 mx-auto max-w-7xl;
+    section {
+        @apply lg:p-10;
     }
     
-    section:not(.not-found) {
-        @apply lg:p-10 lg:ml-[125px];
+    .sidebar-layout {
+        @apply lg:ml-[125px] text-center;
     }
     
     ::selection {
@@ -68,89 +71,45 @@
 
 @layer components {
     h1 {
-        font-family: 'Acens', monospace;
-        @apply text-xl md:text-3xl lg:text-4xl my-6 tracking-widest uppercase;
-    }
-    
-    h2 {
         @apply text-4xl md:text-4xl lg:text-5xl;
     }
     
-    .projects h2 {
-        color: var(--custom-color-salmon);
+    h2 {
+        @apply text-xl md:text-3xl lg:text-4xl my-6 tracking-widest uppercase relative inline-block;
+        font-family: 'Acens', monospace;
+        text-shadow: 0 0.5rem 2rem, 0 -0.5rem 1rem rgba(80, 76, 76, 0.75);
     }
     
     h3 {
         @apply text-3xl lg:text-4xl my-10;
         text-shadow: 0 0.5rem 3rem, 0 -0.5rem 1rem rgba(80, 76, 76, 0.75);
-        /*color: var(--custom-color-snowy-mint);*/
     }
     
-    h4.developer-info {
+    h4 {
+        @apply text-4xl md:text-4xl lg:text-5xl my-4;
+        color: var(--custom-color-salmon);
+    }
+    
+    h5 {
         @apply text-base lg:text-xl my-4 lg:my-10 px-6;
+    }
+    
+    a {
+        font-family: 'FuturaMedium', monospace;
     }
     
     nav a {
         @apply text-xl uppercase;
-    }
-    
-    .projects-item a {
-        font-family: 'FuturaMedium', monospace;
-        
-    }
-    
-    li.badge {
-        @apply p-3.5 pt-4 text-base;
-        color: var(--custom-color-snowy-mint);
-        font-family: 'FuturaMedium', monospace;
-        font-size: 1rem !important;
+        font-family: 'FuturaLight', monospace;
     }
     
     p {
-        letter-spacing: 0.1em;
-        @apply text-base lg:text-xl;
-    }
-    
-    .tech-item a span {
-        @apply text-sm font-thin;
+        @apply text-base lg:text-xl tracking-[0.075rem];
+        color: var(--color-zinc-300);
     }
     
     .active {
         color: var(--custom-color-salmon);
-    }
-    
-    .underline-container {
-        position: relative;
-    }
-    
-    .underline-1,
-    .underline-2 {
-        display: block;
-        position: absolute;
-        bottom: -5px;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background-color: var(--color-pink-400);
-        border-radius: 12px;
-    }
-    
-    .underline-2 {
-        left: -5px;
-        bottom: -12px;
-        background-color: var(--color-emerald-500);
-    }
-    
-    .starwind-tooltip {
-        a,
-        span {
-            font-size: 16px;
-            letter-spacing: 0.05em;
-        }
-        
-        a {
-            font-family: 'FuturaMedium', monospace;
-        }
     }
 }
 

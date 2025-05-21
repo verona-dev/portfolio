@@ -45,7 +45,7 @@ const {
                         aria-label='Link to description'
                         class='btn btn-soft align-center'
                     >
-                        <span>Learn more</span>
+                        <span class='learn-more'>Learn more</span>
                     </a>
                 </div>
             </div>
@@ -77,33 +77,46 @@ const {
             }
         }
 
-        /*  Tooltip content */
-        .starwind-tooltip-content {
-            display: none;
-            //display: flex;
-            --tooltip-offset: calc(100% + 15px) !important;
-            white-space: normal;
+        .starwind-tooltip {
+            /*  Tooltip content */
+            .starwind-tooltip-content {
+                display: none;
+                //display: flex;
+                --tooltip-offset: calc(100% + 15px) !important;
+                white-space: normal;
 
-            &:hover {
-                cursor: auto;
-            }
+                &:hover {
+                    cursor: auto;
+                }
 
-            .card {
-                background-color: var(--card);
-                border-top: 10px solid var(--custom-color-salmon);
-            }
+                .card {
+                    background-color: var(--card);
+                    border-top: 10px solid var(--custom-color-salmon);
+                }
 
-            .card-body {
-                align-items: center;
-                display: flex;
-                flex: initial;
-                gap: 1rem;
-                padding: 0;
-
-                .icon-info-container {
-                    display: flex;
+                .card-body {
                     align-items: center;
-                    justify-content: center;
+                    display: flex;
+                    flex: initial;
+                    gap: 1rem;
+                    padding: 0;
+
+                    .icon-info-container {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+
+                span {
+                    font-size: 16px;
+                    letter-spacing: 0.05em;
+                }
+
+                span.learn-more {
+                    font-size: 0.875rem;
+                    font-weight: 100;
+                    line-height: calc(1.25 / 0.875);
                 }
             }
         }

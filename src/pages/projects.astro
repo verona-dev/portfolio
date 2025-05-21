@@ -8,10 +8,10 @@ import ProjectsItem from '../components/ProjectsItem.astro';
     title='Projects'
     description='Projects I worked on'
 >
-    <section class='projects'>
+    <section class='sidebar-layout projects'>
         <h3 class='mb-20 text-center'>
             <span>The</span>
-            <span class='underline-container'>projects<span class='underline-1'></span><span class='underline-2'></span></span>
+            <span class='double-underline-container'>projects<span class='underline-first-line'></span><span class='underline-second-line'></span></span>
             <span>I worked on</span>
         </h3>
 
@@ -42,6 +42,7 @@ import ProjectsItem from '../components/ProjectsItem.astro';
         display: flex;
         flex-direction: column;
         justify-content: center;
+        text-align: initial;
 
         .image-container {
             align-content: center;
@@ -58,8 +59,8 @@ import ProjectsItem from '../components/ProjectsItem.astro';
    import { gsap } from 'gsap';
 
    const h3 = document.querySelector('h3');
-   const underline = document.querySelector('.underline-1');
-   const underline2 = document.querySelector('.underline-2');
+   const underline = document.querySelector('.underline-first-line');
+   const underline2 = document.querySelector('.underline-second-line');
    const thumbnail = document.querySelectorAll('.projects-item');
    const timeline = gsap.timeline({
       defaults: {

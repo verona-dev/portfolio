@@ -1,0 +1,34 @@
+
+
+.underline-frontend {
+    display: block;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-emerald-400);
+    border-radius: 12px;
+}
+
+.double-underline-container {
+    position: relative;
+}
+
+.underline-first-line,
+.underline-second-line {
+    display: block;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-pink-400);
+    border-radius: 12px;
+}
+
+.underline-second-line {
+    background-color: var(--color-emerald-500);
+    bottom: -12px;
+    left: -5px;
+}

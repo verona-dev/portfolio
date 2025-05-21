@@ -3,7 +3,7 @@ import { Avatar, AvatarImage, AvatarFallback } from '@/components/starwind/avata
 import ProfilePicture from '@/assets/images/profile-picture.jpg';
 ---
 
-<section class='homepage text-center'>
+<section class='sidebar-layout'>
     <Avatar class='!my-4'>
         <AvatarImage
             image={ProfilePicture}
@@ -12,53 +12,32 @@ import ProfilePicture from '@/assets/images/profile-picture.jpg';
         <AvatarFallback>ZGV</AvatarFallback>
     </Avatar>
 
-    <h2 class='my-4 lg:my-10'>Zoran G. Verona</h2>
+    <h1 class='my-4 lg:my-10'>Zoran G. Verona</h1>
 
-    <h1 class='text-pink-400'>
-        Frontend Developer<span class='underline'></span>
-    </h1>
+    <h2 class='text-pink-400'>
+        Frontend Developer<span class='underline-frontend'></span>
+    </h2>
 
-    <h4 class='developer-info'>
+    <h5 class='developer-info'>
         Based in Croatia, Europe, with 4+ years of web development experience.<span class='lg:block'>
             I am a frontend web developer who enjoys building websites and web applications that are both fun and functional.</span>
-    </h4>
+    </h5>
 </section>
 
 <style>
-    .homepage {
-        //position: relative;
+    figure {
+        margin: 0 auto;
 
-        figure {
-            margin: 0 auto;
-
-            /* Desktop */
-            @media (min-width: 1024px) {
-                height: 300px;
-                width: 300px;
-            }
-
-            /* Mobile */
-            @media (max-width: 1023px) {
-                height: 200px;
-                width: 200px;
-            }
+        /* Desktop */
+        @media (min-width: 1024px) {
+            height: 300px;
+            width: 300px;
         }
 
-        h1 {
-            position: relative;
-            display: inline-block;
-            text-shadow: 0 0.5rem 2rem, 0 -0.5rem 1rem rgba(80, 76, 76, 0.75);
-        }
-
-        .underline {
-            display: block;
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--color-emerald-400);
-            border-radius: 12px;
+        /* Mobile */
+        @media (max-width: 1023px) {
+            height: 200px;
+            width: 200px;
         }
     }
 </style>
@@ -66,7 +45,7 @@ import ProfilePicture from '@/assets/images/profile-picture.jpg';
 <script>
    import { gsap } from 'gsap';
 
-   const underline = document.querySelector('.underline');
+   const underline = document.querySelector('.underline-frontend');
    const description = document.querySelector('.developer-info');
    const timeline = gsap.timeline({
       defaults: {
@@ -76,14 +55,14 @@ import ProfilePicture from '@/assets/images/profile-picture.jpg';
    });
 
    timeline
-      .fromTo(['h2', 'h1', description], {
-         delay: 1,
+      .fromTo(['h1', 'h2', description], {
          opacity: 0,
       }, {
+         delay: 1,
          opacity: 1,
          stagger: 1,
       })
-      .fromTo('h1', {
+      .fromTo('h2', {
          transform: 'scale(1.35)'
       }, {
          duration: 2,
