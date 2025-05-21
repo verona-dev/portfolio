@@ -93,17 +93,18 @@
         @apply text-base lg:text-xl my-4 lg:my-10 px-6;
     }
     
+    a {
+        font-family: 'FuturaMedium', monospace;
+    }
+    
     nav a {
         @apply text-xl uppercase;
+        font-family: 'FuturaLight', monospace;
     }
     
     p {
         @apply text-base lg:text-xl tracking-[0.075rem];
         color: var(--color-zinc-300);
-    }
-    
-    .tech-item a span {
-        @apply text-sm font-thin;
     }
     
     .active {
@@ -130,18 +131,6 @@
         left: -5px;
         bottom: -12px;
         background-color: var(--color-emerald-500);
-    }
-    
-    .starwind-tooltip {
-        a,
-        span {
-            font-size: 16px;
-            letter-spacing: 0.05em;
-        }
-        
-        a {
-            font-family: 'FuturaMedium', monospace;
-        }
     }
 }
 
