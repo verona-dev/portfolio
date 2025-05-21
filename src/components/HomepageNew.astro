@@ -1,0 +1,111 @@
+---
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/starwind/avatar';
+import ProfilePicture from '@/assets/images/profile-picture.jpg';
+---
+
+<section class='sidebar-layout homepage'>
+    <div class='card mt-20 lg:card-side bg-base-100 shadow-sm'>
+        <Avatar size='custom'>
+            <AvatarImage
+                image={ProfilePicture}
+                alt='Zoran G. Verona'
+            />
+            <AvatarFallback>ZGV</AvatarFallback>
+        </Avatar>
+
+        <div class='card-body p-10'>
+            <h2 class='text-pink-400'>
+                Frontend Developer<span class='underline-frontend'></span>
+            </h2>
+
+            <h1 class='my-4'>Hello, I'm Zoran G. Verona</h1>
+
+            <h5 class='developer-info'>
+                Based in Croatia, Europe, with 4+ years of web development experience.<span class='lg:block'>
+            I am a frontend web developer who enjoys building websites and web applications that are both fun and functional.</span>
+            </h5>
+        </div>
+    </div>
+
+    <!--
+    <Avatar class='!my-4'>
+        <AvatarImage
+            image={ProfilePicture}
+            alt='Zoran G. Verona'
+        />
+        <AvatarFallback>ZGV</AvatarFallback>
+    </Avatar>
+
+    <h1 class='my-4 lg:my-10'>Zoran G. Verona</h1>
+
+    <h2 class='text-pink-400'>
+        Frontend Developer<span class='underline-frontend'></span>
+    </h2>
+
+    <h5 class='developer-info'>
+        Based in Croatia, Europe, with 4+ years of web development experience.<span class='lg:block'>
+            I am a frontend web developer who enjoys building websites and web applications that are both fun and functional.</span>
+    </h5>
+    -->
+</section>
+
+<style>
+    .homepage {
+        figure {
+            //margin: 0 auto;
+
+            /* Desktop */
+            @media (min-width: 1024px) {
+                //height: 300px;
+                //width: 300px;
+            }
+
+            /* Mobile */
+            @media (max-width: 1023px) {
+                //height: 200px;
+                //width: 200px;
+            }
+        }
+
+        .card {
+            //width: 75vw;
+
+            //width: 75vw;
+        }
+    }
+</style>
+
+<script>
+   import { gsap } from 'gsap';
+
+   const underline = document.querySelector('.underline-frontend');
+   const description = document.querySelector('.developer-info');
+   const timeline = gsap.timeline({
+      defaults: {
+         duration: 1,
+         ease: 'power3.inOut'
+      }
+   });
+
+   /*
+   timeline
+      .fromTo(['h1', 'h2', description], {
+         opacity: 0,
+      }, {
+         delay: 1,
+         opacity: 1,
+         stagger: 1,
+      })
+      .fromTo('h2', {
+         transform: 'scale(1.35)'
+      }, {
+         duration: 2,
+         transform: 'scale(1)',
+      })
+      .to(underline, {
+         duration: 1,
+         ease: 'sine',
+         width: '100%',
+      })
+   */
+</script>
