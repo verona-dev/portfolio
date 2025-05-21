@@ -78,13 +78,14 @@
         @apply text-4xl md:text-4xl lg:text-5xl;
     }
     
-    .projects h2 {
-        color: var(--custom-color-salmon);
-    }
-    
     h3 {
         @apply text-3xl lg:text-4xl my-10;
         text-shadow: 0 0.5rem 3rem, 0 -0.5rem 1rem rgba(80, 76, 76, 0.75);
+    }
+    
+    h4 {
+        @apply text-4xl md:text-4xl lg:text-5xl;
+        color: var(--custom-color-salmon);
     }
     
     h5 {
