@@ -3,7 +3,7 @@ import { Avatar, AvatarImage, AvatarFallback } from '@/components/starwind/avata
 import ProfilePicture from '@/assets/images/profile-picture.jpg';
 ---
 
-<section class='homepage text-center'>
+<section class='sidebar-layout'>
     <Avatar class='!my-4'>
         <AvatarImage
             image={ProfilePicture}
@@ -25,41 +25,37 @@ import ProfilePicture from '@/assets/images/profile-picture.jpg';
 </section>
 
 <style>
-    .homepage {
-        //position: relative;
+    figure {
+        margin: 0 auto;
 
-        figure {
-            margin: 0 auto;
-
-            /* Desktop */
-            @media (min-width: 1024px) {
-                height: 300px;
-                width: 300px;
-            }
-
-            /* Mobile */
-            @media (max-width: 1023px) {
-                height: 200px;
-                width: 200px;
-            }
+        /* Desktop */
+        @media (min-width: 1024px) {
+            height: 300px;
+            width: 300px;
         }
 
-        h1 {
-            position: relative;
-            display: inline-block;
-            text-shadow: 0 0.5rem 2rem, 0 -0.5rem 1rem rgba(80, 76, 76, 0.75);
+        /* Mobile */
+        @media (max-width: 1023px) {
+            height: 200px;
+            width: 200px;
         }
+    }
 
-        .underline {
-            display: block;
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--color-emerald-400);
-            border-radius: 12px;
-        }
+    h1 {
+        position: relative;
+        display: inline-block;
+        text-shadow: 0 0.5rem 2rem, 0 -0.5rem 1rem rgba(80, 76, 76, 0.75);
+    }
+
+    .underline {
+        display: block;
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--color-emerald-400);
+        border-radius: 12px;
     }
 </style>
 

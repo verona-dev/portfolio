@@ -51,15 +51,15 @@
     }
     
     main {
-        @apply flex-1 mx-auto max-w-xl lg:max-w-5xl;
+        @apply opacity-0 flex-1 mx-auto max-w-xl lg:max-w-5xl;
     }
     
-    main.main-not-found {
-        @apply flex-1 mx-auto max-w-7xl;
-    }
-    
-    section:not(.not-found) {
+    section {
         @apply lg:p-10 lg:ml-[125px];
+    }
+    
+    .sidebar-layout {
+        @apply lg:ml-[125px] text-center;
     }
     
     ::selection {
