@@ -59,6 +59,11 @@
     section:not(.not-found) {
         @apply lg:p-10 opacity-0 lg:ml-[125px];
     }
+    
+    ::selection {
+        color: var(--color-zinc-50);
+        background: var(--color-zinc-600);
+    }
 }
 
 @layer components {
