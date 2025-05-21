@@ -55,7 +55,7 @@
     }
     
     section {
-        @apply lg:p-10 lg:ml-[125px];
+        @apply lg:p-10;
     }
     
     .sidebar-layout {
