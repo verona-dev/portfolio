@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@import './gsap.css';
 
 @plugin 'daisyui' {
     /* Fix for modal bug shifting layout */
@@ -109,28 +110,6 @@
     
     .active {
         color: var(--custom-color-salmon);
-    }
-    
-    .underline-container {
-        position: relative;
-    }
-    
-    .underline-1,
-    .underline-2 {
-        display: block;
-        position: absolute;
-        bottom: -5px;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background-color: var(--color-pink-400);
-        border-radius: 12px;
-    }
-    
-    .underline-2 {
-        left: -5px;
-        bottom: -12px;
-        background-color: var(--color-emerald-500);
     }
 }
 
