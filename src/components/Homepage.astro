@@ -26,7 +26,7 @@ import ProfilePicture from '@/assets/images/profile-picture.jpg';
 
 <style>
     .homepage {
-        position: relative;
+        //position: relative;
 
         figure {
             margin: 0 auto;
@@ -66,7 +66,6 @@ import ProfilePicture from '@/assets/images/profile-picture.jpg';
 <script>
    import { gsap } from 'gsap';
 
-   const homepage = document.querySelector('.homepage');
    const underline = document.querySelector('.underline');
    const description = document.querySelector('.developer-info');
    const timeline = gsap.timeline({
@@ -77,10 +76,8 @@ import ProfilePicture from '@/assets/images/profile-picture.jpg';
    });
 
    timeline
-      .to(homepage, {
-         opacity: 1
-      })
       .fromTo(['h2', 'h1', description], {
+         delay: 1,
          opacity: 0,
       }, {
          opacity: 1,

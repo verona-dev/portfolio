@@ -34,21 +34,21 @@ import TechItem from '../components/TechItem.astro';
 <script>
    import { gsap } from 'gsap';
 
-   const tech = document.querySelector('.tech');
    const techItem = document.querySelectorAll('.tech-icon');
    const underline = document.querySelector('.underline-1');
    const underline2 = document.querySelector('.underline-2');
    const timeline = gsap.timeline({
-      defaults: { duration: 1 }
+      defaults: {
+         duration: 1,
+      }
    });
 
    timeline
-      .to(tech, {
-         opacity: 1,
-      })
       .to(techItem, {
+         delay: 1,
          opacity: 1,
          stagger: 0.25,
+         ease: 'sine.inOut',
       })
       .to(underline, {
          duration: 0.5,

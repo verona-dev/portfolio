@@ -30,10 +30,29 @@ title = `Zoran G Verona - Frontend Developer | ${title}`
    <body>
       <Navigation />
 
-      <main>
+      <main id='main' class='opacity-0'>
           <slot />
       </main>
 
       <Footer />
    </body>
 </html>
+
+<script>
+    import { gsap } from 'gsap';
+
+    const main = document.getElementById('main');
+    const timeline = gsap.timeline({
+       defaults: {
+          duration: 1,
+          ease: 'power3.inOut'
+       }
+    });
+
+    timeline
+       .fromTo(main, {
+          opacity: 0,
+       }, {
+          opacity: 1,
+       })
+</script>

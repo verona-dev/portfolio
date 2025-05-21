@@ -57,7 +57,6 @@ import ProjectsItem from '../components/ProjectsItem.astro';
 <script>
    import { gsap } from 'gsap';
 
-   const projects = document.querySelector('.projects');
    const h3 = document.querySelector('h3');
    const underline = document.querySelector('.underline-1');
    const underline2 = document.querySelector('.underline-2');
@@ -70,9 +69,6 @@ import ProjectsItem from '../components/ProjectsItem.astro';
    });
 
    timeline
-      .to(projects, {
-         opacity: 1,
-      })
       .from(h3, {
          y: '-50vh',
          ease: 'circ',
