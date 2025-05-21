@@ -12,11 +12,11 @@ import ProfilePicture from '@/assets/images/profile-picture.jpg';
         <AvatarFallback>ZGV</AvatarFallback>
     </Avatar>
 
-    <h2 class='my-4 lg:my-10'>Zoran G. Verona</h2>
+    <h1 class='my-4 lg:my-10'>Zoran G. Verona</h1>
 
-    <h1 class='text-pink-400'>
+    <h2 class='text-pink-400'>
         Frontend Developer<span class='underline'></span>
-    </h1>
+    </h2>
 
     <h5 class='developer-info'>
         Based in Croatia, Europe, with 4+ years of web development experience.<span class='lg:block'>
@@ -39,12 +39,6 @@ import ProfilePicture from '@/assets/images/profile-picture.jpg';
             height: 200px;
             width: 200px;
         }
-    }
-
-    h1 {
-        position: relative;
-        display: inline-block;
-        text-shadow: 0 0.5rem 2rem, 0 -0.5rem 1rem rgba(80, 76, 76, 0.75);
     }
 
     .underline {
@@ -72,14 +66,14 @@ import ProfilePicture from '@/assets/images/profile-picture.jpg';
    });
 
    timeline
-      .fromTo(['h2', 'h1', description], {
+      .fromTo(['h1', 'h2', description], {
          opacity: 0,
       }, {
          delay: 1,
          opacity: 1,
          stagger: 1,
       })
-      .fromTo('h1', {
+      .fromTo('h2', {
          transform: 'scale(1.35)'
       }, {
          duration: 2,
