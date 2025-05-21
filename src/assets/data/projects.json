@@ -31,8 +31,8 @@
             "description": "DNO focuses on guiding and supporting businesses through digital transformation and digital reorganization. It offers insights, strategies, and practical advice on sustainable digital strategies, digital operating and business models, agile teams, scalable organizations, continuous innovation, and strategic leadership using frameworks like OKR (Objectives & Key Results).",
             "url": "https://digitaleneuordnung.de",
             "tech": {
-                "stack": ["Vue", "Nuxt", "Wordpress", "Tailwind"],
-                "modules": ["DaisyUI", "Sass","Supabase", "Axios", "Pinia", "Algolia", "DayJs"]
+                "stack": ["Vue", "Nuxt", "Wordpress", "Tailwind", "Typescript"],
+                "modules": ["DaisyUI", "Sass", "Supabase", "GraphQL", "Docker", "Axios", "Pinia", "Algolia", "DayJs"]
             },
             "image": "https://res.cloudinary.com/dgcyv1ehi/image/upload/v1745340313/dno_-_screenshot_xdfkd1.png"
         },
