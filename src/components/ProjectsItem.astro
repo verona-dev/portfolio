@@ -78,7 +78,7 @@ const {
                     <h4>{ title }</h4>
 
                     <!--  Badges  -->
-                    <div class='badges-container'>
+                    <div>
                         <ul class='badges flex gap-2.5 flex-wrap'>
                            {
                               tech.stack.map((item, index) =>
@@ -139,43 +139,23 @@ const {
 
 <style>
     .projects-item {
-        a, button {
-            font-family: 'FuturaMedium', monospace;
-            letter-spacing: 0.2em;
-            word-spacing: 0.25em;
-            text-transform: uppercase;
+        img.thumbnail {
+            border-radius: 16px;
+            transition: all .25s;
+            filter: brightness(0.95);
 
-            /* Mobile */
-            @media (max-width: 1023px) {
-                font-size: 0.75rem;
+            &:hover {
+                cursor: pointer;
+                opacity: 1;
+                transform: scale(1.12);
+                filter: none;
             }
-        }
 
-        figure,
-        .media-container img,
-        video {
-            height: 100% !important;
-            margin: 0 auto;
-            width: 100% !important;
-        }
-
-        figure {
-            /* Mobile */
-            @media (max-width: 1023px) {
-                width: 75% !important;
-            }
-        }
-
-        .video-js {
-            background: transparent !important;
-            height: 350px;
-            margin: 0 auto;
-            width: 80%;
-
-            /* Mobile */
-            @media (max-width: 640px) {
-                height: 250px !important;
-                width: 100%;
+            /* Desktop */
+            @media (min-width: 1024px) {
+                height: 225px;
+                opacity: 0.95;
+                width: 320px;
             }
         }
 
@@ -208,46 +188,26 @@ const {
             }
         }
 
-        img.thumbnail {
-            border-radius: 16px;
-            transition: all .25s;
-            filter: brightness(0.95);
-
-            &:hover {
-                cursor: pointer;
-                opacity: 1;
-                transform: scale(1.12);
-                filter: none;
+        .modal {
+            &.modal-open, &[open], &:target {
+                & .modal-box {
+                    /* Desktop */
+                    @media (min-width: 1024px) {
+                        translate: 50px 0;
+                    }
+                }
             }
 
-            /* Desktop */
-            @media (min-width: 1024px) {
-                height: 225px;
-                opacity: 0.95;
-                width: 320px;
-            }
-        }
-    }
-
-    .modal {
-        &.modal-open, &[open], &:target {
             & .modal-box {
                 /* Desktop */
                 @media (min-width: 1024px) {
                     translate: 50px 0;
                 }
-            }
-        }
 
-        & .modal-box {
-            /* Desktop */
-            @media (min-width: 1024px) {
-                translate: 50px 0;
-            }
-
-            /* Mobile */
-            @media (max-width: 1023px) {
-                width: 100vw;
+                /* Mobile */
+                @media (max-width: 1023px) {
+                    width: 100vw;
+                }
             }
         }
 
@@ -262,9 +222,47 @@ const {
                     border-top-right-radius: 8px;
                 }
 
-                .badges-container {
-                    .badges {
-                        margin-bottom: 10px;
+                .badges {
+                    margin-bottom: 10px;
+                }
+
+                a, button {
+                    font-family: 'FuturaMedium', monospace;
+                    letter-spacing: 0.2em;
+                    word-spacing: 0.25em;
+                    text-transform: uppercase;
+
+                    /* Mobile */
+                    @media (max-width: 1023px) {
+                        font-size: 0.75rem;
+                    }
+                }
+
+                figure,
+                .media-container img,
+                video {
+                    height: 100% !important;
+                    margin: 0 auto;
+                    width: 100% !important;
+                }
+
+                figure {
+                    /* Mobile */
+                    @media (max-width: 1023px) {
+                        width: 75% !important;
+                    }
+                }
+
+                .video-js {
+                    background: transparent !important;
+                    height: 350px;
+                    margin: 0 auto;
+                    width: 80%;
+
+                    /* Mobile */
+                    @media (max-width: 640px) {
+                        height: 250px !important;
+                        width: 100%;
                     }
                 }
             }
