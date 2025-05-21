@@ -57,7 +57,12 @@
     }
     
     section:not(.not-found) {
-        @apply lg:p-10 opacity-0 lg:ml-[125px];
+        @apply lg:p-10 lg:ml-[125px];
+    }
+    
+    ::selection {
+        background: var(--color-zinc-600);
+        color: var(--color-zinc-50);
     }
 }
 

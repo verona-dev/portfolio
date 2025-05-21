@@ -92,6 +92,16 @@
 		--input: var(--color-zinc-200);
 		--outline: var(--color-blue-600);
 		--radius: 0.5rem;
+        
+        --custom-background: #27272a;
+        --custom-color-active: #5cecc0;
+        --custom-color-salmon: #dc8272;
+        --custom-color-snowy-mint: #d3fbd8;
+        --custom-color-green-dark: #324b4a;
+        
+        --custom-color-1: #1f3737;
+        --custom-color-2: #9c5f72;
+        --custom-color-3: #cfa616;
 	}
 
 	.dark {
@@ -124,16 +134,6 @@
 		--radius: 0.5rem;
         --active: var(--color-neutral-800);
         --active-foreground: var(--color-zinc-50);
-        
-        --custom-background: #27272a;
-        --custom-color-active: #5cecc0;
-        --custom-color-salmon: #dc8272;
-        --custom-color-snowy-mint: #d3fbd8;
-        --custom-color-green-dark: #324b4a;
-        
-        --custom-color-1: #1f3737;
-        --custom-color-2: #9c5f72;
-        --custom-color-3: #cfa616;
 	}
 
 	* {
