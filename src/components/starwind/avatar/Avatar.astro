@@ -8,6 +8,7 @@ const avatar = tv({
 	base: "text-foreground bg-muted relative overflow-hidden rounded-full border-2",
 	variants: {
 		variant: {
+           custom: "border-none",
 			default: "border-border",
 			primary: "border-primary",
 			secondary: "border-secondary",
@@ -16,9 +17,9 @@ const avatar = tv({
 			warning: "border-warning",
 			error: "border-error",
 		},
-		size: { sm: "h-8 w-8 text-xs", md: "h-10 w-10 text-sm", lg: "h-12 w-12 text-base", custom: "text-xl" },
+		size: { sm: "h-8 w-8 text-xs", md: "h-10 w-10 text-sm", lg: "h-12 w-12 text-base", custom: "w-96 h-96 self-center text-xl" },
 	},
-	defaultVariants: { variant: "default", size: "md" },
+	defaultVariants: { variant: "custom", size: "md" },
 });
 
 const { variant, size, class: className, ...rest } = Astro.props;

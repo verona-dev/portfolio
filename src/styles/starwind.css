@@ -93,6 +93,7 @@
 		--outline: var(--color-blue-600);
 		--radius: 0.5rem;
         
+        --color-active: var(--color-pink-400);
         --custom-background: #27272a;
         --custom-color-active: #5cecc0;
         --custom-color-salmon: #dc8272;

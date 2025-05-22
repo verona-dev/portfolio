@@ -1,16 +1,4 @@
 
-
-.underline-frontend {
-    display: block;
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--color-emerald-400);
-    border-radius: 12px;
-}
-
 .double-underline-container {
     position: relative;
 }
@@ -32,3 +20,16 @@
     bottom: -12px;
     left: -5px;
 }
+
+/*
+.underline-frontend {
+    display: block;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-active);
+    border-radius: 12px;
+}
+*/
