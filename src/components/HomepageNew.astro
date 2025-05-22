@@ -4,7 +4,7 @@ import ProfilePicture from '@/assets/images/profile-picture.jpg';
 ---
 
 <section class='sidebar-layout homepage'>
-    <div class='card mt-20 lg:card-side bg-base-100 shadow-sm'>
+    <div class='card mt-20 lg:card-side shadow-sm'>
         <Avatar size='custom'>
             <AvatarImage
                 image={ProfilePicture}
@@ -13,12 +13,15 @@ import ProfilePicture from '@/assets/images/profile-picture.jpg';
             <AvatarFallback>ZGV</AvatarFallback>
         </Avatar>
 
-        <div class='card-body p-10'>
+        <div class='card-body px-20'>
             <h2 class='text-pink-400'>
-                Frontend Developer<span class='underline-frontend'></span>
+                    Frontend Developer
+                <span class='underline-frontend'></span>
             </h2>
 
-            <h1 class='my-4'>Hello, I'm Zoran G. Verona</h1>
+            <h1 class=''>Hello, I'm
+                <span class='mt-12 divider divider-accent lg:px-20'>Zoran G. Verona</span>
+            </h1>
 
             <h5 class='developer-info'>
                 Based in Croatia, Europe, with 4+ years of web development experience.<span class='lg:block'>
@@ -52,25 +55,34 @@ import ProfilePicture from '@/assets/images/profile-picture.jpg';
 <style>
     .homepage {
         figure {
-            //margin: 0 auto;
-
-            /* Desktop */
-            @media (min-width: 1024px) {
-                //height: 300px;
+            border-radius: 8px;
+            margin: 0 auto;
+                //max-height: 300px;
                 //width: 300px;
+
+            img {
+
+                /* Desktop */
+                @media (min-width: 1024px) {
+                    //height: 300px;
+                    //width: 300px;
+                }
+
+                /* Mobile */
+                @media (max-width: 1023px) {
+                    //height: 200px;
+                    //width: 200px;
+                }
             }
 
-            /* Mobile */
-            @media (max-width: 1023px) {
-                //height: 200px;
-                //width: 200px;
-            }
+
         }
 
         .card {
-            //width: 75vw;
-
-            //width: 75vw;
+           .card-body {
+               display: flex;
+               gap: 1rem;
+           }
         }
     }
 </style>
@@ -87,9 +99,8 @@ import ProfilePicture from '@/assets/images/profile-picture.jpg';
       }
    });
 
-   /*
    timeline
-      .fromTo(['h1', 'h2', description], {
+      .fromTo(['h2', 'h1', description], {
          opacity: 0,
       }, {
          delay: 1,
@@ -97,15 +108,15 @@ import ProfilePicture from '@/assets/images/profile-picture.jpg';
          stagger: 1,
       })
       .fromTo('h2', {
-         transform: 'scale(1.35)'
+         transform: 'scale(0)'
       }, {
          duration: 2,
          transform: 'scale(1)',
       })
-      .to(underline, {
-         duration: 1,
-         ease: 'sine',
-         width: '100%',
-      })
-   */
+
+      // .to(underline, {
+      //    duration: 1,
+      //    ease: 'sine',
+      //    width: '100%',
+      // })
 </script>
