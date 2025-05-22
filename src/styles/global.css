@@ -1,5 +1,9 @@
 @import 'tailwindcss';
+@import '../styles/starwind.css';
 @import './gsap.css';
+
+/* Fonts */
+@import '@fontsource/roboto-mono';
 
 @plugin 'daisyui' {
     /* Fix for modal bug shifting layout */
