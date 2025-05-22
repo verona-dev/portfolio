@@ -4,7 +4,7 @@ import ProfilePicture from '@/assets/images/profile-picture.jpg';
 ---
 
 <section class='sidebar-layout homepage'>
-    <div class='card mt-20 lg:card-side shadow-sm'>
+    <div class='card mt-20 lg:card-side'>
         <Avatar size='custom'>
             <AvatarImage
                 image={ProfilePicture}
@@ -14,10 +14,7 @@ import ProfilePicture from '@/assets/images/profile-picture.jpg';
         </Avatar>
 
         <div class='card-body p-10 gap-4'>
-            <h2 class='text-pink-400 self-start'>
-                Frontend Developer
-                <span class='underline-frontend'></span>
-            </h2>
+            <h2 class='text-pink-400 self-start'>Frontend Developer</h2>
 
             <h1>Hello, I'm
                 <span class='name mt-24 mb-8 divider divider-accent text-6xl xl:text-8xl'>Zoran G. Verona</span>
@@ -53,7 +50,6 @@ import ProfilePicture from '@/assets/images/profile-picture.jpg';
         }
     }
 
-
     .divider {
         --myScale: 0;
 
@@ -66,7 +62,6 @@ import ProfilePicture from '@/assets/images/profile-picture.jpg';
 <script>
    import { gsap } from 'gsap';
 
-   const underline = document.querySelector('.underline-frontend');
    const description = document.querySelector('.developer-info');
    const divider = document.querySelector('.divider');
 
@@ -79,7 +74,7 @@ import ProfilePicture from '@/assets/images/profile-picture.jpg';
 
    timeline
       .fromTo('h2', {
-         x: '50vw', y: 0,
+         x: 0, y: '-100vh',
       }, {
          x: 0, y: 0,
          duration: 2,
@@ -87,22 +82,23 @@ import ProfilePicture from '@/assets/images/profile-picture.jpg';
       })
       .fromTo('h1', {
          opacity: 0,
-      }, {
-         opacity: 1,
-      })
-      .fromTo(description, {
-         x: '-100vw', y: 0,
+         x: '100vw', y: 0,
       }, {
          duration: 2,
          x: 0, y: 0,
+         opacity: 1,
+      })
+      .fromTo(description, {
+         opacity: 0,
+         x: 0, y: '100vh',
+      }, {
+         duration: 2,
+         x: 0, y: 0,
+         opacity: 1,
       })
       .to(divider, {
          '--myScale': 1,
          ease: 'bounce.out',
          duration: 3,
-      })
-      .to(underline, {
-         ease: 'sine',
-         width: '100%',
       })
 </script>
