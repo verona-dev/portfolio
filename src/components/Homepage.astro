@@ -1,10 +1,10 @@
 ---
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/starwind/avatar';
-import ProfilePicture from '@/assets/images/profile-picture.jpg';
+import ProfilePicture from '../assets/images/profile-picture.jpg';
 ---
 
-<section class='sidebar-layout homepage max-w-6xl'>
-    <div class='card lg:mt-20 p-10 lg:p-6 lg:card-side'>
+<section class='sidebar-layout homepage max-w-6xl p-0'>
+    <div class='card md:h-full md:p-10 lg:card-side'>
         <Avatar size='custom'>
             <AvatarImage
                 image={ProfilePicture}
@@ -13,14 +13,14 @@ import ProfilePicture from '@/assets/images/profile-picture.jpg';
             <AvatarFallback>ZGV</AvatarFallback>
         </Avatar>
 
-        <div class='card-body flex items-center mt-10 lg:mt-0 lg:ml-6 p-6 gap-10'>
-            <h5 class='intro text-3xl self-start'>Hello, I'm</h5>
+        <div class='card-body flex items-center mt-10 lg:mt-0 md:ml-6 p-6 gap-4 md:gap-10'>
+            <h5 class='intro text-xl md:text-3xl self-start'>Hello, I'm</h5>
 
-            <h1 class='name text-6xl xl:text-7xl'>Zoran G. Verona</h1>
+            <h1 class='name text-3xl md:text-7xl'>Zoran G. Verona</h1>
 
             <h2 class='job-title divider divider-accent text-pink-400'>Frontend Developer</h2>
 
-            <h5 class='description text-center'>
+            <h5 class='description md:text-center'>
                 Based in Croatia, Europe, with 4+ years of web development experience.<span class='block'>
             I am a frontend web developer who enjoys building websites and web applications that are both fun and functional.</span>
             </h5>
@@ -31,18 +31,25 @@ import ProfilePicture from '@/assets/images/profile-picture.jpg';
 <style>
     .homepage {
         overflow: hidden;
+        align-self: center;
+
+        .card {
+            //align-items: center;
+        }
 
         figure {
             border-radius: 12px;
+
+            /* Mobile */
+            @media (max-width: 1023px) {
+                margin: 0 auto;
+            }
         }
 
         .name {
             letter-spacing: 0.2rem;
             word-spacing: 0.3rem;
         }
-    }
-
-    .description {
     }
 
     .divider {

@@ -54,7 +54,7 @@
     }
     
     main {
-        @apply opacity-0 flex-1 mx-auto;
+        @apply opacity-0 flex flex-1 mx-auto;
     }
     
     section {
@@ -80,7 +80,7 @@
     }
     
     h2 {
-        @apply text-3xl lg:text-2xl my-6 uppercase relative inline-block;
+        @apply text-base md:text-2xl my-6 uppercase relative inline-block;
         font-family: 'Acens', monospace;
         text-shadow: 0 0.5rem 2rem, 0 -0.5rem 1rem rgba(80, 76, 76, 0.75);
         letter-spacing: 0.4rem;
@@ -103,7 +103,7 @@
     }
     
     h5 {
-        @apply text-base lg:text-xl;
+        @apply text-xl;
     }
     
     nav a {
