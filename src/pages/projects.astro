@@ -9,13 +9,13 @@ import ProjectsItem from '../components/ProjectsItem.astro';
     description='Projects I worked on'
 >
     <section class='projects sidebar-layout lg:max-w-5xl'>
-        <h3 class='mb-20 text-center'>
+        <h3>
             <span>The</span>
             <span class='double-underline-container'>projects<span class='underline-first-line'></span><span class='underline-second-line'></span></span>
             <span>I worked on</span>
         </h3>
 
-        <div class='image-container'>
+        <div class='py-6 image-container'>
            {
               data.projects.map(project => (
                   <ProjectsItem
@@ -38,12 +38,6 @@ import ProjectsItem from '../components/ProjectsItem.astro';
 
 <style>
     .projects {
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: initial;
-
         .image-container {
             align-content: center;
             align-items: center;
