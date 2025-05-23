@@ -79,7 +79,8 @@
         @apply text-4xl md:text-4xl lg:text-5xl;
     }
     
-    h2 {
+    h2,
+    .homepage .job-title {
         @apply text-3xl lg:text-2xl my-6 uppercase relative inline-block;
         font-family: 'Acens', monospace;
         text-shadow: 0 0.5rem 2rem, 0 -0.5rem 1rem rgba(80, 76, 76, 0.75);
@@ -88,11 +89,12 @@
     }
     
     h3 {
-        @apply text-3xl lg:text-4xl my-10;
+        @apply text-3xl lg:text-4xl;
     }
     
     .tech h3,
     .projects h3 {
+        @apply my-10;
         text-shadow: 0 0.5rem 3rem, 0 -0.5rem 1rem rgba(80, 76, 76, 0.75);
     }
     
@@ -102,7 +104,7 @@
     }
     
     h5 {
-        @apply text-base lg:text-xl my-4 lg:my-10;
+        @apply text-base lg:text-xl;
     }
     
     nav a {
