@@ -25,11 +25,6 @@ export default defineConfig({
     integrations: [
         icon({
             include: {
-                arcticons: [
-                   'github',
-                   'linkedin',
-                   'yahoo-mail',
-                ],
                 iconoir: [
                    'xmark',
                 ],
@@ -48,7 +43,9 @@ export default defineConfig({
                 hugeicons: [
                    'github',
                    'wordpress',
-                   'information-circle'
+                   'information-circle',
+                   'linkedin-01',
+                   'mail-01'
                 ],
             }
         }),

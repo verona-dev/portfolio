@@ -2,18 +2,21 @@
 import { Icon } from 'astro-icon/components';
 ---
 
-<div class='socials lg:max-w-4xl mx-auto py-10 md:p-14 lg:p-20 flex justify-evenly'>
+<div class='socials flex justify-around w-full lg:w-3/4'>
     <div class='social-item'>
         <a
             href='https://github.com/verona-dev'
             target='_blank'
             rel='noopener noreferrer'
             aria-label='Github profile'
+            class='btn btn-dash btn-secondary'
         >
             <Icon
-                name='arcticons:github'
-                class='w-10 h-10'
+                name='hugeicons:github'
+                class='w-6 h-6'
             />
+
+            <span class='ml-1'>Github</span>
         </a>
     </div>
 
@@ -23,11 +26,13 @@ import { Icon } from 'astro-icon/components';
             target='_blank'
             rel='noopener noreferrer'
             aria-label='Linkedin profile'
+            class='btn btn-dash btn-secondary'
         >
             <Icon
-                name='arcticons:linkedin'
-                class='w-10 h-10'
+                name='hugeicons:linkedin-01'
+                class='w-6 h-6'
             />
+            <span class='ml-1'>Linkedin</span>
         </a>
     </div>
 
@@ -36,12 +41,14 @@ import { Icon } from 'astro-icon/components';
             id='email'
             target='_blank'
             rel='noopener noreferrer'
-            aria-label='Personal email'
+            aria-label='Send email'
+            class='btn btn-dash btn-secondary'
         >
             <Icon
-                name='arcticons:yahoo-mail'
-                class='w-10 h-10'
+                name='hugeicons:mail-01'
+                class='w-6 h-6'
             />
+            <span class='ml-1'>Email</span>
         </a>
     </div>
 </div>
@@ -50,11 +57,13 @@ import { Icon } from 'astro-icon/components';
     .socials {
         .social-item {
             transition: all .25s ease-in-out;
+            background-color: #27272a;
 
             &:hover {
-                transform: scale(1.25);
+                transform: scale(1.15);
             }
         }
+
     }
 </style>
 
@@ -62,21 +71,4 @@ import { Icon } from 'astro-icon/components';
    const encEmail = 'dmVyb25hZGV2QHR1dGEuaW8=';
    const mail = document.getElementById('email');
    mail?.setAttribute('href', 'mailto:'.concat(atob(encEmail)));
-
-   import { gsap } from 'gsap';
-   const socialItem = document.querySelectorAll('.social-item');
-   const timeline = gsap.timeline({ defaults: {
-         duration: 2,
-         ease: 'expo',
-      }
-   });
-
-   timeline
-      .fromTo(socialItem, {
-         opacity: 0,
-      }, {
-         opacity: 1,
-         stagger: 0.33,
-      })
-   ;
 </script>

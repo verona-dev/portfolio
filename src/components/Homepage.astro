@@ -1,6 +1,7 @@
 ---
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/starwind/avatar';
 import ProfilePicture from '../assets/images/profile-picture.jpg';
+import Socials from '@/components/Socials.astro';
 ---
 
 <section class='sidebar-layout homepage max-w-6xl p-0'>
@@ -13,17 +14,19 @@ import ProfilePicture from '../assets/images/profile-picture.jpg';
             <AvatarFallback>ZGV</AvatarFallback>
         </Avatar>
 
-        <div class='card-body flex items-center mt-10 lg:mt-0 md:ml-6 p-6 gap-4 md:gap-10'>
-            <h5 class='intro text-xl md:text-3xl self-start'>Hello, I'm</h5>
+        <div class='card-body flex items-center p-4 py-10 lg:p-6 gap-16 lg:gap-16'>
+            <h5 class='intro text-xl mt-10 lg:mt-0 md:text-3xl self-start'>Hello, I'm</h5>
 
-            <h1 class='name text-3xl md:text-7xl'>Zoran G. Verona</h1>
+            <h1 class='name text-4xl md:text-7xl'>Zoran G. Verona</h1>
 
-            <h2 class='job-title divider divider-accent text-pink-400'>Frontend Developer</h2>
+            <h2 class='job-title divider divider-accent m-0 text-pink-400'>Frontend Developer</h2>
 
             <h5 class='description md:text-center'>
                 Based in Croatia, Europe, with 4+ years of web development experience.<span class='block'>
             I am a frontend web developer who enjoys building websites and web applications that are both fun and functional.</span>
             </h5>
+
+            <Socials />
         </div>
     </div>
 </section>
@@ -63,6 +66,7 @@ import ProfilePicture from '../assets/images/profile-picture.jpg';
    const intro = document.querySelector('.intro');
    const jobTitle = document.querySelector('.job-title');
    const description = document.querySelector('.description');
+   const socials = document.querySelector('.socials');
    const divider = document.querySelectorAll('.divider');
 
    const timeline = gsap.timeline({
@@ -71,6 +75,7 @@ import ProfilePicture from '../assets/images/profile-picture.jpg';
          ease: 'power3.inOut'
       }
    });
+
 
    timeline
       .fromTo(intro, {
@@ -84,14 +89,14 @@ import ProfilePicture from '../assets/images/profile-picture.jpg';
          x: 0, y: 0,
          ease: 'power4.inOut'
       })
-      .fromTo(description, {
-         x: 0, y: '100vh',
+      .fromTo([description, socials], {
+         x: 0, y: '50vh',
       }, {
          x: 0, y: 0,
       })
       .to(divider, {
          '--myScale': 1,
          ease: 'bounce.out',
-         duration: 5,
+         duration: 10,
       })
 </script>
