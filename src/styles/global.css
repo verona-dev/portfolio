@@ -80,7 +80,7 @@
     }
     
     h2 {
-        @apply text-base md:text-2xl my-6 uppercase relative inline-block;
+        @apply text-xl md:text-2xl uppercase relative;
         font-family: 'Acens', monospace;
         text-shadow: 0 0.5rem 2rem, 0 -0.5rem 1rem rgba(80, 76, 76, 0.75);
         letter-spacing: 0.4rem;
