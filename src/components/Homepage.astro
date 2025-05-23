@@ -3,41 +3,54 @@ import { Avatar, AvatarImage, AvatarFallback } from '@/components/starwind/avata
 import ProfilePicture from '@/assets/images/profile-picture.jpg';
 ---
 
-<section class='sidebar-layout'>
-    <Avatar class='!my-4'>
-        <AvatarImage
-            image={ProfilePicture}
-            alt='Zoran G. Verona'
-        />
-        <AvatarFallback>ZGV</AvatarFallback>
-    </Avatar>
+<section class='sidebar-layout homepage max-w-6xl'>
+    <div class='card lg:mt-20 p-10 lg:p-6 lg:card-side'>
+        <Avatar size='custom'>
+            <AvatarImage
+                image={ProfilePicture}
+                alt='Zoran G. Verona'
+            />
+            <AvatarFallback>ZGV</AvatarFallback>
+        </Avatar>
 
-    <h1 class='my-4 lg:my-10'>Zoran G. Verona</h1>
+        <div class='card-body flex items-center mt-10 lg:mt-0 lg:ml-6 p-6 gap-10'>
+            <h5 class='intro text-3xl self-start'>Hello, I'm</h5>
 
-    <h2 class='text-pink-400'>
-        Frontend Developer<span class='underline-frontend'></span>
-    </h2>
+            <h1 class='name text-6xl xl:text-7xl'>Zoran G. Verona</h1>
 
-    <h5 class='developer-info'>
-        Based in Croatia, Europe, with 4+ years of web development experience.<span class='lg:block'>
+            <h2 class='job-title divider divider-accent text-pink-400'>Frontend Developer</h2>
+
+            <h5 class='description text-center'>
+                Based in Croatia, Europe, with 4+ years of web development experience.<span class='block'>
             I am a frontend web developer who enjoys building websites and web applications that are both fun and functional.</span>
-    </h5>
+            </h5>
+        </div>
+    </div>
 </section>
 
 <style>
-    figure {
-        margin: 0 auto;
+    .homepage {
+        overflow: hidden;
 
-        /* Desktop */
-        @media (min-width: 1024px) {
-            height: 300px;
-            width: 300px;
+        figure {
+            border-radius: 12px;
         }
 
-        /* Mobile */
-        @media (max-width: 1023px) {
-            height: 200px;
-            width: 200px;
+        .name {
+            letter-spacing: 0.2rem;
+            word-spacing: 0.3rem;
+        }
+    }
+
+    .description {
+    }
+
+    .divider {
+        --myScale: 0;
+
+        &::before, &::after {
+            height: 1px;
+            transform: scale(var(--myScale));
         }
     }
 </style>
@@ -45,32 +58,41 @@ import ProfilePicture from '@/assets/images/profile-picture.jpg';
 <script>
    import { gsap } from 'gsap';
 
-   const underline = document.querySelector('.underline-frontend');
-   const description = document.querySelector('.developer-info');
+   const intro = document.querySelector('.intro');
+   const jobTitle = document.querySelector('.job-title');
+   const description = document.querySelector('.description');
+   const divider = document.querySelectorAll('.divider');
+
    const timeline = gsap.timeline({
       defaults: {
-         duration: 1,
+         duration: 2,
          ease: 'power3.inOut'
       }
    });
 
    timeline
-      .fromTo(['h1', 'h2', description], {
-         opacity: 0,
-      }, {
-         delay: 1,
-         opacity: 1,
-         stagger: 1,
-      })
-      .fromTo('h2', {
-         transform: 'scale(1.35)'
+      .fromTo(intro, {
+         x: '100vw', y: 0,
       }, {
          duration: 2,
-         transform: 'scale(1)',
+         x: 0, y: 0,
       })
-      .to(underline, {
-         duration: 1,
-         ease: 'sine',
-         width: '100%',
+      .fromTo(jobTitle, {
+         x: 0, y: '-100vh',
+      }, {
+         x: 0, y: 0,
+         duration: 2,
+         ease: 'power4.inOut'
+      })
+      .fromTo(description, {
+         x: 0, y: '100vh',
+      }, {
+         duration: 2,
+         x: 0, y: 0,
+      })
+      .to(divider, {
+         '--myScale': 1,
+         ease: 'bounce.out',
+         duration: 3,
       })
 </script>
