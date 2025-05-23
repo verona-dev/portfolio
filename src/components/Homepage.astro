@@ -31,11 +31,6 @@ import ProfilePicture from '../assets/images/profile-picture.jpg';
 <style>
     .homepage {
         overflow: hidden;
-        align-self: center;
-
-        .card {
-            //align-items: center;
-        }
 
         figure {
             border-radius: 12px;
@@ -81,25 +76,22 @@ import ProfilePicture from '../assets/images/profile-picture.jpg';
       .fromTo(intro, {
          x: '100vw', y: 0,
       }, {
-         duration: 2,
          x: 0, y: 0,
       })
       .fromTo(jobTitle, {
          x: 0, y: '-100vh',
       }, {
          x: 0, y: 0,
-         duration: 2,
          ease: 'power4.inOut'
       })
       .fromTo(description, {
          x: 0, y: '100vh',
       }, {
-         duration: 2,
          x: 0, y: 0,
       })
       .to(divider, {
          '--myScale': 1,
          ease: 'bounce.out',
-         duration: 3,
+         duration: 5,
       })
 </script>
