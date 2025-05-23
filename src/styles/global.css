@@ -58,7 +58,7 @@
     }
     
     section {
-        @apply lg:mb-20 self-center;
+        @apply lg:mb-32 self-center;
     }
     
     .sidebar-layout {
