@@ -4,7 +4,7 @@ import ProfilePicture from '@/assets/images/profile-picture.jpg';
 ---
 
 <section class='sidebar-layout homepage max-w-6xl'>
-    <div class='card mt-20 p-6 lg:card-side'>
+    <div class='card lg:mt-20 p-10 lg:p-6 lg:card-side'>
         <Avatar size='custom'>
             <AvatarImage
                 image={ProfilePicture}
@@ -13,12 +13,12 @@ import ProfilePicture from '@/assets/images/profile-picture.jpg';
             <AvatarFallback>ZGV</AvatarFallback>
         </Avatar>
 
-        <div class='card-body flex items-center ml-6 p-6 gap-10'>
+        <div class='card-body flex items-center mt-10 lg:mt-0 lg:ml-6 p-6 gap-10'>
             <h5 class='intro text-3xl self-start'>Hello, I'm</h5>
 
             <h1 class='name text-6xl xl:text-7xl'>Zoran G. Verona</h1>
 
-            <h2 class='inline-flex job-title divider divider-accent text-pink-400'>Frontend Developer</h2>
+            <h2 class='job-title divider divider-accent text-pink-400'>Frontend Developer</h2>
 
             <h5 class='description text-center'>
                 Based in Croatia, Europe, with 4+ years of web development experience.<span class='block'>
@@ -30,6 +30,8 @@ import ProfilePicture from '@/assets/images/profile-picture.jpg';
 
 <style>
     .homepage {
+        overflow: hidden;
+
         figure {
             border-radius: 12px;
         }
@@ -38,6 +40,9 @@ import ProfilePicture from '@/assets/images/profile-picture.jpg';
             letter-spacing: 0.2rem;
             word-spacing: 0.3rem;
         }
+    }
+
+    .description {
     }
 
     .divider {
@@ -67,12 +72,10 @@ import ProfilePicture from '@/assets/images/profile-picture.jpg';
 
    timeline
       .fromTo(intro, {
-         opacity: 0,
          x: '100vw', y: 0,
       }, {
          duration: 2,
          x: 0, y: 0,
-         opacity: 1,
       })
       .fromTo(jobTitle, {
          x: 0, y: '-100vh',
@@ -82,12 +85,10 @@ import ProfilePicture from '@/assets/images/profile-picture.jpg';
          ease: 'power4.inOut'
       })
       .fromTo(description, {
-         opacity: 0,
          x: 0, y: '100vh',
       }, {
          duration: 2,
          x: 0, y: 0,
-         opacity: 1,
       })
       .to(divider, {
          '--myScale': 1,
