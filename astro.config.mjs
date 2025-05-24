@@ -45,7 +45,9 @@ export default defineConfig({
                    'wordpress',
                    'information-circle',
                    'linkedin-01',
-                   'mail-01'
+                   'mail-01',
+                   'tools',
+                   'workflow-square-06'
                 ],
             }
         }),

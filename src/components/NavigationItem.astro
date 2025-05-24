@@ -1,0 +1,40 @@
+---
+import {Icon} from 'astro-icon/components';
+import Logo from './Logo.astro';
+const currentPath = Astro.url.pathname;
+const isActive = path => currentPath === path ? 'active' : '';
+const {
+   href,
+   label,
+   icon
+} = Astro.props;
+---
+
+<li class='w-full lg:my-4'>
+    <a
+        href={href}
+        class={`${isActive(href)} flex flex-col lg:flex-row`}
+        aria-label={label}
+    >
+       {
+          icon && (
+               <div class='mx-2'>
+                   <Icon
+                       name={icon}
+                       class='w-10 h-10'
+                   />
+               </div>
+          )
+       }
+
+       {
+          label === 'Home' && (
+               <div class='mx-2'>
+                   <Logo />
+               </div>
+          )
+       }
+
+        <span class=''>{label}</span>
+    </a>
+</li>

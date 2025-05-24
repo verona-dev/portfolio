@@ -1,0 +1,59 @@
+---
+import NavigationItem from '@/components/NavigationItem.astro';
+---
+
+<header class='lg:min-h-[100px]'>
+    <nav class='lg:min-h-[100px] hover:cursor-crosshair'>
+        <ul class='dock max-w-6xl mx-auto min-h-[150px] lg:min-h-[100px] justify-center items-center content-center border-none'>
+            <NavigationItem
+                href='/'
+                label='Home'
+            />
+
+            <NavigationItem
+                href='/tech'
+                label='Tech'
+                icon='hugeicons:tools'
+            />
+
+            <NavigationItem
+                href='/projects'
+                label='Projects'
+                icon='hugeicons:workflow-square-06'
+            />
+        </ul>
+    </nav>
+</header>
+
+<style is:inline>
+    /* Desktop */
+    @media (min-width: 1024px) {
+        header,
+        nav,
+        ul.dock {
+            top: 25px;
+            //top: calc(0.25rem * 0);
+            background-color: transparent;
+        }
+
+        nav ul li a span {
+            transition: all .35s ease-in-out;
+        }
+
+        nav:hover ul li a span {
+            opacity: 1;
+            visibility: visible;
+            //display: block;
+        }
+    }
+
+    /* Mobile */
+    /*
+    @media (max-width: 1023px) {
+        position: fixed;
+        right: calc(0.25rem * 0);
+        bottom: calc(0.25rem * 0);
+        left: calc(0.25rem * 0);
+    }
+    */
+</style>
