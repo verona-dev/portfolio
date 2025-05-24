@@ -61,13 +61,6 @@
         @apply lg:mb-52 self-center;
     }
     
-    .sidebar-layout {
-        /* Mobile */
-        @media (min-width: 1024px) {
-            @apply ml-[125px];
-        }
-    }
-    
     ::selection {
         background: var(--color-zinc-600);
         color: var(--color-zinc-50);
