@@ -10,24 +10,25 @@ const {
 } = Astro.props;
 ---
 
-<li>
+<li class='mx-8 lg:mb-0'>
     <a
         href={href}
-        class={isActive(`${href}`)}
+        class={`${isActive(href)} flex flex-col items-center content-center relative`}
         aria-label={label}
     >
        {
-          icon &&
-           <Icon
-               name={icon}
-               class='w-10 h-10'
-           />
+          icon && (
+               <Icon
+                   name={icon}
+                   class='w-10 h-10'
+               />
+          )
        }
 
        {
           label === 'Home' && <Logo />
        }
 
-        <span>{label}</span>
+        <span class='hidden absolute top-14'>{label}</span>
     </a>
 </li>

@@ -2,9 +2,9 @@
 import NavigationItem from '@/components/NavigationItem.astro';
 ---
 
-<header>
-    <nav>
-        <ul class='dock max-w-6xl mx-auto'>
+<header class='min-h-[125px] lg:min-h-[100px]'>
+    <nav class='min-h-[125px] lg:min-h-[100px] hover:cursor-crosshair'>
+        <ul class='dock max-w-6xl mx-auto min-h-[125px] lg:min-h-[100px] justify-center items-center content-center border-none'>
             <NavigationItem
                 href='/'
                 label='Home'
@@ -15,6 +15,7 @@ import NavigationItem from '@/components/NavigationItem.astro';
                 label='Tech'
                 icon='hugeicons:tools'
             />
+
             <NavigationItem
                 href='/projects'
                 label='Projects'
@@ -24,24 +25,26 @@ import NavigationItem from '@/components/NavigationItem.astro';
     </nav>
 </header>
 
-<style>
+<style is:inline>
+    header,
     ul.dock {
-        //background-color: transparent;
-        height: 100px;
-
-        a {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
         /* Desktop */
         @media (min-width: 1024px) {
-            top: calc(0.25rem * 0);
+            top: 25px;
+            //top: calc(0.25rem * 0);
+            background-color: transparent;
         }
 
         /* Mobile */
-        @media (max-width: 1023px) {}
+        @media (max-width: 1023px) {
+            position: fixed;
+            right: calc(0.25rem * 0);
+            bottom: calc(0.25rem * 0);
+            left: calc(0.25rem * 0);
+        }
+    }
+
+    nav:hover ul li a span {
+        display: block;
     }
 </style>
