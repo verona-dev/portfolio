@@ -55,6 +55,7 @@ import Socials from '@/components/Socials.astro';
 
         &::before, &::after {
             height: 1px;
+            margin: 0 20px;
             transform: scale(var(--myScale));
         }
     }
@@ -96,6 +97,6 @@ import Socials from '@/components/Socials.astro';
       .to(divider, {
          '--myScale': 1,
          ease: 'bounce.out',
-         duration: 10,
+         duration: 5,
       })
 </script>
