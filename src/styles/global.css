@@ -35,11 +35,10 @@
 }
 
 @layer base {
-    /*
     html {
-        scrollbar-gutter: stable;
+        @apply overflow-x-hidden;
+        /*scrollbar-gutter: stable;*/
     }
-    */
     
     html,
     body {
@@ -54,11 +53,11 @@
     }
     
     main {
-        @apply opacity-0 flex flex-1 mx-auto;
+        @apply opacity-0 flex lg:flex-1 mx-auto;
     }
     
     section {
-        @apply lg:mb-52 self-center;
+        @apply lg:mb-44 self-center;
     }
     
     ::selection {
@@ -99,9 +98,8 @@
         @apply text-xl;
     }
     
-    nav a {
-        /*@apply text-xl uppercase;*/
-        /*font-family: 'FuturaLight', monospace;*/
+    nav a span {
+        @apply text-base uppercase;
     }
     
     p {
