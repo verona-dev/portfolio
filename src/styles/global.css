@@ -53,11 +53,18 @@
     }
     
     main {
-        @apply opacity-0 flex lg:flex-1 mx-auto;
+        @apply opacity-0 pb-24 flex lg:flex-1 mx-auto;
     }
     
     section {
-        @apply lg:mb-44 self-center;
+        @apply lg:mb-32 self-center;
+    }
+    
+    .sidebar-layout {
+        /* Mobile */
+        @media (min-width: 1024px) {
+            @apply ml-[175px];
+        }
     }
     
     ::selection {
@@ -99,7 +106,7 @@
     }
     
     nav a span {
-        @apply text-base uppercase;
+        @apply text-xl;
     }
     
     p {
