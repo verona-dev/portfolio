@@ -36,8 +36,14 @@ import NavigationItem from '@/components/NavigationItem.astro';
             background-color: transparent;
         }
 
+        nav ul li a span {
+            transition: all .35s ease-in-out;
+        }
+
         nav:hover ul li a span {
-            display: block;
+            opacity: 1;
+            visibility: visible;
+            //display: block;
         }
     }
 
