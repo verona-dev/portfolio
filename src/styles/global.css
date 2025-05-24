@@ -100,8 +100,8 @@
     }
     
     nav a {
-        @apply text-xl uppercase;
-        font-family: 'FuturaLight', monospace;
+        /*@apply text-xl uppercase;*/
+        /*font-family: 'FuturaLight', monospace;*/
     }
     
     p {
@@ -110,7 +110,7 @@
     }
     
     .active {
-        color: var(--custom-color-salmon);
+        color: var(--color-pink-300);
     }
 }
 
