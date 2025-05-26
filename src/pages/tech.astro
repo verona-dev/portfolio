@@ -34,6 +34,7 @@ import TechItem from '../components/TechItem.astro';
 <script>
    import { gsap } from 'gsap';
 
+   const h3 = document.querySelector('h3');
    const techItem = document.querySelectorAll('.tech-icon');
    const underline = document.querySelector('.underline-first-line');
    const underline2 = document.querySelector('.underline-second-line');
@@ -44,8 +45,11 @@ import TechItem from '../components/TechItem.astro';
    });
 
    timeline
+      .from(h3, {
+         y: '-50vh',
+         ease: 'circ',
+      })
       .to(techItem, {
-         delay: 1,
          opacity: 1,
          stagger: 0.25,
          ease: 'sine.inOut',
