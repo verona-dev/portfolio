@@ -1,0 +1,29 @@
+
+<div class='time-container'>
+    <p
+        id='time'
+        class='time text-sm'
+    ></p>
+</div>
+
+<style>
+    .time-container {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        width: 60px;
+    }
+</style>
+
+<script>
+   import dayjs from 'dayjs';
+   const time = document.getElementById('time');
+
+   const updateTime = () => {
+      time.textContent = dayjs().format('HH:mm:ss');
+   }
+
+   document.addEventListener('DOMContentLoaded', () => {
+      setInterval(updateTime, 1000);
+   });
+</script>
