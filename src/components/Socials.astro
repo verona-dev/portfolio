@@ -2,7 +2,7 @@
 import { Icon } from 'astro-icon/components';
 ---
 
-<div class='socials self-center flex justify-around w-full lg:w-3/4'>
+<div class='socials lg:self-center flex flex-wrap gap-8 md:gap-24 justify-center w-full lg:w-3/4 mt-8'>
     <div class='social-item'>
         <a
             href='https://github.com/verona-dev'
@@ -62,9 +62,7 @@ import { Icon } from 'astro-icon/components';
             --btn-border: var(--color-zinc-700);
 
             &:hover {
-                //border-style: solid;
                 --btn-border: var(--color-pink-400);
-                //--btn-fg: var(--color-pink-300);
                 transform: scale(1.15);
             }
         }

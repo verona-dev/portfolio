@@ -82,7 +82,7 @@
     }
     
     h2 {
-        @apply text-3xl md:text-4xl uppercase relative;
+        @apply text-xl md:text-4xl mx-auto uppercase relative;
         /*font-family: 'Acens', monospace;*/
         text-shadow: 0 0.5rem 2rem, 0 -0.5rem 1rem rgba(80, 76, 76, 0.75);
         letter-spacing: 0.2rem;
@@ -106,7 +106,7 @@
     }
     
     h5 {
-        @apply text-xl;
+        @apply text-lg;
         letter-spacing: 1px;
     }
     
