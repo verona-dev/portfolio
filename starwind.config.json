@@ -8,10 +8,6 @@
   "componentDir": "src/components",
   "components": [
     {
-      "name": "avatar",
-      "version": "1.1.1"
-    },
-    {
       "name": "tooltip",
       "version": "1.1.1"
     },

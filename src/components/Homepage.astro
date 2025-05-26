@@ -1,30 +1,28 @@
 ---
-import { Avatar, AvatarImage, AvatarFallback } from '@/components/starwind/avatar';
+import { Image } from 'astro:assets';
 import ProfilePicture from '../assets/images/profile-picture.jpg';
 import Socials from '@/components/Socials.astro';
 ---
 
-<section class='homepage sidebar-layout max-w-7xl'>
+<section class='homepage sidebar-layout max-w-sm md:max-w-3xl xl:max-w-7xl self-center mb-36'>
     <div class='card md:h-full xl:card-side'>
-        <Avatar size='custom'>
-            <AvatarImage
-                image={ProfilePicture}
-                alt='Zoran G. Verona'
-            />
-            <AvatarFallback>ZGV</AvatarFallback>
-        </Avatar>
+        <div class='avatar xl:flex xl:items-center xl:mb-12'>
+            <div class='w-72 h-72 rounded mx-auto'>
+                <Image src={ProfilePicture} alt='Profile' />
+            </div>
+        </div>
 
-        <div class='card-body flex gap-16 lg:gap-20'>
-            <h2 class='job-title divider divider-secondary mt-10 xl:mt-0 text-secondary'>Frontend Developer</h2>
+        <div class='card-body flex gap-y-16 xl:gap-y-20 mt-10 xl:mt-0'>
+            <h2 class='job-title lg:divider lg:divider-secondary text-secondary'>Frontend Developer</h2>
 
-            <div class='content flex flex-col gap-12'>
+            <div class='content flex flex-col gap-y-12'>
                 <h1>Hello, I am Zoran G. Verona!</h1>
 
                 <h5>
                     Based in Croatia, Europe, with 4+ years of web development experience.
-                    <span class='block'>
-                    I am a frontend web developer who enjoys building websites and web applications that are both fun and functional.
-                </span>
+                    <span class='inline-block'>
+                        I am a frontend web developer who enjoys building websites and web applications that are both fun and functional.
+                    </span>
                 </h5>
             </div>
 
@@ -36,24 +34,26 @@ import Socials from '@/components/Socials.astro';
 <style>
     .homepage {
         overflow: hidden;
-
-        figure {
-            border-radius: 6px;
-
-            /* Mobile */
-            @media (max-width: 1023px) {
-                margin: 0 auto;
-            }
-        }
     }
 
     .divider {
         --myScale: 0;
+        display: inline-flex;
+        margin: 0;
+        //white-space: initial;
 
         &::before, &::after {
             height: 2px;
             margin: 0 20px;
             transform: scale(var(--myScale));
+        }
+    }
+
+    /* Mobile */
+    @media (max-width: 640px) {
+        .card-body {
+            padding-left: 0;
+            padding-right: 0;
         }
     }
 </style>
@@ -72,6 +72,15 @@ import Socials from '@/components/Socials.astro';
       }
    });
 
+/*   .fromTo(socials, {
+      opacity: 0,
+   }, {
+      duration: 2,
+      ease: 'sine',
+      opacity: 1,
+      stagger: 0.33,
+   })*/
+
    timeline
       .fromTo(content, {
          opacity: 0,
@@ -81,18 +90,10 @@ import Socials from '@/components/Socials.astro';
          opacity: 1,
       })
       .fromTo(jobTitle, {
-         x: 0, y: '-10vh',
+         x: 0, y: '-50vh',
       }, {
          duration: 1,
          x: 0, y: 0,
-      })
-      .fromTo(socials, {
-         opacity: 0,
-      }, {
-         duration: 2,
-         ease: 'sine',
-         opacity: 1,
-         stagger: 0.33,
       })
       .to(divider, {
          '--myScale': 1,
