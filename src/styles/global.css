@@ -65,7 +65,7 @@
     .sidebar-layout {
         /* Mobile */
         @media (min-width: 1024px) {
-            @apply ml-[175px];
+            @apply ml-[125px];
         }
     }
     
@@ -117,13 +117,13 @@
         font-family: 'FuturaLight', monospace;
     }
     
+    nav a {
+        @apply text-xl uppercase;
+    }
+    
     p {
         @apply text-base lg:text-xl tracking-[0.075rem];
         color: var(--color-zinc-300);
-    }
-    
-    .active {
-        color: var(--color-pink-300);
     }
 }
 
