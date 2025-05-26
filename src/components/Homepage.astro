@@ -1,18 +1,16 @@
 ---
-import { Avatar, AvatarImage, AvatarFallback } from '@/components/starwind/avatar';
+import { Image } from 'astro:assets';
 import ProfilePicture from '../assets/images/profile-picture.jpg';
 import Socials from '@/components/Socials.astro';
 ---
 
 <section class='homepage sidebar-layout max-w-7xl self-center mb-36'>
-    <div class='card md:h-full xl:card-side'>
-        <Avatar size='custom'>
-            <AvatarImage
-                image={ProfilePicture}
-                alt='Zoran G. Verona'
-            />
-            <AvatarFallback>ZGV</AvatarFallback>
-        </Avatar>
+    <div class='card md:h-full lg:card-side'>
+        <div class="avatar">
+            <div class="w-72 rounded mx-auto">
+                <Image src={ProfilePicture} alt="Profile" />
+            </div>
+        </div>
 
         <div class='card-body flex gap-16 lg:gap-20 mt-10 xl:mt-0'>
             <h2 class='job-title divider divider-secondary text-secondary'>Frontend Developer</h2>
@@ -36,15 +34,6 @@ import Socials from '@/components/Socials.astro';
 <style>
     .homepage {
         overflow: hidden;
-
-        figure {
-            border-radius: 6px;
-
-            /* Mobile */
-            @media (max-width: 1023px) {
-                margin: 0 auto;
-            }
-        }
     }
 
     .divider {
