@@ -5,7 +5,7 @@ import Socials from '@/components/Socials.astro';
 ---
 
 <section class='homepage sidebar-layout max-w-7xl'>
-    <div class='card md:h-full lg:card-side'>
+    <div class='card md:h-full xl:card-side'>
         <Avatar size='custom'>
             <AvatarImage
                 image={ProfilePicture}
@@ -14,17 +14,19 @@ import Socials from '@/components/Socials.astro';
             <AvatarFallback>ZGV</AvatarFallback>
         </Avatar>
 
-        <div class='card-body flex items-center gap-16 lg:gap-16'>
-            <h2 class='job-title divider divider-secondary m-0 text-secondary'>Frontend Developer</h2>
+        <div class='card-body flex gap-16 lg:gap-20'>
+            <h2 class='job-title divider divider-secondary mt-10 xl:mt-0 text-secondary'>Frontend Developer</h2>
 
-            <h1 class='name mt-10 lg:mt-0 self-start'>Hey, I am Zoran G. Verona.</h1>
+            <div class='name-description flex flex-col gap-12'>
+                <h1>Hello, I am Zoran G. Verona!</h1>
 
-            <h5 class='description'>
-                Based in Croatia, Europe, with 4+ years of web development experience.
-                <span class='block'>
+                <h5>
+                    Based in Croatia, Europe, with 4+ years of web development experience.
+                    <span class='block'>
                     I am a frontend web developer who enjoys building websites and web applications that are both fun and functional.
                 </span>
-            </h5>
+                </h5>
+            </div>
 
             <Socials />
         </div>
@@ -43,11 +45,6 @@ import Socials from '@/components/Socials.astro';
                 margin: 0 auto;
             }
         }
-
-        .name {
-            //letter-spacing: 0.1rem;
-            //word-spacing: 0.2rem;
-        }
     }
 
     .divider {
@@ -65,9 +62,8 @@ import Socials from '@/components/Socials.astro';
    import { gsap } from 'gsap';
 
    const jobTitle = document.querySelector('.job-title');
-   const name = document.querySelector('.name');
-   const description = document.querySelector('.description');
-   const socials = document.querySelector('.socials');
+   const nameDescription = document.querySelector('.name-description');
+   const socialItem = document.querySelectorAll('.social-item');
    const divider = document.querySelectorAll('.divider');
 
    const timeline = gsap.timeline({
@@ -78,24 +74,22 @@ import Socials from '@/components/Socials.astro';
    });
 
    timeline
-      .fromTo(jobTitle, {
-         x: 0, y: '-50vh',
-      }, {
-         x: 0, y: 0,
-      })
-      .fromTo([name, description], {
+      .fromTo([jobTitle, nameDescription], {
          x: 0, y: '50vh',
       }, {
          x: 0, y: 0,
+         stagger: 0.33,
       })
-      .fromTo(socials, {
-         x: 0, y: '50vh',
+      .fromTo(socialItem, {
+         opacity: 0,
       }, {
-         x: 0, y: 0,
+         ease: 'sine',
+         opacity: 1,
+         stagger: 0.33,
       })
       .to(divider, {
          '--myScale': 1,
          ease: 'bounce.out',
-         duration: 5,
+         duration: 4,
       })
 </script>

@@ -55,11 +55,11 @@
     }
     
     main {
-        @apply opacity-0 pb-24 flex lg:flex-1 mx-auto;
+        @apply opacity-0 flex lg:flex-1 mx-auto;
     }
     
     section {
-        @apply lg:mb-32 self-center;
+        @apply self-center mb-24;
     }
     
     .sidebar-layout {
@@ -78,15 +78,15 @@
 @layer components {
     h1 {
         @apply text-4xl md:text-5xl;
-        /*font-weight: 200;*/
+        word-spacing: 0.3rem;
     }
     
     h2 {
-        @apply text-xl md:text-5xl uppercase relative;
+        @apply text-3xl md:text-4xl uppercase relative;
         /*font-family: 'Acens', monospace;*/
         text-shadow: 0 0.5rem 2rem, 0 -0.5rem 1rem rgba(80, 76, 76, 0.75);
-        /*text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5), 2px 2px 0 rgba(0, 0, 0, 0.4), 3px 3px 0 rgba(0, 0, 0, 0.3);*/
-        word-spacing: 0.7rem;
+        letter-spacing: 0.2rem;
+        word-spacing: 0.75rem;
         font-weight: 400;
     }
     
@@ -107,19 +107,17 @@
     
     h5 {
         @apply text-xl;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
     }
     
-    a {
+    a,
+    p,
+    .tech-item
+     {
         font-family: 'FuturaLight', monospace;
-    }
-    
-    nav a span {
-        @apply text-xl;
     }
     
     p {
-        font-family: 'FuturaLight', monospace;
         @apply text-base lg:text-xl tracking-[0.075rem];
         color: var(--color-zinc-300);
     }
