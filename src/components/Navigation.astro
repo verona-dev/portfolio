@@ -1,39 +1,73 @@
 ---
-import NavigationItem from '@/components/NavigationItem.astro';
+const currentPath = Astro.url.pathname;
+import Logo from '@/components/Logo.astro';
+const isActive = path => currentPath === path ? 'active' : '';
 ---
 
-<header class='bg-base-200'>
-    <nav class='flex justify-center'>
-        <ul class='menu flex-row'>
-            <NavigationItem
-                href='/'
-                label='Home'
-            />
+<header>
+    <nav>
+        <ul class='lg:flex lg:flex-col lg:items-center'>
+            <li>
+                <a
+                    href='/'
+                    class={isActive('/')}
+                    aria-label='Home'
+                >
+                    <Logo />
+                </a>
+            </li>
 
-            <NavigationItem
-                href='/tech'
-                label='Tech'
-                icon='hugeicons:tools'
-            />
+            <li class='lg:mt-8'>
+                <a
+                    href='/tech'
+                    class={isActive('/tech')}
+                    aria-label='Tech'
+                >
+                    <span>
+                        Tech
+                    </span>
+                </a>
+            </li>
 
-            <NavigationItem
-                href='/projects'
-                label='Projects'
-                icon='hugeicons:workflow-square-06'
-            />
+            <li class='lg:mt-12'>
+                <a
+                    href='/projects'
+                    class={isActive('/projects')}
+                    aria-label='Projects'
+                >
+                    <span>
+                        Projects
+                    </span>
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
 
 <style>
+    .active {
+        color: var(--color-pink-400);
+    }
+
     /* Desktop */
     @media (min-width: 1024px) {
         header {
-            //background-color: #3f3d3d;
-            //border-right: 1px solid var(--color-pink-400);
-            height: 100%;
             position: fixed;
-            width: 175px;
+            width: 125px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        li:not(:first-child) {
+            letter-spacing: 0.5em;
+            text-orientation: upright;
+            -webkit-writing-mode: vertical-rl;
+            -ms-writing-mode: tb-rl;
+            writing-mode: vertical-rl;
         }
     }
 
