@@ -4,7 +4,7 @@ import ProfilePicture from '../assets/images/profile-picture.jpg';
 import Socials from '@/components/Socials.astro';
 ---
 
-<section class='homepage sidebar-layout max-w-6xl'>
+<section class='homepage sidebar-layout max-w-7xl'>
     <div class='card md:h-full lg:card-side'>
         <Avatar size='custom'>
             <AvatarImage
@@ -14,16 +14,16 @@ import Socials from '@/components/Socials.astro';
             <AvatarFallback>ZGV</AvatarFallback>
         </Avatar>
 
-        <div class='card-body flex items-center p-4 py-10 lg:p-6 gap-16 lg:gap-16'>
-            <h5 class='intro text-xl mt-10 lg:mt-0 md:text-3xl self-start'>Hello, I am</h5>
-
-            <h1 class='name text-4xl md:text-7xl'>Zoran G. Verona</h1>
-
+        <div class='card-body flex items-center gap-16 lg:gap-16'>
             <h2 class='job-title divider divider-secondary m-0 text-secondary'>Frontend Developer</h2>
 
-            <h5 class='description md:text-center'>
-                Based in Croatia, Europe, with 4+ years of web development experience.<span class='block'>
-            I am a frontend web developer who enjoys building websites and web applications that are both fun and functional.</span>
+            <h1 class='name mt-10 lg:mt-0 self-start'>Hey, I am Zoran G. Verona.</h1>
+
+            <h5 class='description'>
+                Based in Croatia, Europe, with 4+ years of web development experience.
+                <span class='block'>
+                    I am a frontend web developer who enjoys building websites and web applications that are both fun and functional.
+                </span>
             </h5>
 
             <Socials />
@@ -45,8 +45,8 @@ import Socials from '@/components/Socials.astro';
         }
 
         .name {
-            letter-spacing: 0.2rem;
-            word-spacing: 0.3rem;
+            //letter-spacing: 0.1rem;
+            //word-spacing: 0.2rem;
         }
     }
 
@@ -64,8 +64,8 @@ import Socials from '@/components/Socials.astro';
 <script>
    import { gsap } from 'gsap';
 
-   const intro = document.querySelector('.intro');
    const jobTitle = document.querySelector('.job-title');
+   const name = document.querySelector('.name');
    const description = document.querySelector('.description');
    const socials = document.querySelector('.socials');
    const divider = document.querySelectorAll('.divider');
@@ -78,18 +78,17 @@ import Socials from '@/components/Socials.astro';
    });
 
    timeline
-      .fromTo(intro, {
-         x: '100vw', y: 0,
-      }, {
-         x: 0, y: 0,
-      })
       .fromTo(jobTitle, {
-         x: 0, y: '-100vh',
+         x: 0, y: '-50vh',
       }, {
          x: 0, y: 0,
-         ease: 'power4.inOut'
       })
-      .fromTo([description, socials], {
+      .fromTo([name, description], {
+         x: 0, y: '50vh',
+      }, {
+         x: 0, y: 0,
+      })
+      .fromTo(socials, {
          x: 0, y: '50vh',
       }, {
          x: 0, y: 0,
