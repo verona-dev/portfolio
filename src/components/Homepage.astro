@@ -4,7 +4,7 @@ import ProfilePicture from '../assets/images/profile-picture.jpg';
 import Socials from '@/components/Socials.astro';
 ---
 
-<section class='homepage sidebar-layout max-w-7xl'>
+<section class='homepage sidebar-layout max-w-7xl self-center mb-36'>
     <div class='card md:h-full xl:card-side'>
         <Avatar size='custom'>
             <AvatarImage
@@ -14,8 +14,8 @@ import Socials from '@/components/Socials.astro';
             <AvatarFallback>ZGV</AvatarFallback>
         </Avatar>
 
-        <div class='card-body flex gap-16 lg:gap-20'>
-            <h2 class='job-title divider divider-secondary mt-10 xl:mt-0 text-secondary'>Frontend Developer</h2>
+        <div class='card-body flex gap-16 lg:gap-20 mt-10 xl:mt-0'>
+            <h2 class='job-title divider divider-secondary text-secondary'>Frontend Developer</h2>
 
             <div class='content flex flex-col gap-12'>
                 <h1>Hello, I am Zoran G. Verona!</h1>
@@ -81,7 +81,7 @@ import Socials from '@/components/Socials.astro';
          opacity: 1,
       })
       .fromTo(jobTitle, {
-         x: 0, y: '-10vh',
+         x: 0, y: '-50vh',
       }, {
          duration: 1,
          x: 0, y: 0,
