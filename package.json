@@ -10,6 +10,7 @@
     },
     "dependencies": {
         "@astrojs/sitemap": "3.3.0",
+        "@fontsource-variable/montserrat": "5.2.5",
         "@fontsource/roboto-mono": "5.2.5",
         "@iconify-json/catppuccin": "1.2.11",
         "@iconify-json/hugeicons": "1.2.5",
@@ -21,6 +22,7 @@
         "astro-icon": "1.1.5",
         "astro-seo": "0.8.4",
         "daisyui": "5.0.35",
+        "dayjs": "1.11.13",
         "gsap": "3.12.7",
         "motion": "12.9.0",
         "sass": "1.86.3",

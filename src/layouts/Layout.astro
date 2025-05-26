@@ -5,6 +5,7 @@ import CommonMeta from '../components/CommonMeta.astro';
 import Navigation from '../components/Navigation.astro';
 import NavigationDock from '../components/NavigationDock.astro';
 import Seo from '../components/Seo.astro';
+import TimeNow from '../components/TimeNow.astro';
 
 let {
    title,
@@ -28,7 +29,8 @@ title = `Zoran G Verona - Frontend Developer | ${title}`
    <body>
       <Navigation />
 
-      <main id='main'>
+      <main id='main' class='max-w-7xl'>
+          <TimeNow />
           <slot />
       </main>
    </body>

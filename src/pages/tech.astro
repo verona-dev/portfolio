@@ -8,7 +8,7 @@ import TechItem from '../components/TechItem.astro';
     title='Tech stack'
     description='My tech stack and skills'
 >
-    <section class='tech sidebar-layout text-center max-w-5xl'>
+    <section class='tech sidebar-layout text-center max-w-4xl'>
         <h3>
             <span>The</span>
             <span class='double-underline-container'>tools<span class='underline-first-line'></span><span class='underline-second-line'></span></span>
@@ -34,6 +34,7 @@ import TechItem from '../components/TechItem.astro';
 <script>
    import { gsap } from 'gsap';
 
+   const h3 = document.querySelector('h3');
    const techItem = document.querySelectorAll('.tech-icon');
    const underline = document.querySelector('.underline-first-line');
    const underline2 = document.querySelector('.underline-second-line');
@@ -44,8 +45,11 @@ import TechItem from '../components/TechItem.astro';
    });
 
    timeline
+      .from(h3, {
+         y: '-50vh',
+         ease: 'circ',
+      })
       .to(techItem, {
-         delay: 1,
          opacity: 1,
          stagger: 0.25,
          ease: 'sine.inOut',

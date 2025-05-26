@@ -4,8 +4,8 @@ import ProfilePicture from '../assets/images/profile-picture.jpg';
 import Socials from '@/components/Socials.astro';
 ---
 
-<section class='homepage sidebar-layout max-w-6xl'>
-    <div class='card md:h-full lg:card-side'>
+<section class='homepage sidebar-layout max-w-7xl'>
+    <div class='card md:h-full xl:card-side'>
         <Avatar size='custom'>
             <AvatarImage
                 image={ProfilePicture}
@@ -14,17 +14,19 @@ import Socials from '@/components/Socials.astro';
             <AvatarFallback>ZGV</AvatarFallback>
         </Avatar>
 
-        <div class='card-body flex items-center p-4 py-10 lg:p-6 gap-16 lg:gap-16'>
-            <h5 class='intro text-xl mt-10 lg:mt-0 md:text-3xl self-start'>Hello, I am</h5>
+        <div class='card-body flex gap-16 lg:gap-20'>
+            <h2 class='job-title divider divider-secondary mt-10 xl:mt-0 text-secondary'>Frontend Developer</h2>
 
-            <h1 class='name text-4xl md:text-7xl'>Zoran G. Verona</h1>
+            <div class='content flex flex-col gap-12'>
+                <h1>Hello, I am Zoran G. Verona!</h1>
 
-            <h2 class='job-title divider divider-secondary m-0 text-secondary'>Frontend Developer</h2>
-
-            <h5 class='description md:text-center'>
-                Based in Croatia, Europe, with 4+ years of web development experience.<span class='block'>
-            I am a frontend web developer who enjoys building websites and web applications that are both fun and functional.</span>
-            </h5>
+                <h5>
+                    Based in Croatia, Europe, with 4+ years of web development experience.
+                    <span class='block'>
+                    I am a frontend web developer who enjoys building websites and web applications that are both fun and functional.
+                </span>
+                </h5>
+            </div>
 
             <Socials />
         </div>
@@ -36,17 +38,12 @@ import Socials from '@/components/Socials.astro';
         overflow: hidden;
 
         figure {
-            border-radius: 12px;
+            border-radius: 6px;
 
             /* Mobile */
             @media (max-width: 1023px) {
                 margin: 0 auto;
             }
-        }
-
-        .name {
-            letter-spacing: 0.2rem;
-            word-spacing: 0.3rem;
         }
     }
 
@@ -54,7 +51,7 @@ import Socials from '@/components/Socials.astro';
         --myScale: 0;
 
         &::before, &::after {
-            height: 1px;
+            height: 2px;
             margin: 0 20px;
             transform: scale(var(--myScale));
         }
@@ -64,39 +61,42 @@ import Socials from '@/components/Socials.astro';
 <script>
    import { gsap } from 'gsap';
 
-   const intro = document.querySelector('.intro');
    const jobTitle = document.querySelector('.job-title');
-   const description = document.querySelector('.description');
-   const socials = document.querySelector('.socials');
+   const content = document.querySelector('.content');
+   const socials = document.querySelectorAll('.social-item');
    const divider = document.querySelectorAll('.divider');
 
    const timeline = gsap.timeline({
       defaults: {
-         duration: 2,
          ease: 'power3.inOut'
       }
    });
 
    timeline
-      .fromTo(intro, {
-         x: '100vw', y: 0,
+      .fromTo(content, {
+         opacity: 0,
       }, {
-         x: 0, y: 0,
+         delay: 1,
+         ease: 'sine',
+         opacity: 1,
       })
       .fromTo(jobTitle, {
-         x: 0, y: '-100vh',
+         x: 0, y: '-10vh',
       }, {
+         duration: 1,
          x: 0, y: 0,
-         ease: 'power4.inOut'
       })
-      .fromTo([description, socials], {
-         x: 0, y: '50vh',
+      .fromTo(socials, {
+         opacity: 0,
       }, {
-         x: 0, y: 0,
+         duration: 2,
+         ease: 'sine',
+         opacity: 1,
+         stagger: 0.33,
       })
       .to(divider, {
          '--myScale': 1,
-         ease: 'bounce.out',
-         duration: 5,
+         ease: 'bounce',
+         duration: 4,
       })
 </script>

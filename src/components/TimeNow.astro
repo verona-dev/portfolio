@@ -1,0 +1,41 @@
+
+<div class='time-container'>
+    <p class='time text-sm card'></p>
+</div>
+
+<style>
+    .time-container {
+        position: absolute;
+        width: 60px;
+
+
+        /* Desktop */
+        @media (min-width: 1024px) {
+            right: 25px;
+            top: 25px;
+        }
+
+        /* Mobile */
+        @media (max-width: 1023px) {
+            bottom: 25px;
+            left: 0;
+            margin-left: auto;
+            margin-right: auto;
+            right: 0;
+            text-align: center;
+        }
+    }
+</style>
+
+<script>
+   import dayjs from 'dayjs';
+   const time = document.querySelector('.time');
+
+   const updateTime = () => {
+      time.textContent = dayjs().format('HH:mm:ss');
+   }
+
+   document.addEventListener('DOMContentLoaded', () => {
+      setInterval(updateTime, 1000);
+   });
+</script>
