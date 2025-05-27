@@ -5,9 +5,9 @@ import Socials from '@/components/Socials.astro';
 ---
 
 <section class='homepage sidebar-layout max-w-sm md:max-w-5xl xl:max-w-7xl self-center mb-24'>
-    <div class='card md:h-full xl:card-side'>
+    <div class='card xl:card-side'>
         <!-- Avatar -->
-        <div class='avatar xl:flex xl:items-center mb-14 xl:mb-28'>
+        <div class='avatar my-8'>
             <div class='w-72 h-72 rounded mx-auto'>
                 <Image src={ProfilePicture} alt='Profile' />
             </div>
@@ -55,16 +55,6 @@ import Socials from '@/components/Socials.astro';
                 gap: 1rem;
             }
         }
-
-
-    }
-
-    .card-body {
-        /* Mobile */
-        @media (max-width: 640px) {
-            //padding-left: 0;
-            //padding-right: 0;
-        }
     }
 </style>
 
@@ -81,7 +71,6 @@ import Socials from '@/components/Socials.astro';
       }
    });
 
-   /*
    timeline
       .fromTo(jobTitle, {
          x: 0, y: '-75vh',
@@ -102,5 +91,4 @@ import Socials from '@/components/Socials.astro';
          ease: 'bounce',
          duration: 4,
       })
-   */
 </script>
