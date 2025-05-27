@@ -6,11 +6,6 @@
 @import '@fontsource-variable/source-code-pro';
 @import '@fontsource/ubuntu-mono';
 
-@plugin 'daisyui' {
-    /* Fix for modal bug shifting layout */
-    exclude: rootscrollgutter;
-}
-
 @font-face {
     font-family: 'Acens';
     src: url('/fonts/Acens.woff') format('woff');
@@ -25,6 +20,12 @@
     font-weight: normal;
     font-style: normal;
     font-display: swap;
+}
+
+
+@plugin 'daisyui' {
+    /* Fix for modal bug shifting layout */
+    exclude: rootscrollgutter;
 }
 
 @layer base {
