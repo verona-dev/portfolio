@@ -86,7 +86,6 @@
     h3 {
         @apply text-2xl lg:text-4xl text-center my-10;
         text-shadow: 0 0.5rem 3rem, 0 -0.5rem 1rem rgba(80, 76, 76, 0.75);
-        font-family: 'Source Code Pro Variable', monospace;
     }
     
     h4 {
@@ -99,17 +98,16 @@
         letter-spacing: 1px;
     }
     
-    .tech a.learn-more-button {
-        font-family: 'FuturaLight', monospace;
-    }
-    
     nav a {
         @apply text-xl uppercase;
     }
     
+    .starwind-tooltip-content {
+        font-family: 'Ubuntu Mono', monospace;
+    }
+    
     .projects a,
     .projects button {
-        /*font-family: 'Ubuntu Mono', monospace;*/
         /*font-family: 'Ubuntu Mono', monospace;*/
     }
     
