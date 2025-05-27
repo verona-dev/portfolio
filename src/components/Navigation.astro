@@ -7,7 +7,7 @@ const isActive = path => currentPath === path ? 'active' : '';
 <header>
     <nav>
         <ul class='lg:flex lg:flex-col lg:items-center'>
-            <li>
+            <li class='logo-container'>
                 <a
                     href='/'
                     class={isActive('/')}
@@ -17,7 +17,7 @@ const isActive = path => currentPath === path ? 'active' : '';
                 </a>
             </li>
 
-            <li class=''>
+            <li>
                 <a
                     href='/tech'
                     class={isActive('/tech')}
@@ -29,7 +29,7 @@ const isActive = path => currentPath === path ? 'active' : '';
                 </a>
             </li>
 
-            <li class=''>
+            <li>
                 <a
                     href='/projects'
                     class={isActive('/projects')}
@@ -45,10 +45,6 @@ const isActive = path => currentPath === path ? 'active' : '';
 </header>
 
 <style>
-    .active {
-        color: var(--color-pink-400);
-    }
-
     /* Desktop */
     @media (min-width: 1024px) {
         header {
@@ -60,6 +56,10 @@ const isActive = path => currentPath === path ? 'active' : '';
             display: flex;
             justify-content: center;
             margin-top: 40px;
+        }
+
+        .logo-container {
+            margin-bottom: 25px;
         }
 
         li:not(:first-child) {
