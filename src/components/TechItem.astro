@@ -9,7 +9,6 @@ const {
 } = Astro.props;
 ---
 
-
 <div class='tech-item mx-7 my-6'>
     <Tooltip>
         <TooltipTrigger>
@@ -19,7 +18,7 @@ const {
                     class='w-12 h-12 mx-8'
                 />
 
-                <p class='mt-5'>{ name }</p>
+                <p class='name mt-4'>{ name }</p>
             </div>
         </TooltipTrigger>
 
@@ -34,7 +33,7 @@ const {
                         />
                     </div>
 
-                    <span class='lg:text-left lg:basis-full'>{description}</span>
+                    <span class='lg:text-left'>{description}</span>
                 </div>
 
                 <div class='card-actions mt-6 lg:my-2 justify-center'>
@@ -68,12 +67,16 @@ const {
             color: var(--color-zinc-300);
             filter: grayscale(0.8) brightness(0.9);
             padding: 10px;
-            transition: transform .15s ease-in-out;
+            transition: transform .25s ease-in-out;
 
             &:hover {
-                color: var(--color-zinc-50);
+                color: var(--primary-foreground);
                 filter: none;
                 transform: scale(1.1);
+            }
+
+            &:hover p.name {
+             color: var(--tooltip-ribbon);
             }
         }
 
@@ -90,8 +93,8 @@ const {
                 }
 
                 .card {
-                    background-color: var(--card);
-                    border-top: 10px solid var(--custom-color-salmon);
+                    background-color: var(--tooltip-card);
+                    border-top: 10px solid var(--tooltip-ribbon);
                 }
 
                 .card-body {

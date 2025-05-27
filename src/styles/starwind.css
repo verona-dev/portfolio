@@ -74,7 +74,7 @@
 		--popover-foreground: var(--color-zinc-950);
 		--primary: var(--color-blue-700);
 		--primary-foreground: var(--color-zinc-50);
-		--secondary: var(--color-fuchsia-700);
+		
 		--secondary-foreground: var(--color-zinc-50);
 		--muted: var(--color-zinc-100);
 		--muted-foreground: var(--color-zinc-600);
@@ -93,20 +93,17 @@
 		--outline: var(--color-blue-600);
 		--radius: 0.5rem;
         
-        --color-active: var(--color-pink-400);
-        --custom-background: #27272a;
-        --custom-color-active: #5cecc0;
-        --custom-color-salmon: #dc8272;
-        --custom-color-snowy-mint: #d3fbd8;
-        --custom-color-green-dark: #324b4a;
+        --secondary: var(--color-pink-500);
+        --secondary-hover: var(--color-pink-400);
+        --tooltip-card: #44424a;
+        --tooltip-ribbon: #86baab;
         
-        --custom-color-1: #1f3737;
-        --custom-color-2: #9c5f72;
-        --custom-color-3: #cfa616;
-	}
+        --color-active: #5cecc0;
+        --color-salmon: #dc8272;
+    }
 
 	.dark {
-		--background: var(--color-zinc-800);
+		--background: var(--color-zinc-800); /* #27272a */
 		--foreground: var(--color-zinc-50);
 		--card: #3b3c4e;
 		/*--card: var(--color-slate-800);*/
@@ -119,7 +116,7 @@
 		--secondary-foreground: var(--color-zinc-950);
 		--muted: var(--color-zinc-900);
 		--muted-foreground: var(--color-zinc-400);
-		--accent: var(--color-zinc-900);
+		--accent: #d3fbd8; /* Snowy Mint */
 		--accent-foreground: var(--color-zinc-100);
 		--info: var(--color-sky-300);
 		--info-foreground: var(--color-sky-950);
@@ -133,7 +130,7 @@
 		--input: var(--color-zinc-800);
 		--outline: var(--color-blue-600);
 		--radius: 0.5rem;
-        --active: var(--color-neutral-800);
+        --active: var(--color-pink-400);
         --active-foreground: var(--color-zinc-50);
 	}
 

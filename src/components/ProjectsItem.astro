@@ -17,7 +17,7 @@ const {
 
 ---
 
-<div class='projects-item opacity-0'>
+<div class='projects-item opacity-0 m-6'>
     <!--  Modal Trigger  -->
     <Image
         onclick={`my_modal_${id}.showModal()`}
@@ -33,7 +33,7 @@ const {
         id={`my_modal_${id}`}
         class='modal'
     >
-        <div class='modal-box flex h-full w-full max-w-full lg:h-auto lg:max-w-3xl px-0 py-8 md:px-14 lg:px-10'>
+        <div class='modal-box flex h-full w-full max-w-full lg:h-auto lg:max-w-3xl px-0 py-8 md:px-14 lg:px-10 shadow-2xl'>
             <form method='dialog'>
                 <button class='btn btn-lg btn-circle btn-ghost absolute right-2 top-2 z-100'>
                     <Icon
@@ -141,21 +141,21 @@ const {
     .projects-item {
         img.thumbnail {
             border-radius: 16px;
-            transition: all .25s;
             filter: brightness(0.95);
+            transition: all .25s;
 
             &:hover {
                 cursor: pointer;
                 opacity: 1;
-                transform: scale(1.12);
                 filter: none;
+                transform: scale(1.12);
             }
 
             /* Desktop */
             @media (min-width: 1024px) {
-                height: 225px;
+                height: 275px;
                 opacity: 0.95;
-                width: 320px;
+                width: 400px;
             }
         }
 
@@ -201,6 +201,8 @@ const {
             }
 
             & .modal-box {
+                //background-color: var(--card);
+
                 /* Desktop */
                 @media (min-width: 1024px) {
                     translate: 50px 0;
@@ -228,7 +230,6 @@ const {
                     margin-bottom: 10px;
 
                     li.badge {
-                        font-family: 'Roboto Mono', monospace;
                         font-weight: 100;
                         font-size: 1rem;
                         padding: 14px;
@@ -236,7 +237,6 @@ const {
                 }
 
                 a, button {
-                    font-family: 'FuturaMedium', monospace;
                     letter-spacing: 0.2em;
                     word-spacing: 0.25em;
                     text-transform: uppercase;

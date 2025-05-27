@@ -11,12 +11,12 @@
     left: 0;
     width: 0;
     height: 2px;
-    background-color: var(--color-pink-400);
+    background-color: var(--secondary-hover);
     border-radius: 12px;
 }
 
 .underline-second-line {
-    background-color: var(--color-emerald-500);
+    background-color: var(--accent);
     bottom: -12px;
     left: -5px;
 }
@@ -29,7 +29,6 @@
     left: 0;
     width: 0;
     height: 2px;
-    background-color: var(--color-active);
     border-radius: 12px;
 }
 */
