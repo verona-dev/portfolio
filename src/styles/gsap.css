@@ -16,7 +16,7 @@
 }
 
 .underline-second-line {
-    background-color: var(--color-snowy-mint);
+    background-color: var(--accent);
     bottom: -12px;
     left: -5px;
 }

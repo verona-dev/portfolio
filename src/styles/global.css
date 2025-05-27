@@ -41,7 +41,7 @@
     
     body {
         @apply flex flex-col relative font-light;
-        color: var(--color-zinc-50);
+        color: var(--primary-foreground);
         font-family: 'Source Code Pro Variable', monospace;
         min-height: 100vh;
     }
@@ -63,7 +63,7 @@
     
     ::selection {
         background: var(--color-zinc-600);
-        color: var(--color-zinc-50);
+        color: var(--primary-foreground);
     }
 }
 
@@ -88,7 +88,7 @@
     
     h4 {
         @apply text-4xl md:text-4xl lg:text-5xl my-4;
-        color: var(--color-snowy-mint);
+        color: var(--accent);
         font-family: 'FuturaLight', monospace;
     }
     

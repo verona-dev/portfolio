@@ -33,7 +33,7 @@ const {
         id={`my_modal_${id}`}
         class='modal'
     >
-        <div class='modal-box flex h-full w-full max-w-full lg:h-auto lg:max-w-3xl px-0 py-8 md:px-14 lg:px-10'>
+        <div class='modal-box flex h-full w-full max-w-full lg:h-auto lg:max-w-3xl px-0 py-8 md:px-14 lg:px-10 shadow-2xl'>
             <form method='dialog'>
                 <button class='btn btn-lg btn-circle btn-ghost absolute right-2 top-2 z-100'>
                     <Icon
@@ -201,6 +201,8 @@ const {
             }
 
             & .modal-box {
+                //background-color: var(--card);
+
                 /* Desktop */
                 @media (min-width: 1024px) {
                     translate: 50px 0;

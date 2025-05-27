@@ -95,17 +95,12 @@
         
         --secondary: var(--color-pink-500);
         --secondary-hover: var(--color-pink-400);
-        --color-snowy-mint: #d3fbd8;
+        --tooltip-card: #44424a;
+        --tooltip-ribbon: #86baab;
         
-        --color-active: var(--color-pink-500);
-        --custom-color-active: #5cecc0;
-        --custom-color-salmon: #dc8272;
-        --custom-color-green-dark: #324b4a;
-        
-        --custom-color-1: #1f3737;
-        --custom-color-2: #9c5f72;
-        --custom-color-3: #cfa616;
-	}
+        --color-active: #5cecc0;
+        --color-salmon: #dc8272;
+    }
 
 	.dark {
 		--background: var(--color-zinc-800); /* #27272a */
@@ -121,7 +116,7 @@
 		--secondary-foreground: var(--color-zinc-950);
 		--muted: var(--color-zinc-900);
 		--muted-foreground: var(--color-zinc-400);
-		--accent: var(--color-zinc-900);
+		--accent: #d3fbd8; /* Snowy Mint */
 		--accent-foreground: var(--color-zinc-100);
 		--info: var(--color-sky-300);
 		--info-foreground: var(--color-sky-950);
