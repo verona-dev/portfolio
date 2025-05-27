@@ -4,7 +4,7 @@ import ProfilePicture from '../assets/images/profile-picture.jpg';
 import Socials from '@/components/Socials.astro';
 ---
 
-<section class='homepage sidebar-layout max-w-lg xl:max-w-7xl self-center mb-36'>
+<section class='homepage sidebar-layout max-w-sm md:max-w-3xl xl:max-w-7xl self-center mb-36'>
     <div class='card md:h-full xl:card-side'>
         <div class='avatar xl:flex xl:items-center xl:mb-12'>
             <div class='w-72 h-72 rounded mx-auto'>
@@ -12,10 +12,10 @@ import Socials from '@/components/Socials.astro';
             </div>
         </div>
 
-        <div class='card-body flex gap-y-16 xl:gap-y-20 mt-10 xl:mt-0'>
+        <div class='card-body flex gap-16 xl:gap-20 mt-10 xl:mt-0'>
             <h2 class='job-title divider divider-secondary text-secondary'>Frontend Developer</h2>
 
-            <div class='content flex flex-col gap-y-12'>
+            <div class='content flex flex-col gap-12 px-5'>
                 <h1>Hello, I am Zoran G. Verona!</h1>
 
                 <h5>
@@ -40,18 +40,25 @@ import Socials from '@/components/Socials.astro';
         --myScale: 0;
         display: inline-flex;
         margin: 0;
-        //white-space: initial;
 
         &::before, &::after {
             height: 2px;
             margin: 0 20px;
             transform: scale(var(--myScale));
         }
+
+        @media (max-width: 640px) {
+            white-space: initial;
+
+            &:not(:empty) {
+                gap: 0;
+            }
+        }
     }
 
-    /* Mobile */
-    @media (max-width: 640px) {
-        .card-body {
+    .card-body {
+        /* Mobile */
+        @media (max-width: 640px) {
             padding-left: 0;
             padding-right: 0;
         }
