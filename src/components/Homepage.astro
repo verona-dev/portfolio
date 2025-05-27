@@ -6,25 +6,25 @@ import Socials from '@/components/Socials.astro';
 
 <section class='homepage sidebar-layout max-w-sm md:max-w-3xl xl:max-w-7xl self-center mb-36'>
     <div class='card md:h-full xl:card-side'>
+        <!-- Avatar -->
         <div class='avatar xl:flex xl:items-center xl:mb-12'>
             <div class='w-72 h-72 rounded mx-auto'>
                 <Image src={ProfilePicture} alt='Profile' />
             </div>
         </div>
 
-        <div class='card-body flex gap-16 xl:gap-20 mt-10 xl:mt-0'>
-            <h2 class='job-title divider divider-secondary'>Frontend Developer</h2>
+        <!-- Content -->
+        <div class='card-body flex flex-col gap-12 xl:gap-16 mt-10 xl:mt-0'>
+            <h2 class='job-title '>Frontend Developer</h2>
 
-            <div class='flex flex-col gap-12 px-5'>
-                <h1>Hello, I am Zoran G. Verona!</h1>
+            <h1 class='italic divider divider-secondary'> Zoran G. Verona</h1>
 
-                <h5>
-                    Based in Croatia, Europe, with 4+ years of web development experience.
-                    <span class='inline-block'>
+            <h5>
+                Based in Croatia, Europe, with 4+ years of web development experience.
+                <span class='inline-block'>
                         I am a frontend web developer who enjoys building websites and web applications that are both fun and functional.
                     </span>
-                </h5>
-            </div>
+            </h5>
 
             <Socials />
         </div>
@@ -48,7 +48,7 @@ import Socials from '@/components/Socials.astro';
         }
 
         @media (max-width: 640px) {
-            white-space: initial;
+            //white-space: initial;
 
             &:not(:empty) {
                 gap: 0;
@@ -78,7 +78,6 @@ import Socials from '@/components/Socials.astro';
       }
    });
 
-   /*
    timeline
       .fromTo(jobTitle, {
          x: 0, y: '-50vh',
@@ -98,5 +97,4 @@ import Socials from '@/components/Socials.astro';
          ease: 'bounce',
          duration: 4,
       })
-   */
 </script>
