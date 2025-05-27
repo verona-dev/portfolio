@@ -4,7 +4,7 @@ import ProfilePicture from '../assets/images/profile-picture.jpg';
 import Socials from '@/components/Socials.astro';
 ---
 
-<section class='homepage sidebar-layout max-w-sm xl:max-w-7xl self-center mb-36'>
+<section class='homepage sidebar-layout max-w-lg xl:max-w-7xl self-center mb-36'>
     <div class='card md:h-full xl:card-side'>
         <div class='avatar xl:flex xl:items-center xl:mb-12'>
             <div class='w-72 h-72 rounded mx-auto'>
@@ -13,7 +13,7 @@ import Socials from '@/components/Socials.astro';
         </div>
 
         <div class='card-body flex gap-y-16 xl:gap-y-20 mt-10 xl:mt-0'>
-            <h2 class='job-title lg:divider lg:divider-secondary text-secondary'>Frontend Developer</h2>
+            <h2 class='job-title divider divider-secondary text-secondary'>Frontend Developer</h2>
 
             <div class='content flex flex-col gap-y-12'>
                 <h1>Hello, I am Zoran G. Verona!</h1>
@@ -72,15 +72,6 @@ import Socials from '@/components/Socials.astro';
       }
    });
 
-/*   .fromTo(socials, {
-      opacity: 0,
-   }, {
-      duration: 2,
-      ease: 'sine',
-      opacity: 1,
-      stagger: 0.33,
-   })*/
-
    timeline
       .fromTo(content, {
          opacity: 0,
@@ -94,6 +85,14 @@ import Socials from '@/components/Socials.astro';
       }, {
          duration: 1,
          x: 0, y: 0,
+      })
+      .fromTo(socials, {
+         opacity: 0,
+      }, {
+         duration: 2,
+         ease: 'sine',
+         opacity: 1,
+         stagger: 0.33,
       })
       .to(divider, {
          '--myScale': 1,
