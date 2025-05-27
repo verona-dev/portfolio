@@ -6,7 +6,6 @@
 @import '@fontsource/roboto-mono';
 @import '@fontsource-variable/montserrat';
 @import '@fontsource/ubuntu-mono';
-@import '@fontsource-variable/inter';
 @import '@fontsource-variable/source-code-pro';
 
 @plugin 'daisyui' {
@@ -91,6 +90,7 @@
     h4 {
         @apply text-4xl md:text-4xl lg:text-5xl my-4;
         color: var(--color-snowy-mint);
+        font-family: 'FuturaLight', monospace;
     }
     
     h5 {
@@ -98,39 +98,33 @@
         letter-spacing: 1px;
     }
     
+    p {
+        @apply text-base lg:text-xl tracking-[0.075rem];
+    }
+    
+    .projects p {
+        font-family: 'FuturaLight', monospace;
+    }
+    
     nav a {
         @apply text-xl uppercase;
+        font-family: 'Montserrat Variable', sans-serif;
     }
     
     .starwind-tooltip-content {
         font-family: 'Ubuntu Mono', monospace;
     }
     
-    .projects a,
-    .projects button {
-        /*font-family: 'Ubuntu Mono', monospace;*/
-    }
-    
     .projects .badge {
         font-family: 'Ubuntu Mono', monospace;
     }
     
-    p,
-    .tech-item
-    {
-        /*
-        font-family: 'Ubuntu Mono', monospace;
-        font-family: 'Montserrat Variable', sans-serif;
-        font-family: 'FuturaLight', monospace;
-        font-family: 'Inter Variable', sans-serif;
-        font-family: 'Source Code Pro Variable', monospace;
-        */
-    }
-    
-    p {
-        @apply text-base lg:text-xl tracking-[0.075rem];
-        color: var(--color-zinc-300);
-    }
+    /*
+    font-family: 'Ubuntu Mono', monospace;
+    font-family: 'Montserrat Variable', sans-serif;
+    font-family: 'FuturaLight', monospace;
+    font-family: 'Source Code Pro Variable', monospace;
+    */
     
     .active {
         color: var(--secondary-hover);
