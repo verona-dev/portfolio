@@ -95,12 +95,13 @@
     }
     
     h5 {
-        @apply text-lg;
+        @apply text-xl;
         letter-spacing: 1px;
     }
     
-    a {
+    .socials a {
         /*font-family: 'Inter Variable', sans-serif;*/
+        font-weight: 200;
     }
     
     .tech a.learn-more-button {
@@ -131,14 +132,6 @@
         font-family: 'Inter Variable', sans-serif;
         font-family: 'Source Code Pro Variable', monospace;
         */
-    }
-    
-    .tech {
-        /*font-family: 'Ubuntu Mono', monospace;*/
-    }
-    
-    .projects {
-        /*font-family: 'FuturaLight', monospace;*/
     }
     
     p {
