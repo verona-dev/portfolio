@@ -15,7 +15,7 @@ import Socials from '@/components/Socials.astro';
         <div class='card-body flex gap-16 xl:gap-20 mt-10 xl:mt-0'>
             <h2 class='job-title divider divider-secondary text-secondary'>Frontend Developer</h2>
 
-            <div class='content flex flex-col gap-12 px-5'>
+            <div class='flex flex-col gap-12 px-5'>
                 <h1>Hello, I am Zoran G. Verona!</h1>
 
                 <h5>
@@ -69,37 +69,28 @@ import Socials from '@/components/Socials.astro';
    import { gsap } from 'gsap';
 
    const jobTitle = document.querySelector('.job-title');
-   const content = document.querySelector('.content');
    const socials = document.querySelectorAll('.social-item');
    const divider = document.querySelectorAll('.divider');
 
    const timeline = gsap.timeline({
       defaults: {
-         ease: 'power3.inOut'
+         ease: 'circ.inOut'
       }
    });
 
    timeline
-      .fromTo(content, {
-         opacity: 0,
-      }, {
-         delay: 1,
-         ease: 'sine',
-         opacity: 1,
-      })
       .fromTo(jobTitle, {
          x: 0, y: '-50vh',
       }, {
-         duration: 1,
+         duration: 2,
          x: 0, y: 0,
       })
       .fromTo(socials, {
          opacity: 0,
       }, {
-         duration: 2,
-         ease: 'sine',
+         duration: 3,
          opacity: 1,
-         stagger: 0.33,
+         stagger: 0.5,
       })
       .to(divider, {
          '--myScale': 1,
