@@ -4,17 +4,17 @@ import ProfilePicture from '../assets/images/profile-picture.jpg';
 import Socials from '@/components/Socials.astro';
 ---
 
-<section class='homepage sidebar-layout max-w-sm md:max-w-3xl xl:max-w-7xl self-center mb-36'>
+<section class='homepage sidebar-layout max-w-sm md:max-w-5xl xl:max-w-7xl self-center mb-24'>
     <div class='card md:h-full xl:card-side'>
         <!-- Avatar -->
-        <div class='avatar xl:flex xl:items-center xl:mb-12'>
+        <div class='avatar xl:flex xl:items-center mb-14 xl:mb-28'>
             <div class='w-72 h-72 rounded mx-auto'>
                 <Image src={ProfilePicture} alt='Profile' />
             </div>
         </div>
 
         <!-- Content -->
-        <div class='card-body flex flex-col gap-12 xl:gap-16 mt-10 xl:mt-0'>
+        <div class='card-body flex flex-col gap-12 md:gap-20'>
             <h2 class='job-title '>Frontend Developer</h2>
 
             <h1 class='italic divider divider-secondary'> Zoran G. Verona</h1>
@@ -43,24 +43,27 @@ import Socials from '@/components/Socials.astro';
 
         &::before, &::after {
             height: 2px;
-            margin: 0 20px;
             transform: scale(var(--myScale));
         }
 
-        @media (max-width: 640px) {
-            //white-space: initial;
+        /* Divider width */
+        &:not(:empty) {
+            gap: 3rem;
 
-            &:not(:empty) {
-                gap: 0;
+            @media (max-width: 640px) {
+                //white-space: initial;
+                gap: 1rem;
             }
         }
+
+
     }
 
     .card-body {
         /* Mobile */
         @media (max-width: 640px) {
-            padding-left: 0;
-            padding-right: 0;
+            //padding-left: 0;
+            //padding-right: 0;
         }
     }
 </style>
@@ -80,8 +83,9 @@ import Socials from '@/components/Socials.astro';
 
    timeline
       .fromTo(jobTitle, {
-         x: 0, y: '-50vh',
+         x: 0, y: '-75vh',
       }, {
+         delay: 1,
          duration: 2,
          x: 0, y: 0,
       })

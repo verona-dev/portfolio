@@ -100,7 +100,7 @@
     }
     
     a {
-        font-family: 'Inter Variable', sans-serif;
+        /*font-family: 'Inter Variable', sans-serif;*/
     }
     
     .tech a.learn-more-button {
@@ -115,10 +115,6 @@
     .projects button {
         /*font-family: 'Ubuntu Mono', monospace;*/
         /*font-family: 'Ubuntu Mono', monospace;*/
-    }
-    
-    .tech .name {
-        font-family: 'Source Code Pro Variable', monospace;
     }
     
     .projects .badge {
