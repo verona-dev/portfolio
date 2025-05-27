@@ -10,7 +10,6 @@
     },
     "dependencies": {
         "@astrojs/sitemap": "3.3.0",
-        "@fontsource-variable/montserrat": "5.2.5",
         "@fontsource-variable/source-code-pro": "5.2.5",
         "@fontsource/ubuntu-mono": "5.2.5",
         "@iconify-json/catppuccin": "1.2.11",
