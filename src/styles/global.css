@@ -5,6 +5,9 @@
 /* Fonts */
 @import '@fontsource/roboto-mono';
 @import '@fontsource-variable/montserrat';
+@import '@fontsource/ubuntu-mono';
+@import '@fontsource-variable/inter';
+@import '@fontsource-variable/source-code-pro';
 
 @plugin 'daisyui' {
     /* Fix for modal bug shifting layout */
@@ -50,6 +53,8 @@
         @apply flex flex-col relative font-light;
         color: var(--color-zinc-50);
         /*font-family: 'FuturaLight', monospace;*/
+        font-family: 'Ubuntu Mono', monospace;
+        font-family: 'Inter Variable', sans-serif;
         font-family: 'Montserrat Variable', sans-serif;
         min-height: 100vh;
     }
@@ -82,7 +87,7 @@
     }
     
     h2 {
-        @apply text-lg md:text-4xl mx-auto uppercase relative;
+        @apply text-lg md:text-4xl mx-auto uppercase relative text-secondary;
         /*font-family: 'Acens', monospace;*/
         text-shadow: 0 0.5rem 2rem, 0 -0.5rem 1rem rgba(80, 76, 76, 0.75);
         letter-spacing: 0.2rem;
@@ -91,13 +96,10 @@
     }
     
     h3 {
-        @apply text-2xl lg:text-4xl text-center;
-    }
-    
-    .tech h3,
-    .projects h3 {
-        @apply my-10;
+        @apply text-2xl lg:text-4xl text-center my-10;
         text-shadow: 0 0.5rem 3rem, 0 -0.5rem 1rem rgba(80, 76, 76, 0.75);
+        font-family: 'Ubuntu Mono', monospace;
+        font-family: 'Source Code Pro Variable', monospace;
     }
     
     h4 {
@@ -110,10 +112,11 @@
         letter-spacing: 1px;
     }
     
-    a,
-    p,
-    .tech-item
-     {
+    a {
+        font-family: 'Inter Variable', sans-serif;
+    }
+    
+    .tech a.learn-more-button {
         font-family: 'FuturaLight', monospace;
     }
     
@@ -121,9 +124,44 @@
         @apply text-xl uppercase;
     }
     
+    .projects a,
+    .projects button {
+        /*font-family: 'Ubuntu Mono', monospace;*/
+        /*font-family: 'Ubuntu Mono', monospace;*/
+    }
+    
+    .tech .name {
+        font-family: 'Source Code Pro Variable', monospace;
+    }
+    
+    .projects .badge {
+        font-family: 'Ubuntu Mono', monospace;
+    }
+    
+    p,
+    .tech-item
+    {
+        /*font-family: 'Ubuntu Mono', monospace;*/
+        /*font-family: 'Montserrat Variable', sans-serif;*/
+        /*font-family: 'FuturaLight', monospace;*/
+        /*font-family: 'Inter Variable', sans-serif;*/
+    }
+    
+    .tech {
+        /*font-family: 'Ubuntu Mono', monospace;*/
+    }
+    
+    .projects {
+        /*font-family: 'FuturaLight', monospace;*/
+    }
+    
     p {
         @apply text-base lg:text-xl tracking-[0.075rem];
         color: var(--color-zinc-300);
+    }
+    
+    .active {
+        color: var(--secondary-hover);
     }
 }
 
