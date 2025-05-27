@@ -17,7 +17,7 @@ const isActive = path => currentPath === path ? 'active' : '';
                 </a>
             </li>
 
-            <li class='lg:mt-8'>
+            <li class=''>
                 <a
                     href='/tech'
                     class={isActive('/tech')}
@@ -29,7 +29,7 @@ const isActive = path => currentPath === path ? 'active' : '';
                 </a>
             </li>
 
-            <li class='lg:mt-12'>
+            <li class=''>
                 <a
                     href='/projects'
                     class={isActive('/projects')}
@@ -63,6 +63,7 @@ const isActive = path => currentPath === path ? 'active' : '';
         }
 
         li:not(:first-child) {
+            margin: 50px 0;
             letter-spacing: 0.5em;
             text-orientation: upright;
             -webkit-writing-mode: vertical-rl;
