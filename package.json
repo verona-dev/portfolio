@@ -24,7 +24,6 @@
         "daisyui": "5.0.35",
         "dayjs": "1.11.13",
         "gsap": "3.12.7",
-        "motion": "12.9.0",
         "sass": "1.86.3",
         "tailwind-variants": "1.0.0",
         "tailwindcss": "4.1.4",
